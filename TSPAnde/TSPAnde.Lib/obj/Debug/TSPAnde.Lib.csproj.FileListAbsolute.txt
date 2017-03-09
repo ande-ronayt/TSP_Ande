@@ -1,0 +1,5 @@
+C:\Users\greedy\Desktop\Lunwen\Programming\TSPAnde\TSPAnde.Lib\obj\Debug\TSPAnde.Lib.csprojResolveAssemblyReference.cache
+C:\Users\greedy\Desktop\Lunwen\Programming\TSPAnde\TSPAnde.Lib\bin\Debug\TSPAnde.Lib.dll
+C:\Users\greedy\Desktop\Lunwen\Programming\TSPAnde\TSPAnde.Lib\bin\Debug\TSPAnde.Lib.pdb
+C:\Users\greedy\Desktop\Lunwen\Programming\TSPAnde\TSPAnde.Lib\obj\Debug\TSPAnde.Lib.dll
+C:\Users\greedy\Desktop\Lunwen\Programming\TSPAnde\TSPAnde.Lib\obj\Debug\TSPAnde.Lib.pdb
