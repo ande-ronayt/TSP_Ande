@@ -96,12 +96,18 @@ namespace TSPAnde.Lib.GA
                 children.Add(this.population[parent1Index].Crossover(this.population[parent2Index]));
             }
 
+            Mutation(children);
             this.population = this.population.Concat(children).ToList();
         }
 
         private int ChooseParent(int another)
         {
             return ChooseParentOperator.ChooseParent(this.population, another);
+        }
+
+        public void Mutation(List<Chromosome> chromosomes)
+        {
+            throw new NotImplementedException();
         }
 
         public virtual void CalculateBestFit()

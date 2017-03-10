@@ -39,8 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="City.cs" />
-    <Compile Include="Environment.cs" />
+    <Compile Include="GA\City.cs" />
+    <Compile Include="GA\Environment.cs" />
     <Compile Include="GA\ChooseParentOperator.cs" />
     <Compile Include="GA\Chromosome.cs" />
     <Compile Include="GA\ChromosomeOperator.cs" />
@@ -48,7 +48,11 @@
     <Compile Include="GA\Population.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Randomizer.cs" />
-    <Compile Include="Tour.cs" />
+    <Compile Include="GA\Tour.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="mTSPGA\" />
+    <Folder Include="TSPGA\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

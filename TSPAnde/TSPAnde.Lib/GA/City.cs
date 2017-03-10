@@ -5,9 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using TSPAnde.Lib.GA;
 
-namespace TSPAnde.Lib
+namespace TSPAnde.Lib.GA
 {
     class City : Gene
     {
+        public int Number{ get; set; }
     }
 }

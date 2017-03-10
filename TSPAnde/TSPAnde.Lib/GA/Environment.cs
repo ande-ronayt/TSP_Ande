@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TSPAnde.Lib
+namespace TSPAnde.Lib.GA
 {
     public static class Environment
     {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TSPAnde.Lib.GA;
 
-namespace TSPAnde.Lib
+namespace TSPAnde.Lib.GA
 {
     public class Tour : Chromosome
     {
