@@ -8,3 +8,8 @@ C:\Users\greedy\Desktop\Lunwen\Programming\TSP_Ande\TSPAnde\TSPAnde.Lib\bin\Debu
 C:\Users\greedy\Desktop\Lunwen\Programming\TSP_Ande\TSPAnde\TSPAnde.Lib\obj\Debug\TSPAnde.Lib.csprojResolveAssemblyReference.cache
 C:\Users\greedy\Desktop\Lunwen\Programming\TSP_Ande\TSPAnde\TSPAnde.Lib\obj\Debug\TSPAnde.Lib.dll
 C:\Users\greedy\Desktop\Lunwen\Programming\TSP_Ande\TSPAnde\TSPAnde.Lib\obj\Debug\TSPAnde.Lib.pdb
+\\Mac\Home\Documents\Visual Studio 2013\Projects\TSP_Ande\TSPAnde\TSPAnde.Lib\bin\Debug\TSPAnde.Lib.dll
+\\Mac\Home\Documents\Visual Studio 2013\Projects\TSP_Ande\TSPAnde\TSPAnde.Lib\bin\Debug\TSPAnde.Lib.pdb
+\\Mac\Home\Documents\Visual Studio 2013\Projects\TSP_Ande\TSPAnde\TSPAnde.Lib\obj\Debug\TSPAnde.Lib.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\Visual Studio 2013\Projects\TSP_Ande\TSPAnde\TSPAnde.Lib\obj\Debug\TSPAnde.Lib.dll
+\\Mac\Home\Documents\Visual Studio 2013\Projects\TSP_Ande\TSPAnde\TSPAnde.Lib\obj\Debug\TSPAnde.Lib.pdb

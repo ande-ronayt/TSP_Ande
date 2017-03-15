@@ -107,7 +107,7 @@ namespace TSPAnde.Lib.GA
 
         public void Mutation(List<Chromosome> chromosomes)
         {
-            throw new NotImplementedException();
+            ChromosomeOperator.Mutation(chromosomes);
         }
 
         public virtual void CalculateBestFit()

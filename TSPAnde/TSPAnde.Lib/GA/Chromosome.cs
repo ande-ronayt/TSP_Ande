@@ -9,7 +9,7 @@ namespace TSPAnde.Lib.GA
 {
     public class Chromosome
     {
-        private List<Gene> genes;
+        public List<Gene> genes; //public for mutation!
 
         public double Fit1 { get; set; }
 
