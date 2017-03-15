@@ -43,6 +43,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DistanceOperator.cs" />
     <Compile Include="GA\City.cs" />
     <Compile Include="GA\Environment.cs" />
     <Compile Include="GA\ChooseParentOperator.cs" />

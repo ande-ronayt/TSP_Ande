@@ -8,5 +8,6 @@ namespace TSPAnde.Lib.GA
 {
     public class Gene
     {
+        public int Id { get; set; }
     }
 }
