@@ -13,13 +13,13 @@ namespace TSPAnde.Lib.GA
 
         static ChromosomeOperator()
         {
-            crossover = new CrossoverOperatorMiddle();
+            crossover = new CrosooverOperatorPMX();
             mutationOperator = new MutationOperatorRandomOne();
         }
 
-        public static List<Gene> Crossover(List<Gene> firstParent, List<Gene> secondParent)
+        public static List<Chromosome> Crossover(List<Gene> firstParent, List<Gene> secondParent, Environment environment)
         {
-            return crossover.Crossover(firstParent, secondParent);
+            return crossover.Crossover(firstParent, secondParent, environment);
         }
 
         public static void ChangeOperator(ICrossoverOperator cOperator)
@@ -32,53 +32,120 @@ namespace TSPAnde.Lib.GA
             mutationOperator = mOperator;
         }
 
-        public static void Mutation(List<Chromosome> chromosomes)
+        public static void Mutation(List<Chromosome> chromosomes, Environment environment)
         {
-            mutationOperator.Mutation(chromosomes);
+            mutationOperator.Mutation(chromosomes, environment);
         }
     }
 
     public class CrossoverOperatorMiddle : ICrossoverOperator
     {
-        public List<Gene> Crossover(List<Gene> first, List<Gene> second)
+        public List<Chromosome> Crossover(List<Gene> first, List<Gene> second, Environment environment)
         {
             var i = Randomizer.Random.Next(1, second.Count);
             var j = Randomizer.Random.Next(i, second.Count);
             List<Gene> s = first.GetRange(i, j - i + 1);
             List<Gene> ms = second.Except(s).ToList();
 
-            return ms.Take(i)
-                .Concat(s)
-                .Concat(ms.Skip(i))
-                .ToList();           
+            List<Chromosome> newChildren = new List<Chromosome>();
+            newChildren.Add(new Chromosome(
+                                     ms.Take(i)
+                                        .Concat(s)
+                                        .Concat(ms.Skip(i))
+                                        .ToList(), environment));
+            return newChildren;
+        }
+    }
+
+    public class CrosooverOperatorPMX : ICrossoverOperator
+    {
+        public List<Chromosome> Crossover(List<Gene> first, List<Gene> second, Environment environment)
+        {
+            var i = Randomizer.Random.Next(1, second.Count);
+            var j = Randomizer.Random.Next(i, second.Count);
+            
+            List<Gene> mFirst = first.GetRange(i, j - i + 1);
+            List<Gene> mSecond = second.GetRange(i, j - i + 1);
+
+            //TODO: check skip(j) or j+1
+            List<Gene> fFull = first.Take(i)
+                .Concat(mSecond)
+                .Concat(first.Skip(j+1)).ToList();
+            List<Gene> sFull = second.Take(i)
+                .Concat(mFirst)
+                .Concat(second.Skip(j+1)).ToList();
+
+            var mapper1 = new Dictionary<Gene, Gene>();
+            var mapper2 = new Dictionary<Gene, Gene>();
+            for (int k = 0; k < mFirst.Count; k++)
+            {
+                mapper1.Add(mFirst[k], mSecond[k]);
+                mapper2.Add(mSecond[k], mFirst[k]);
+            }
+
+            for (int k = 0; k < i; k++)
+            {
+                while (mSecond.Contains(fFull[k]))
+                {
+                    fFull[k] = mapper2[fFull[k]];
+                }
+                while (mFirst.Contains(sFull[k]))
+                {
+                    sFull[k] = mapper1[sFull[k]];
+                }
+            }
+            for (int k = j+1; k < fFull.Count; k++)
+            {
+                while (mSecond.Contains(fFull[k]))
+                {
+                    fFull[k] = mapper2[fFull[k]];
+                }
+                while (mFirst.Contains(sFull[k]))
+                {
+                    sFull[k] = mapper1[sFull[k]];
+                }
+            }
+
+            var newChilder = new List<Chromosome>();
+            newChilder.Add(new Chromosome(fFull, environment));
+            newChilder.Add(new Chromosome(sFull, environment));
+            return newChilder;
         }
     }
 
     public interface ICrossoverOperator
     {
-        List<Gene> Crossover(List<Gene> first, List<Gene> second);
+        List<Chromosome> Crossover(List<Gene> first, List<Gene> second, Environment environment);
     }
 
     public class MutationOperatorRandomOne : IMutationOperator
     {
-        public void Mutation(List<Chromosome> chromosomes)
+        public void Mutation(List<Chromosome> chromosomes, Environment Environment)
         {
             foreach (var item in chromosomes)
             {
-                if (Randomizer.Random.NextDouble() < Environment.mutRate)
-                {
-                    //random swap
-                    int i = Randomizer.Random.Next(0, item.genes.Count);
-                    int j = Randomizer.Random.Next(0, item.genes.Count);
-                    var tmpGene = item.genes[i];
-                    item.genes[i] = item.genes[j];
-                    item.genes[j] = tmpGene;
-                }
+                int c = 0;
+                do{
+                    if (Randomizer.Random.NextDouble() < Environment.mutRate)
+                    {
+                        //random swap
+                        int i = Randomizer.Random.Next(0, item.genes.Count);
+                        int j = Randomizer.Random.Next(0, item.genes.Count);
+                        var tmpGene = item.genes[i];
+                        item.genes[i] = item.genes[j];
+                        item.genes[j] = tmpGene;
+                    }
+                    
+                }while(++c < Environment.countMut);
+                
+                
             }
+                
         }
     }
     public interface IMutationOperator
     {
-        void Mutation(List<Chromosome> chromosomes);
+        void Mutation(List<Chromosome> chromosomes, Environment Environment);
     }
 }
+

@@ -6,15 +6,45 @@ using System.Threading.Tasks;
 
 namespace TSPAnde.Lib.GA
 {
-    public static class Environment
+    public class Environment
     {
-        public const double mutRate = 0.03;
-        public const int elitism = 6;
-        public const int popSize = 60;
-        public const int k = 30;
+        private  object lockObj = new object();
+        private  double _alpha = 1;
+        public  double Alpha
+        {
+            get
+            {
+                lock (lockObj)
+                {
+                    return _alpha;
+                }
+            }
+            set
+            {
+                lock (lockObj)
+                {
+                    _alpha = value;
+                }
+            }
+        }
 
-        public const int numCities = 20;
+        private  double _beta = 1;
+        public  double Beta
+        {
+            get { lock (lockObj) { return _beta; } }
+            set { lock (lockObj) { _beta = value; } }
+        }
 
-        public const int travelers = 3;
+        //public const int elitism = 6;
+        public int depoId = 1;
+        public int bigDist = 9999;
+        public  int numCities = 20;
+        public double mutRate = 0.7;
+        public int popSize = 60;
+        public int k = 6;
+        public int travelers = 3;
+        public int countMut { get { return (int)(numCities * 0.1)+1; } }
+
+        public bool IsuseOneFit = true;
     }
 }

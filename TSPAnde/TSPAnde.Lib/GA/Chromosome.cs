@@ -9,9 +9,27 @@ namespace TSPAnde.Lib.GA
 {
     public class Chromosome
     {
+        public override string ToString()
+        {
+            return this.PrintChromosome(this.Environment);
+        }
+
+        public Environment Environment;
+        public string ToString(Environment environment)
+        {
+            return this.PrintChromosome(environment);
+        }
+
+        public double GetOneFit(double alpha, double beta)
+        {
+            return alpha * Fit1 + beta * Fit2; 
+        }
+
         public List<Gene> genes; //public for mutation!
 
         private double _distance;
+
+        public double BalanceProportion;
 
         public double Distance
         {
@@ -32,12 +50,16 @@ namespace TSPAnde.Lib.GA
             }
         }
 
+        public List<double> Distances = new List<double>();
+
         public double Fit1 { get; set; }
 
-        public double Fit2 { get { return Fit1; }  } //TODO: change for 2 fit
-        public Chromosome(List<Gene> genes)
+        public double Fit2 { get { return 1/BalanceProportion; }  } 
+        public Chromosome(List<Gene> genes, Environment environment)
         {
+            this.Environment = environment;
             this.genes = genes;
+            CalculateDistance();
         }
 
         public Chromosome(Chromosome chromosome)
@@ -47,23 +69,61 @@ namespace TSPAnde.Lib.GA
             {
                 this.genes.Add(gene);
             }
+            CalculateDistance();
         }
 
-        public virtual Chromosome Crossover(Chromosome second)
+        public virtual List<Chromosome> Crossover(Chromosome second)
         {
-            return new Chromosome(ChromosomeOperator.Crossover(this.genes, second.genes));
+            return ChromosomeOperator.Crossover(this.genes, second.genes, Environment);
         }
 
         public double CalculateDistance()
         {
+            Distances.Clear();
+            Distances.Add(0);
+            int trevelid = 0;
+            //Distances.Last
             _distance = 0;
-            for (int i = 0; i < genes.Count - 1; i++)
+            double temp = 0;
+
+            for (int i = 0; i < genes.Count; ++i)
             {
-                _distance += DistanceOperator.dOperator.Matrix[genes[i].Id, genes[i + 1].Id];
+                if (genes[i].Id == genes[(i + 1) % genes.Count].Id)
+                {
+                    temp = Environment.bigDist;
+                }else temp = DistanceOperator.dOperator.Matrix[genes[i].Id, genes[(i + 1) % genes.Count].Id];
+                _distance += temp;
+
+                if (genes[i].IsDepo)
+                {
+                    Distances.Add(0);
+                    trevelid++;
+                }
+
+                Distances[trevelid] += temp;
+                //temp = this.t[i].distanceTo(this.t[(i + 1) % this.t.Count]);
             }
 
-            Distance = _distance + DistanceOperator.dOperator.Matrix[genes[genes.Count - 1].Id, genes[0].Id];
+            if (Distances.Count > Environment.travelers)
+            {
+                Distances[0] += Distances[trevelid];
+                Distances.RemoveAt(trevelid);
+            }
+
+            BalanceProportion = DistanceOperator.GetBalanceProportion(Distances, _distance);
+
+
+            Distance = _distance;
             return Distance;
+
+            //_distance = 0;
+            //for (int i = 0; i < genes.Count - 1; i++)
+            //{
+            //    _distance += DistanceOperator.dOperator.Matrix[genes[i].Id, genes[i + 1].Id];
+            //}
+
+            //Distance = _distance + DistanceOperator.dOperator.Matrix[genes[genes.Count - 1].Id, genes[0].Id];
+            //return Distance;
         }
     }
 }

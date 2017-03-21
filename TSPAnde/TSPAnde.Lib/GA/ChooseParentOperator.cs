@@ -15,9 +15,9 @@ namespace TSPAnde.Lib.GA
             _chPOperator = new RandomChooseParentOperator();
         }
 
-        public static int ChooseParent(List<Chromosome> population, int another)
+        public static int ChooseParent(List<Chromosome> population, int another, double maxFit, int k, int type, double alpha, double beta)
         {
-            return _chPOperator.ChooseParent(population, another);
+            return _chPOperator.ChooseParent(population, another, maxFit, k, type, alpha, beta);
         }
 
         public static void ChangeOperator(IChooseParentOperator chPOperator)
@@ -28,20 +28,57 @@ namespace TSPAnde.Lib.GA
 
     public class RandomChooseParentOperator : IChooseParentOperator
     {
-        public int ChooseParent(List<Chromosome> population, int another)
+        public int ChooseParent(List<Chromosome> population, int another, double maxFit, int k, int type, double alpha, double beta)
         {
-            int index = Randomizer.Random.Next(population.Count);
-            while (index == another)
+            while (true)
             {
-                index = Randomizer.Random.Next(population.Count);
-            }
+                int start = 0;
+                int end = population.Count;
+                switch (type)
+                {
+                    case 1:
+                        end = k / 2;
+                        break;
+                    case 2:
+                        start = k / 2;
+                        break;
+                    case 3:
+                        break;
+                }
+                    
+                int index = Randomizer.Random.Next(start, population.Count);
 
-            return index;
+                while (index == another)
+                {
+                    index = Randomizer.Random.Next(start, population.Count);
+                }
+
+                switch (type)
+                {
+                    case 1: if (Randomizer.Random.NextDouble() < population[index].Fit1 / maxFit)
+                        {
+                            return index;
+                        } 
+                        break;
+                    case 2: 
+                        if (Randomizer.Random.NextDouble() < population[index].Fit2 / maxFit)
+                        {
+                            return index;
+                        }
+                        break;
+                    case 3:
+                        if (Randomizer.Random.NextDouble() < population[index].GetOneFit(alpha, beta) / maxFit)
+                        {
+                            return index;
+                        }
+                        break;
+                }
+            }
         }
 }
 
     public interface IChooseParentOperator
     {
-        int ChooseParent(List<Chromosome> population, int another);
+        int ChooseParent(List<Chromosome> population, int another, double maxFit, int k, int type, double alpha, double beta);
     }
 }

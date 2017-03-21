@@ -9,5 +9,12 @@ namespace TSPAnde.Lib.GA
     public class Gene
     {
         public int Id { get; set; }
+
+        public bool IsDepo { get; set; }
+
+        public override string ToString()
+        {
+            return Id.ToString();
+        }
     }
 }
