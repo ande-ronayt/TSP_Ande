@@ -10,20 +10,22 @@ namespace TSPAnde.Lib
 
     public class DistanceOperator
     {
-        public static IBalanceProportionCalc BalancePropoptionCalc;
-
+        public static IBalanceProportionCalc BalanceProportionCalc;
+        public static Type GetBalanceProportionType { get { return BalanceProportionCalc.GetType(); } }
         public static void SetBalanceProportionCalc(IBalanceProportionCalc bpc)
         {
-            BalancePropoptionCalc = bpc;
+            BalanceProportionCalc = bpc;
         }
 
         static DistanceOperator()
         {
-            BalancePropoptionCalc = new BalanceProportionDispersionCalc();
+            //BalanceProportionCalc = new BalanceProportionMaxCalc();
+            //BalanceProportionCalc = new BalanceProportionDispersionCalc();
+            BalanceProportionCalc = new BalanceProportionMaxWithSumCalc();
         }
 
         public static double GetBalanceProportion(List<double> distances, double distance){
-            return BalancePropoptionCalc.GetBalanceProportion(distances, distance);
+            return BalanceProportionCalc.GetBalanceProportion(distances, distance);
         }
 
         public static DistanceOperator dOperator;
@@ -86,6 +88,42 @@ namespace TSPAnde.Lib
                     Matrix[i,j] = problem.EdgeWeightsProvider.GetWeight(nodes[i-1],nodes[j-1]);
                 }
             }
+        }
+    }
+
+    public class BalanceProportionMaxWithSumCalc : IBalanceProportionCalc
+    {
+        public double GetBalanceProportion(List<double> distances, double distance)
+        {
+            //find maximum:
+            double max = distances[0];
+            for (int i = 1; i < distances.Count; i++)
+            {
+                if (distances[i] > max) max = distances[i];
+            }
+
+            double temp = 0;
+            for (int i = 0; i < distances.Count; i++)
+            {
+                temp += max - distances[i];
+            }
+
+            return max + temp;
+        }
+    }
+
+    public class BalanceProportionMaxCalc : IBalanceProportionCalc
+    {
+        public double GetBalanceProportion(List<double> distances, double distance)
+        {
+            //find maximum:
+            double max = distances[0];
+            for (int i = 1; i < distances.Count; i++)
+            {
+                if (distances[i] > max) max = distances[i];
+            }
+
+            return max;
         }
     }
 

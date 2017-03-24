@@ -14,3 +14,11 @@ C:\Users\greedy\Desktop\Lunwen\Programming\3.21\TSP_Ande\TSPAnde\ConsoleApp\bin\
 C:\Users\greedy\Desktop\Lunwen\Programming\3.21\TSP_Ande\TSPAnde\ConsoleApp\obj\Debug\ConsoleApp.csprojResolveAssemblyReference.cache
 C:\Users\greedy\Desktop\Lunwen\Programming\3.21\TSP_Ande\TSPAnde\ConsoleApp\obj\Debug\ConsoleApp.exe
 C:\Users\greedy\Desktop\Lunwen\Programming\3.21\TSP_Ande\TSPAnde\ConsoleApp\obj\Debug\ConsoleApp.pdb
+\\Mac\Home\Documents\Visual Studio 2013\Projects\3.21\TSP_Ande\TSPAnde\ConsoleApp\bin\Debug\ConsoleApp.exe.config
+\\Mac\Home\Documents\Visual Studio 2013\Projects\3.21\TSP_Ande\TSPAnde\ConsoleApp\bin\Debug\ConsoleApp.exe
+\\Mac\Home\Documents\Visual Studio 2013\Projects\3.21\TSP_Ande\TSPAnde\ConsoleApp\bin\Debug\ConsoleApp.pdb
+\\Mac\Home\Documents\Visual Studio 2013\Projects\3.21\TSP_Ande\TSPAnde\ConsoleApp\bin\Debug\TspLibNet.dll
+\\Mac\Home\Documents\Visual Studio 2013\Projects\3.21\TSP_Ande\TSPAnde\ConsoleApp\bin\Debug\TspLibNet.xml
+\\Mac\Home\Documents\Visual Studio 2013\Projects\3.21\TSP_Ande\TSPAnde\ConsoleApp\obj\Debug\ConsoleApp.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\Visual Studio 2013\Projects\3.21\TSP_Ande\TSPAnde\ConsoleApp\obj\Debug\ConsoleApp.exe
+\\Mac\Home\Documents\Visual Studio 2013\Projects\3.21\TSP_Ande\TSPAnde\ConsoleApp\obj\Debug\ConsoleApp.pdb

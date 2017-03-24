@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -52,10 +53,10 @@
     <Compile Include="GA\ChromosomeOperator.cs" />
     <Compile Include="GA\Gene.cs" />
     <Compile Include="GA\Population.cs" />
+    <Compile Include="GA\SelectionOperator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Randomizer.cs" />
     <Compile Include="GA\Tour.cs" />
-    <Compile Include="SaveTheBestTourOperator.cs" />
     <Compile Include="StringOperation.cs" />
   </ItemGroup>
   <ItemGroup>

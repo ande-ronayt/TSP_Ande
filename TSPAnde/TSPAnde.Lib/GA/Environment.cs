@@ -41,7 +41,7 @@ namespace TSPAnde.Lib.GA
         public  int numCities = 20;
         public double mutRate = 0.7;
         public int popSize = 60;
-        public int k = 6;
+        public int k = 12;
         public int travelers = 3;
         public int countMut { get { return (int)(numCities * 0.1)+1; } }
 

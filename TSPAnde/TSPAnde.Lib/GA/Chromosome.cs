@@ -54,7 +54,8 @@ namespace TSPAnde.Lib.GA
 
         public double Fit1 { get; set; }
 
-        public double Fit2 { get { return 1/BalanceProportion; }  } 
+        //public double Fit2 { get { return 1/BalanceProportion; }  }
+        public double Fit2 { get { return 1 / BalanceProportion; } } 
         public Chromosome(List<Gene> genes, Environment environment)
         {
             this.Environment = environment;

@@ -11,6 +11,9 @@ namespace TSPAnde.Lib.GA
         private static ICrossoverOperator crossover;
         private static IMutationOperator mutationOperator;
 
+        public static Type GetCrossoverType { get { return crossover.GetType(); } }
+        public static Type GetMutationOperator { get { return mutationOperator.GetType(); } }
+
         static ChromosomeOperator()
         {
             crossover = new CrosooverOperatorPMX();
@@ -38,7 +41,7 @@ namespace TSPAnde.Lib.GA
         }
     }
 
-    public class CrossoverOperatorMiddle : ICrossoverOperator
+    public class CrossoverOperatorTwoPoints : ICrossoverOperator
     {
         public List<Chromosome> Crossover(List<Gene> first, List<Gene> second, Environment environment)
         {
