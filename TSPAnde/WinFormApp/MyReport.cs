@@ -35,7 +35,7 @@ namespace WinFormApp
         {
             var alpha = population.Environment.Alpha;
             var beta = population.Environment.Beta;
-            var newChromosome = population.BestOneFitChromosome;
+            var newChromosome = population.TheBest;
             if (newChromosome.GetOneFit(alpha,beta) > BestList.Last().Chromosome.GetOneFit(alpha, beta))
             {
                 BestList.Add(new Timer(DateTime.Now, population.CurrentGeneration, newChromosome));
@@ -60,6 +60,13 @@ namespace WinFormApp
                 }
 
             }
+        }
+
+        public static int SkipElements = 1;
+
+        public static int TakeElements
+        {
+            get { return BestList.Count > 20 + SkipElements ? 20 : BestList.Count - SkipElements; }
         }
     }
 

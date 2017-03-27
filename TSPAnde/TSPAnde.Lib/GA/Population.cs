@@ -34,6 +34,8 @@ namespace TSPAnde.Lib.GA
 
         public Chromosome BestOneFitChromosome { get; set; }
 
+        public Chromosome TheBest { get; set; }
+
         public virtual void MakeRandomPopulation(int count)
         {
             var tempGeneList = new List<Gene>();
@@ -112,8 +114,9 @@ namespace TSPAnde.Lib.GA
                 children.AddRange(this.population[parent1Index].Crossover(this.population[parent2Index]));
             }
 
-            Mutation(children);
-            this.population = this.population.Concat(children).ToList();
+            //TODO: try
+            //Mutation(children);
+            //this.population = this.population.Concat(children).ToList();
         }
 
         private int ChooseParent(int another, double maxFit, int k, int type, double alpha = 1, double beta = 1)
@@ -183,6 +186,12 @@ namespace TSPAnde.Lib.GA
             if (Environment.IsuseOneFit)
             {
                 GetBestFit();
+                if (TheBest == null || BestOneFit > TheBest.GetOneFit(Environment.Alpha, Environment.Beta))
+                {
+                    TheBest = BestOneFitChromosome.Copy();
+                    TheBest.CalculateDistance();
+                }
+
             }
             else
             {
@@ -218,7 +227,9 @@ namespace TSPAnde.Lib.GA
         {
             Selection();
             GenerateNewChildren(Environment.popSize - Environment.k);
+            Mutation(population);
             CalculateBestFit();
+            
             this.CurrentGeneration++;
         }
 

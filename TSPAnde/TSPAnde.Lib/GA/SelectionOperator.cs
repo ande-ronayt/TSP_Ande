@@ -9,7 +9,12 @@ namespace TSPAnde.Lib.GA
     public static class SelectionOperator
     {
         private static ISelectionOperator selectionOperator;
-        public static Type GetSelectionType { get { return selectionOperator.GetType(); } }
+
+        public static Type GetSelectionType
+        {
+            get { return selectionOperator.GetType(); }
+        }
+
         static SelectionOperator()
         {
             //selectionOperator = new SelectionOperatorTheBestK();
@@ -17,6 +22,7 @@ namespace TSPAnde.Lib.GA
             //selectionOperator = new SelectionOperatorWheelOneFit();
             selectionOperator = new SelectionOperatorBestPlusRouletteWheel();
             //selectionOperator = new SelectionOperatorTournament();
+            selectionOperator = new SelectionOperatorMySelection();
             Coefficient = 5;
         }
 
@@ -25,6 +31,42 @@ namespace TSPAnde.Lib.GA
         public static List<Chromosome> Selection(Population population)
         {
             return selectionOperator.Selection(population);
+        }
+    }
+
+    public class SelectionOperatorMySelection : ISelectionOperator
+    {
+        public List<Chromosome> Selection(Population population)
+        {
+            var alpha = population.Environment.Alpha;
+            var beta = population.Environment.Alpha;
+            var newPopulation = new List<Chromosome>();
+            newPopulation.Add(population.TheBest.Copy());
+            int index = population.TheBestAtByOneFit();
+            var bestCurrentChromosome = population.population[index];
+            newPopulation.Add(bestCurrentChromosome);
+            population.population.RemoveAt(index);
+
+            var mutTheBest = new List<Chromosome> {population.TheBest.Copy()};
+            ChromosomeOperator.Mutation(mutTheBest, population.Environment);
+            newPopulation.Add(mutTheBest[0]);
+
+            while (newPopulation.Count < population.Environment.popSize)
+            {
+                while (true)
+                {
+                    index = Randomizer.Random.Next(population.population.Count);
+                    if (Randomizer.Random.NextDouble() <
+                        population.population[index].GetOneFit(alpha, beta) / (bestCurrentChromosome.GetOneFit(alpha, beta)))
+                    {
+                        newPopulation.Add(population.population[index]);
+                        population.population.RemoveAt(index);
+                        break;
+                    }
+                }
+            }
+
+            return newPopulation;
         }
     }
 
@@ -87,7 +129,7 @@ namespace TSPAnde.Lib.GA
                 population.population.RemoveAt(index);
             }
 
-            while ((k-- ) > population.Environment.elitism)
+            while (population.population.Count > 0 && (k-- ) > population.Environment.elitism)
             {
                 while (true)
                 {

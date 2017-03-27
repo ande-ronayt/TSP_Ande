@@ -2,6 +2,8 @@
 using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,6 +11,13 @@ namespace TSPAnde.Lib.GA
 {
     public class Chromosome
     {
+        public Chromosome Copy()
+        {
+            Gene[] newGenes = new Gene[this.genes.Count];
+            this.genes.CopyTo(newGenes);
+            return new Chromosome(newGenes.ToList(), Environment);
+        }
+
         public override string ToString()
         {
             return this.PrintChromosome(this.Environment);
@@ -75,6 +84,11 @@ namespace TSPAnde.Lib.GA
 
         public virtual List<Chromosome> Crossover(Chromosome second)
         {
+            //TODO try new crossover:
+            var result = ChromosomeOperator.Crossover(this.genes, second.genes, Environment);
+            this.genes = result[0].genes;
+            second.genes = result[1%result.Count].genes;
+
             return ChromosomeOperator.Crossover(this.genes, second.genes, Environment);
         }
 

@@ -263,6 +263,7 @@ TODO:
         {
             while (true)
             {
+                
                 ControlProgram.Population.NextGeneration();
                 SetControlPropertyThreadSafe(lblCurGen, "Text","Gen: " + ControlProgram.Population.CurrentGeneration);
                 MyReport.CheckAndAddBest(ControlProgram.Population);
@@ -278,7 +279,7 @@ TODO:
 
                 if (ControlProgram.Environment.IsuseOneFit)
                 {
-                    if (p.BestOneFitChromosome.ToString(ControlProgram.Environment) == ControlProgram.LastTour)
+                    if (MyReport.BestList.Count > 1 && MyReport.BestList.Last().Chromosome.ToString(ControlProgram.Environment) == ControlProgram.LastTour)
                         continue;
                     SetControlPropertyThreadSafe(textBox1, "Text",
                         string.Format(
@@ -310,6 +311,8 @@ BestList from problem: {5}",
                         "null"); //ControlProgram.tsp.OptimalTourDistance??"null");
                     DrawATour(p.BestFit2Chromosome.ToString(ControlProgram.Environment), Color.Green); 
                 }
+
+                
             }
 
             

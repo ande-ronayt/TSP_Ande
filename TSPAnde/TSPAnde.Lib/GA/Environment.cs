@@ -35,11 +35,11 @@ namespace TSPAnde.Lib.GA
             set { lock (lockObj) { _beta = value; } }
         }
 
-        public int elitism = 1;
+        public int elitism = 0;
         public int depoId = 1;
         public static int BigDist = 9999;
         public  int numCities = 20;
-        public double mutRate = 0.9;
+        public double mutRate = 0.05;
         public int popSize = 60;
         public int k = 12;
         public int travelers = 3;
