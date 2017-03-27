@@ -253,6 +253,7 @@ TODO:
             {
                 this.IsStarted = true;
                 btnRun.Text = "Suspend";
+                MyReport.StartTimer(ControlProgram.Population, ControlProgram.tsp);
                 ControlProgram.RunPopulation = new Thread(Process);
                 ControlProgram.RunPopulation.Start();
             }
@@ -264,6 +265,7 @@ TODO:
             {
                 ControlProgram.Population.NextGeneration();
                 SetControlPropertyThreadSafe(lblCurGen, "Text","Gen: " + ControlProgram.Population.CurrentGeneration);
+                MyReport.CheckAndAddBest(ControlProgram.Population);
                 //lblCurGen.Text = "Gen: " + ControlProgram.Population.CurrentGeneration;
 
                 var p = ControlProgram.Population;
@@ -285,7 +287,7 @@ Fit {1}
 Fit1 {4}
 Fit2 {5}
 Tour with Fit1: {2}
-Best from problem: {3}",
+BestList from problem: {3}",
                             p.BestOneFitChromosome.Distance,    //1
                             p.BestOneFit,                       //2
                             p.BestOneFitChromosome,             //3 
@@ -303,7 +305,7 @@ Fit1: {1}
 Fit2: {2} 
 Tour with Fit1: {3} 
 Tour with Fit2 {4}
-Best from problem: {5}",
+BestList from problem: {5}",
                         p.BestFit1Chromosome.Distance, p.BestFit1, p.BestFit2, p.BestFit1Chromosome, p.BestFit2Chromosome,
                         "null"); //ControlProgram.tsp.OptimalTourDistance??"null");
                     DrawATour(p.BestFit2Chromosome.ToString(ControlProgram.Environment), Color.Green); 

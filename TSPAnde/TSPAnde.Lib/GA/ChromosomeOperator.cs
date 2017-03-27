@@ -17,8 +17,8 @@ namespace TSPAnde.Lib.GA
 
         static ChromosomeOperator()
         {
-            crossover = new CrossoverOperatorTwoPoints();
-            //crossover = new CrosooverOperatorPMX();
+            //crossover = new CrossoverOperatorTwoPoints();
+            crossover = new CrosooverOperatorPMX();
             //mutationOperator = new MutationOperatorRandomTwoPoints();
             //mutationOperator = new MutationOperatorRSM();
             //mutationOperator = new MutationOperatorRandomAndThenRSM();
