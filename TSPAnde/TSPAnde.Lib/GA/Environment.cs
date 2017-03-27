@@ -35,16 +35,18 @@ namespace TSPAnde.Lib.GA
             set { lock (lockObj) { _beta = value; } }
         }
 
-        //public const int elitism = 6;
+        public int elitism = 1;
         public int depoId = 1;
-        public int bigDist = 9999;
+        public static int BigDist = 9999;
         public  int numCities = 20;
-        public double mutRate = 0.7;
+        public double mutRate = 0.9;
         public int popSize = 60;
         public int k = 12;
         public int travelers = 3;
-        public int countMut { get { return (int)(numCities * 0.1)+1; } }
+        public int countMut { get { return (int)(numCities * 0.1)+2; } }
 
         public bool IsuseOneFit = true;
+
+        public static double BalanceCoefficient = 0.7;
     }
 }

@@ -12,8 +12,11 @@ namespace TSPAnde.Lib.GA
         public static Type GetSelectionType { get { return selectionOperator.GetType(); } }
         static SelectionOperator()
         {
+            //selectionOperator = new SelectionOperatorTheBestK();
+            //selectionOperator = new SelectionOperatorTournamentWithRandomAlphaForOneFit();
+            //selectionOperator = new SelectionOperatorWheelOneFit();
+            selectionOperator = new SelectionOperatorBestPlusRouletteWheel();
             //selectionOperator = new SelectionOperatorTournament();
-            selectionOperator = new SelectionOperatorTournamentWithRandomAlphaForOneFit();
             Coefficient = 5;
         }
 
@@ -22,6 +25,116 @@ namespace TSPAnde.Lib.GA
         public static List<Chromosome> Selection(Population population)
         {
             return selectionOperator.Selection(population);
+        }
+    }
+
+
+    public class SelectionOperatorTournament : ISelectionOperator
+    {
+        public List<Chromosome> Selection(Population population)
+        {
+            var alpha = population.Environment.Alpha;
+            var beta = population.Environment.Alpha;
+            int index = population.TheBestAtByOneFit();
+            var bestChromosome = population.population[index];
+            var newPopulation = new List<Chromosome>();
+            var k = population.Environment.k;
+            while ((k--) > 0)
+            {
+                while (true)
+                {
+                    index = Randomizer.Random.Next(population.population.Count);
+                    if (Randomizer.Random.NextDouble() <
+                        population.population[index].GetOneFit(alpha, beta) / (5 * bestChromosome.GetOneFit(alpha, beta)))
+                    {
+                        newPopulation.Add(population.population[index]);
+                        population.population.RemoveAt(index);
+                        break;
+                    }
+                }
+            }
+
+            population.population = newPopulation;
+            newPopulation = new List<Chromosome>();
+            var e = population.Environment.elitism;
+            while (e-- > 0)
+            {
+                index = population.TheBestAtByOneFit();
+                newPopulation.Add(population.population[index]);
+                population.population.RemoveAt(index);
+            }
+
+            return newPopulation;
+        }
+    }
+
+    public class SelectionOperatorBestPlusRouletteWheel : ISelectionOperator
+    {
+        public List<Chromosome> Selection(Population population)
+        {
+            var alpha = population.Environment.Alpha;
+            var beta = population.Environment.Alpha;
+            var k = population.Environment.k;
+            int index = population.TheBestAtByOneFit();
+            var bestChromosome = population.population[index];
+
+            var newPopulation = new List<Chromosome>();
+            var e = population.Environment.elitism;
+            while (e-- > 0)
+            {
+                index = population.TheBestAtByOneFit();
+                newPopulation.Add(population.population[index]);
+                population.population.RemoveAt(index);
+            }
+
+            while ((k-- ) > population.Environment.elitism)
+            {
+                while (true)
+                {
+                    index = Randomizer.Random.Next(population.population.Count);
+                    if (Randomizer.Random.NextDouble() <
+                        population.population[index].GetOneFit(alpha, beta) / (bestChromosome.GetOneFit(alpha, beta)))
+                    {
+                        newPopulation.Add(population.population[index]);
+                        population.population.RemoveAt(index);
+                        break;
+                    }
+                }
+            }
+
+            return newPopulation;
+        }
+    }
+
+    public class SelectionOperatorWheelOneFit : ISelectionOperator
+    {
+        public List<Chromosome> Selection(Population population)
+        {
+            var alpha = population.Environment.Alpha;
+            var beta = population.Environment.Alpha;
+            var k = population.Environment.k;
+            int index = population.TheBestAtByOneFit();
+            var bestChromosome = population.population[index];
+
+            var newPopulation = new List<Chromosome>();
+            newPopulation.Add(population.population[index]);
+            population.population.RemoveAt(index);
+            while (k-- > 1)
+            {
+                while (true)
+                {
+                    index = Randomizer.Random.Next(population.population.Count);
+                    if (Randomizer.Random.NextDouble() <
+                        population.population[index].GetOneFit(alpha, beta)/(3*bestChromosome.GetOneFit(alpha, beta)))
+                    {
+                        newPopulation.Add(population.population[index]);
+                        population.population.RemoveAt(index);
+                        break;
+                    }
+                }                
+            }
+
+            return newPopulation;
         }
     }
 
@@ -40,7 +153,7 @@ namespace TSPAnde.Lib.GA
             while (k-- > 0)
             {
                 //randomize alpha 
-                if (population.Environment.Beta != 0 && population.Environment.Alpha == 0)
+                if (population.Environment.travelers > 1 && population.Environment.Beta != 0 && population.Environment.Alpha == 0)
                     population.Environment.Alpha *= Randomizer.Random.Next(SelectionOperator.Coefficient)*ratio;
                 
                 index = population.TheBestAtByOneFit();
@@ -54,7 +167,7 @@ namespace TSPAnde.Lib.GA
         }
     }
    
-    public class SelectionOperatorTournament : ISelectionOperator
+    public class SelectionOperatorTheBestK : ISelectionOperator
     {
         public List<Chromosome> Selection(Population population)
         {

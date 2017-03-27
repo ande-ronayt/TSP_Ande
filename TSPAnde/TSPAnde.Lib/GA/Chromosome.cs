@@ -91,7 +91,7 @@ namespace TSPAnde.Lib.GA
             {
                 if (genes[i].Id == genes[(i + 1) % genes.Count].Id)
                 {
-                    temp = Environment.bigDist;
+                    temp = Environment.BigDist;
                 }else temp = DistanceOperator.dOperator.Matrix[genes[i].Id, genes[(i + 1) % genes.Count].Id];
                 _distance += temp;
 

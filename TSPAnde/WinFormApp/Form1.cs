@@ -32,6 +32,9 @@ namespace WinFormApp
 
         string MYTODO = 
 @"Q:
+Замечания:
+1. При пересечени, возможные варианты... реверс пути, иначе, при разовой мутации пересечение уберается, но добавляется новое и с длинным путем. 
+И ЭТО СУКА БОЛЬШОЙ МИНУС GA!
 1. What type of reports should  I do?
 ... What type of graphics?
 
@@ -210,6 +213,7 @@ TODO:
         private void TransferTspLibItemToPoints()
         {
             //if Nodes are 2D
+            Points.Clear();
             var nodes = ControlProgram.tsp.Problem.NodeProvider.GetNodes();
             if (nodes[0] is Node2D)
             {

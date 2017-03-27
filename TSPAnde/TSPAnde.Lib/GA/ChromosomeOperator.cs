@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,8 +17,13 @@ namespace TSPAnde.Lib.GA
 
         static ChromosomeOperator()
         {
-            crossover = new CrosooverOperatorPMX();
-            mutationOperator = new MutationOperatorRandomOne();
+            crossover = new CrossoverOperatorTwoPoints();
+            //crossover = new CrosooverOperatorPMX();
+            //mutationOperator = new MutationOperatorRandomTwoPoints();
+            //mutationOperator = new MutationOperatorRSM();
+            //mutationOperator = new MutationOperatorRandomAndThenRSM();
+            //mutationOperator = new MutationOperatorPSM();
+            mutationOperator = new MutationOperatorHalfRSMHalfPSM();
         }
 
         public static List<Chromosome> Crossover(List<Gene> firstParent, List<Gene> secondParent, Environment environment)
@@ -41,6 +47,7 @@ namespace TSPAnde.Lib.GA
         }
     }
 
+    #region crossover
     public class CrossoverOperatorTwoPoints : ICrossoverOperator
     {
         public List<Chromosome> Crossover(List<Gene> first, List<Gene> second, Environment environment)
@@ -120,8 +127,104 @@ namespace TSPAnde.Lib.GA
     {
         List<Chromosome> Crossover(List<Gene> first, List<Gene> second, Environment environment);
     }
+    #endregion
+    #region mutation
 
-    public class MutationOperatorRandomOne : IMutationOperator
+    public class MutationOperatorHalfRSMHalfPSM : IMutationOperator
+    {
+        public void Mutation(List<Chromosome> chromosomes, Environment Environment)
+        {
+            var m = chromosomes.Count / 5;
+            var rsmMutation = new MutationOperatorRSM();
+            var psmMutation = new MutationOperatorPSM();
+
+            rsmMutation.Mutation(chromosomes.Take(m).ToList(), Environment);
+            psmMutation.Mutation(chromosomes.Skip(m).ToList(), Environment);
+        }
+    }
+
+    public class MutationOperatorPSM : IMutationOperator // partial shuffle mutation
+    {
+        public void Mutation(List<Chromosome> chromosomes, Environment Environment)
+        {
+            IEnumerable<Gene> start, end;
+            List<Gene> middle;
+            foreach (var item in chromosomes)
+            {
+                if (Randomizer.Random.NextDouble() < Environment.mutRate)
+                {
+                    int i = Randomizer.Random.Next(0, item.genes.Count);
+                    int j = Randomizer.Random.Next(0, item.genes.Count);
+                    if (i > j)
+                    {
+                        var tmp = i;
+                        i = j;
+                        j = tmp;
+                    }
+
+                    start = item.genes.Take(i);
+                    middle = item.genes.Skip(i).Take(j - i).ToList();
+                    end = item.genes.Skip(j);
+
+                    //shuffle middle:
+                    for (int k = 0; k < middle.Count; k++)
+                    {
+                        var ii = Randomizer.Random.Next(middle.Count);
+                        var tmp = middle[ii];
+                        middle[ii] = middle[k];
+                        middle[k] = tmp;
+                    }
+
+                    item.genes = start.Concat(middle).Concat(end).ToList();
+                }
+
+            }
+        }
+    }
+
+    public class MutationOperatorRandomAndThenRSM : IMutationOperator
+    {
+        public void Mutation(List<Chromosome> chromosomes, Environment Environment)
+        {
+            var m = chromosomes.Count/2;
+            var randomTwoPointsMutation = new MutationOperatorRandomTwoPoints();
+            var rsmMutation = new MutationOperatorRSM();
+
+            randomTwoPointsMutation.Mutation(chromosomes.Take(m).ToList(), Environment);
+            rsmMutation.Mutation(chromosomes.Skip(m).ToList(), Environment);
+        }
+    }
+
+    public class MutationOperatorRSM : IMutationOperator
+    {
+        public void Mutation(List<Chromosome> chromosomes, Environment Environment)
+        {
+            IEnumerable<Gene> start, middle, end;
+            foreach (var item in chromosomes)
+            {
+                if (Randomizer.Random.NextDouble() < Environment.mutRate)
+                {
+                    int i = Randomizer.Random.Next(0, item.genes.Count);
+                    int j = Randomizer.Random.Next(0, item.genes.Count);
+                    if (i > j)
+                    {
+                        var tmp = i;
+                        i = j;
+                        j = tmp;
+                    }
+
+                    start = item.genes.Take(i);
+                    middle = item.genes.Skip(i).Take(j - i);
+                    end = item.genes.Skip(j);
+
+                    item.genes = start.Concat(middle.Reverse()).Concat(end).ToList();
+                }
+
+            }
+        }
+    }
+
+    public class MutationOperatorRandomTwoPoints : IMutationOperator
     {
         public void Mutation(List<Chromosome> chromosomes, Environment Environment)
         {
@@ -150,5 +253,6 @@ namespace TSPAnde.Lib.GA
     {
         void Mutation(List<Chromosome> chromosomes, Environment Environment);
     }
+#endregion
 }
 

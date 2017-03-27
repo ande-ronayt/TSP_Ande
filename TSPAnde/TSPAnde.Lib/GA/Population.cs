@@ -66,13 +66,14 @@ namespace TSPAnde.Lib.GA
 
         public void Selection()
         {
-            this.population = SelectionOperator.Selection(this); new List<Chromosome>();
+            this.population = SelectionOperator.Selection(this); //new List<Chromosome>();
         }
       
         public void GenerateNewChildren(int k)
         {
             double bestFit1, bestFit2;
             int type1 = 1, type2 = 2;
+            int parent1Index, parent2Index;
             if (Environment.IsuseOneFit)
             {
                 bestFit1 = bestFit2 = BestOneFit;
@@ -83,11 +84,31 @@ namespace TSPAnde.Lib.GA
                 bestFit1 = BestFit1;
                 bestFit2 = BestFit2;
             }
-            var parent1Index = ChooseParent(-1, bestFit1, Environment.k, type1, Environment.Alpha, Environment.Beta);
-            var parent2Index = ChooseParent(parent1Index, bestFit2, Environment.k, type2, Environment.Alpha, Environment.Beta);
+            if (population.Count == 1)
+            {
+                parent1Index = parent2Index = 0;
+            }
+            else
+            {
+                parent1Index = ChooseParent(-1, bestFit1, Environment.k, type1, Environment.Alpha, Environment.Beta);
+                parent2Index = ChooseParent(parent1Index, bestFit2, Environment.k, type2, Environment.Alpha,
+                    Environment.Beta);
+            }
             var children = new List<Chromosome>();
             while (children.Count <= k)
             {
+                if (population.Count == 1)
+                {
+                    parent1Index = parent2Index = 0;
+                }
+                else
+                {
+                    parent1Index = ChooseParent(-1, bestFit1, Environment.k, type1, Environment.Alpha, Environment.Beta);
+                    parent2Index = ChooseParent(parent1Index, bestFit2, Environment.k, type2, Environment.Alpha,
+                        Environment.Beta);
+                }
+               // parent1Index = ChooseParent(-1, bestFit1, Environment.k, type1, Environment.Alpha, Environment.Beta);
+                //parent2Index = ChooseParent(parent1Index, bestFit2, Environment.k, type2, Environment.Alpha, Environment.Beta);
                 children.AddRange(this.population[parent1Index].Crossover(this.population[parent2Index]));
             }
 

@@ -21,7 +21,8 @@ namespace TSPAnde.Lib
         {
             //BalanceProportionCalc = new BalanceProportionMaxCalc();
             //BalanceProportionCalc = new BalanceProportionDispersionCalc();
-            BalanceProportionCalc = new BalanceProportionMaxWithSumCalc();
+            //BalanceProportionCalc = new BalanceProportionMaxWithSumCalc();
+            BalanceProportionCalc = new BalanceProportionMaxDevideByMin();
         }
 
         public static double GetBalanceProportion(List<double> distances, double distance){
@@ -88,6 +89,37 @@ namespace TSPAnde.Lib
                     Matrix[i,j] = problem.EdgeWeightsProvider.GetWeight(nodes[i-1],nodes[j-1]);
                 }
             }
+        }
+
+        //public int[] FindIntersections(int[] path)
+        //{
+        //    int a, b, c, d;
+        //    for (int i = 0; i < path.Length; i++)
+        //    {
+        //        a = path[i];
+        //        b = path[(i + 1)%path.Length];
+        //        c = path[(i + 2) % path.Length];
+        //        d = path[(i + 3) % path.Length];
+        //    }
+        //}
+    }
+
+    public class BalanceProportionMaxDevideByMin : IBalanceProportionCalc
+    {
+        public double GetBalanceProportion(List<double> distances, double distance)
+        {
+            double max = distances[0];
+            double min = distances[0];
+            for (int i = 1; i < distances.Count; i++)
+            {
+                if (distances[i] > max) max = distances[i];
+                if (distances[i] < min) min = distances[i];
+            }
+
+            if (min/max >= GA.Environment.BalanceCoefficient)
+                return distance;
+            
+            return GA.Environment.BigDist;
         }
     }
 
