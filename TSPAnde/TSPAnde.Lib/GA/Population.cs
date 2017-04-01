@@ -18,8 +18,10 @@ namespace TSPAnde.Lib.GA
             this.population = new List<Chromosome>();
             CurrentGeneration = 1;
 
-            MakeRandomPopulation(Environment.popSize);
+            MakeRandomPopulation(Environment.PopulationSize);
             CalculateBestFit();
+
+            TheBestChromosomeList = new List<Chromosome>();
         }
 
         public int CurrentGeneration { get; set; }
@@ -36,20 +38,25 @@ namespace TSPAnde.Lib.GA
 
         public Chromosome TheBest { get; set; }
 
-        public virtual void MakeRandomPopulation(int count)
+        private List<Gene> tempGeneList = null;
+        public void MakeRandomPopulation(int count)
         {
-            var tempGeneList = new List<Gene>();
-            for (int i = 1; i <= Environment.numCities; i++)
+            population = new List<Chromosome>();
+            if (tempGeneList == null)
             {
-                tempGeneList.Add(new Gene() { Id = i });
-            }
-
-            tempGeneList.First(x => x.Id == Environment.depoId).IsDepo = true;
-            if (Environment.travelers > 1)
-            {
-                for (int i = 1; i < Environment.travelers; i++)
+                tempGeneList = new List<Gene>();
+                for (int i = 1; i <= Environment.CityAmount; i++)
                 {
-                    tempGeneList.Add(new Gene { Id = Environment.depoId, IsDepo = true });
+                    tempGeneList.Add(new Gene() { Id = i });
+                }
+
+                tempGeneList.First(x => x.Id == Environment.DepoId).IsDepo = true;
+                if (Environment.TravelersAmount > 1)
+                {
+                    for (int i = 1; i < Environment.TravelersAmount; i++)
+                    {
+                        tempGeneList.Add(new Gene { Id = Environment.DepoId, IsDepo = true });
+                    }
                 }
             }
 
@@ -73,6 +80,7 @@ namespace TSPAnde.Lib.GA
       
         public void GenerateNewChildren(int k)
         {
+            ///TODO: OPTIMIZE!
             double bestFit1, bestFit2;
             int type1 = 1, type2 = 2;
             int parent1Index, parent2Index;
@@ -92,12 +100,12 @@ namespace TSPAnde.Lib.GA
             }
             else
             {
-                parent1Index = ChooseParent(-1, bestFit1, Environment.k, type1, Environment.Alpha, Environment.Beta);
-                parent2Index = ChooseParent(parent1Index, bestFit2, Environment.k, type2, Environment.Alpha,
+                parent1Index = ChooseParent(-1, bestFit1, Environment.SelectionCoefficient, type1, Environment.Alpha, Environment.Beta);
+                parent2Index = ChooseParent(parent1Index, bestFit2, Environment.SelectionCoefficient, type2, Environment.Alpha,
                     Environment.Beta);
             }
             var children = new List<Chromosome>();
-            while (children.Count <= k)
+            while (children.Count < k)
             {
                 if (population.Count == 1)
                 {
@@ -105,8 +113,8 @@ namespace TSPAnde.Lib.GA
                 }
                 else
                 {
-                    parent1Index = ChooseParent(-1, bestFit1, Environment.k, type1, Environment.Alpha, Environment.Beta);
-                    parent2Index = ChooseParent(parent1Index, bestFit2, Environment.k, type2, Environment.Alpha,
+                    parent1Index = ChooseParent(-1, bestFit1, Environment.SelectionCoefficient, type1, Environment.Alpha, Environment.Beta);
+                    parent2Index = ChooseParent(parent1Index, bestFit2, Environment.SelectionCoefficient, type2, Environment.Alpha,
                         Environment.Beta);
                 }
                // parent1Index = ChooseParent(-1, bestFit1, Environment.k, type1, Environment.Alpha, Environment.Beta);
@@ -115,8 +123,8 @@ namespace TSPAnde.Lib.GA
             }
 
             //TODO: try
-            //Mutation(children);
-            //this.population = this.population.Concat(children).ToList();
+            Mutation(children);
+            this.population = this.population.Concat(children).ToList();
         }
 
         private int ChooseParent(int another, double maxFit, int k, int type, double alpha = 1, double beta = 1)
@@ -130,6 +138,26 @@ namespace TSPAnde.Lib.GA
             foreach (var item in chromosomes)
             {
                 item.CalculateDistance();
+            }
+        }
+
+        public void Crossover()
+        {
+            var toCrossover = new List<int>();
+            for (int i = 0; i < population.Count; i++)
+            {
+                if (Randomizer.Random.NextDouble() < Environment.CrossoverProbability)
+                {
+                    toCrossover.Add(i);
+                }
+            }
+
+            toCrossover.Shuffle();
+            for (int i = 0; i < toCrossover.Count-1; i+=2)
+            {
+                var children = population[toCrossover[i]].Crossover(population[toCrossover[i + 1]]);
+                population[toCrossover[i]] = children[0];
+                population[toCrossover[i+1]] = children[1];
             }
         }
 
@@ -190,6 +218,7 @@ namespace TSPAnde.Lib.GA
                 {
                     TheBest = BestOneFitChromosome.Copy();
                     TheBest.CalculateDistance();
+                    CurrentStuckIteration = 0;
                 }
 
             }
@@ -198,27 +227,51 @@ namespace TSPAnde.Lib.GA
                 GetBestFit1();
                 GetBestFit2();
             }
+
+            CheckForMaxStuckIterations();
+        }
+
+        public int CurrentStuckIteration { get; set; }
+        public List<Chromosome> TheBestChromosomeList { get; set; }
+        public void CheckForMaxStuckIterations()
+        {
+            if (++CurrentStuckIteration >= Environment.MaximumStuckIteration)
+            {
+                TheBestChromosomeList.Add(TheBest.Copy());
+                TheBest = null;
+                MakeRandomPopulation(Environment.PopulationSize);
+
+                if (TheBestChromosomeList.Count % Environment.SelectionCoefficient == 0)
+                {
+                    population = new List<Chromosome>();
+                    for (int i = TheBestChromosomeList.Count-Environment.SelectionCoefficient; i < TheBestChromosomeList.Count; i++)
+                    {
+                        population.Add(TheBestChromosomeList[i].Copy());
+                    }
+                }
+            }
+
         }
 
         public void GetBestFit()
         {
             var index = TheBestAtByOneFit();
             this.BestOneFit = this.population[index].GetOneFit(Environment.Alpha, this.Environment.Beta);
-            this.BestOneFitChromosome = this.population[index];
+            this.BestOneFitChromosome = this.population[index].Copy();
         }
 
         public void GetBestFit1()
         {
             var index = TheBestAtByFit1();
             this.BestFit1 = this.population[index].Fit1;
-            this.BestFit1Chromosome = this.population[index];
+            this.BestFit1Chromosome = this.population[index].Copy();
         }
 
         public void GetBestFit2()
         {
             var index = TheBestAtByFit2();
             this.BestFit2 = this.population[index].Fit2;
-            this.BestFit2Chromosome = this.population[index];
+            this.BestFit2Chromosome = this.population[index].Copy();
         }
 
         #endregion
@@ -226,8 +279,9 @@ namespace TSPAnde.Lib.GA
         public void NextGeneration()
         {
             Selection();
-            GenerateNewChildren(Environment.popSize - Environment.k);
-            Mutation(population);
+            //Crossover();
+            GenerateNewChildren(Environment.PopulationSize - population.Count);
+            //Mutation(population);
             CalculateBestFit();
             
             this.CurrentGeneration++;

@@ -85,9 +85,9 @@ namespace TSPAnde.Lib.GA
         public virtual List<Chromosome> Crossover(Chromosome second)
         {
             //TODO try new crossover:
-            var result = ChromosomeOperator.Crossover(this.genes, second.genes, Environment);
-            this.genes = result[0].genes;
-            second.genes = result[1%result.Count].genes;
+            //var result = ChromosomeOperator.Crossover(this.genes, second.genes, Environment);
+            //this.genes = result[0].genes;
+            //second.genes = result[1%result.Count].genes;
 
             return ChromosomeOperator.Crossover(this.genes, second.genes, Environment);
         }
@@ -119,7 +119,7 @@ namespace TSPAnde.Lib.GA
                 //temp = this.t[i].distanceTo(this.t[(i + 1) % this.t.Count]);
             }
 
-            if (Distances.Count > Environment.travelers)
+            if (Distances.Count > Environment.TravelersAmount)
             {
                 Distances[0] += Distances[trevelid];
                 Distances.RemoveAt(trevelid);

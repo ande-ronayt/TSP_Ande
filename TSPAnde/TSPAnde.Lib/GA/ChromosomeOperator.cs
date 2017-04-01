@@ -134,12 +134,26 @@ namespace TSPAnde.Lib.GA
     {
         public void Mutation(List<Chromosome> chromosomes, Environment Environment)
         {
-            var m = chromosomes.Count / 5;
+            var rsmMutationList = new List<Chromosome>();
+            var psmMutationList = new List<Chromosome>();
+            foreach (var item in chromosomes)
+            {
+                if (Randomizer.Random.NextDouble() < 0.5)
+                    rsmMutationList.Add(item);
+                else psmMutationList.Add(item);
+            }
+
             var rsmMutation = new MutationOperatorRSM();
             var psmMutation = new MutationOperatorPSM();
+            rsmMutation.Mutation(rsmMutationList, Environment);
+            psmMutation.Mutation(psmMutationList, Environment);
 
-            rsmMutation.Mutation(chromosomes.Take(m).ToList(), Environment);
-            psmMutation.Mutation(chromosomes.Skip(m).ToList(), Environment);
+            //var m = chromosomes.Count / 5;
+            //var rsmMutation = new MutationOperatorRSM();
+            //var psmMutation = new MutationOperatorPSM();
+
+            //rsmMutation.Mutation(chromosomes.Take(m).ToList(), Environment);
+            //psmMutation.Mutation(chromosomes.Skip(m).ToList(), Environment);
         }
     }
 
@@ -151,33 +165,23 @@ namespace TSPAnde.Lib.GA
             List<Gene> middle;
             foreach (var item in chromosomes)
             {
-                if (Randomizer.Random.NextDouble() < Environment.mutRate)
+                if (Randomizer.Random.NextDouble() < Environment.MutationProbability)
                 {
-                    int i = Randomizer.Random.Next(0, item.genes.Count);
-                    int j = Randomizer.Random.Next(0, item.genes.Count);
-                    if (i > j)
+                    int i,j;
+                    do
                     {
-                        var tmp = i;
-                        i = j;
-                        j = tmp;
-                    }
-
+                        i = Randomizer.Random.Next(0, item.genes.Count);
+                        j = Randomizer.Random.Next(0, item.genes.Count);
+                    } while (i >= j);
+                    
                     start = item.genes.Take(i);
                     middle = item.genes.Skip(i).Take(j - i).ToList();
                     end = item.genes.Skip(j);
 
-                    //shuffle middle:
-                    for (int k = 0; k < middle.Count; k++)
-                    {
-                        var ii = Randomizer.Random.Next(middle.Count);
-                        var tmp = middle[ii];
-                        middle[ii] = middle[k];
-                        middle[k] = tmp;
-                    }
+                    middle.Shuffle();
 
                     item.genes = start.Concat(middle).Concat(end).ToList();
                 }
-
             }
         }
     }
@@ -202,7 +206,7 @@ namespace TSPAnde.Lib.GA
             IEnumerable<Gene> start, middle, end;
             foreach (var item in chromosomes)
             {
-                if (Randomizer.Random.NextDouble() < Environment.mutRate)
+                if (Randomizer.Random.NextDouble() < Environment.MutationProbability)
                 {
                     int i = Randomizer.Random.Next(0, item.genes.Count);
                     int j = Randomizer.Random.Next(0, item.genes.Count);
@@ -232,7 +236,7 @@ namespace TSPAnde.Lib.GA
             {
                 int c = 0;
                 do{
-                    if (Randomizer.Random.NextDouble() < Environment.mutRate)
+                    if (Randomizer.Random.NextDouble() < Environment.MutationProbability)
                     {
                         //random swap
                         int i = Randomizer.Random.Next(0, item.genes.Count);
@@ -242,7 +246,7 @@ namespace TSPAnde.Lib.GA
                         item.genes[j] = tmpGene;
                     }
                     
-                }while(++c < Environment.countMut);
+                }while(++c < Environment.RandomTwoPointsMutationAmount);
                 
                 
             }

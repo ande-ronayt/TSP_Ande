@@ -36,7 +36,7 @@ namespace WinFormApp
             var alpha = population.Environment.Alpha;
             var beta = population.Environment.Beta;
             var newChromosome = population.TheBest;
-            if (newChromosome.GetOneFit(alpha,beta) > BestList.Last().Chromosome.GetOneFit(alpha, beta))
+            if (newChromosome != null && newChromosome.GetOneFit(alpha,beta) > BestList.Last().Chromosome.GetOneFit(alpha, beta))
             {
                 BestList.Add(new Timer(DateTime.Now, population.CurrentGeneration, newChromosome));
 

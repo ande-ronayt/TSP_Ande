@@ -31,7 +31,7 @@ namespace TSPAnde.Lib
 
         public static DistanceOperator dOperator;
         public static void InitializeOperator(DistanceOperator op, GA.Environment environment){
-            environment.numCities = op.Size;
+            environment.CityAmount = op.Size;
             dOperator = op;
         }
 

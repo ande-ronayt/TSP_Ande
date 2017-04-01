@@ -199,8 +199,8 @@ TODO:
             }
 
             var environment = new TSPAnde.Lib.GA.Environment();
-            environment.travelers = travelers;
-            environment.depoId = int.Parse(cmbDepoId.Text);
+            environment.TravelersAmount = travelers;
+            environment.DepoId = int.Parse(cmbDepoId.Text);
 
             DistanceOperator.InitializeOperator(dOp, environment);
             Population population = new Population(environment);
@@ -330,7 +330,7 @@ BestList from problem: {5}",
                 var tours = ControlProgram.SplitDistances(tour);
                 var g = pictureBox1.CreateGraphics();
                 g.Clear(Color.White);
-                DrawAllPoints(ControlProgram.Environment.depoId);
+                DrawAllPoints(ControlProgram.Environment.DepoId);
                 for (int j = 0; j < tours.Count; j++)
                 {
 
@@ -509,7 +509,7 @@ BestList from problem: {5}",
 
             tour = tour.Substring(tour.IndexOf("-", tour.IndexOf("BD:")) + 1);
             var ids = tour.Split('-');
-            var depoId = Environment.depoId;
+            var depoId = Environment.DepoId;
             var tours = new List<string>() {string.Empty};
             int curr = 0;
             for (int i = 0; i < ids.Length; i++)

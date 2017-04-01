@@ -14,5 +14,17 @@ namespace TSPAnde.Lib
         {
             Random = new Random();
         }
+
+        public static void Shuffle<T>(this List<T> list)
+        {
+            for (int i = 0, j; i < list.Count; i++)
+            {
+                j = Random.Next(list.Count);
+                //permute
+                var tmp = list[i];
+                list[i] = list[j];
+                list[j] = tmp;
+            }
+        }
     }
 }

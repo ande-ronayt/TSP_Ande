@@ -35,18 +35,59 @@ namespace TSPAnde.Lib.GA
             set { lock (lockObj) { _beta = value; } }
         }
 
-        public int elitism = 0;
-        public int depoId = 1;
-        public static int BigDist = 9999;
-        public  int numCities = 20;
-        public double mutRate = 0.05;
-        public int popSize = 60;
-        public int k = 12;
-        public int travelers = 3;
-        public int countMut { get { return (int)(numCities * 0.1)+2; } }
+        public double CrossoverProbability { get; set; }
+
+        public double MutationProbability { get; set; }
+
+        public int PopulationSize { get; set; }
+
+        public int SelectionCoefficient { get; set; }
+
+        private int _travelersAmount;
+        public int TravelersAmount { get { return _travelersAmount; } set { _travelersAmount = value;  BigDist = int.MaxValue / value; } }
+
+        public int CityAmount { get; set; }
+
+        public int Elitism { get; set; }
+       
+        public int DepoId { get; set; }
+
+        public int MaximumStuckIteration { get; set; }
+        //public int elitism = 4;
+        //public int depoId = 1;
+        //public  int numCities = 20;
+        //public double mutRate = 0.80;
+        //public int popSize = 60;
+        //public int k = 12;
+        //public int travelers = 3;
+
+        public int RandomTwoPointsMutationAmount { get { return (int)(CityAmount * 0.1)+2; } }
 
         public bool IsuseOneFit = true;
 
         public static double BalanceCoefficient = 0.7;
+
+        public Environment()
+        {
+            CrossoverProbability = 0.8;
+            MutationProbability = 0.5;
+            PopulationSize = 60;
+            SelectionCoefficient = 8;
+
+            MaximumStuckIteration = 1000;
+
+            TravelersAmount = 3;
+            CityAmount = 20;
+            Elitism = 3;
+        }
+
+        public static int BigDist { get; set; }
+
+        public Environment(double mutP, double crosP, int popSize )
+        {
+            MutationProbability = mutP;
+            CrossoverProbability = crosP;
+            PopulationSize = popSize;
+        }
     }
 }

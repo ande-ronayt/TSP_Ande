@@ -22,7 +22,7 @@ namespace TSPAnde.Lib.GA
             //selectionOperator = new SelectionOperatorWheelOneFit();
             selectionOperator = new SelectionOperatorBestPlusRouletteWheel();
             //selectionOperator = new SelectionOperatorTournament();
-            selectionOperator = new SelectionOperatorMySelection();
+            //selectionOperator = new SelectionOperatorMySelection();
             Coefficient = 5;
         }
 
@@ -41,17 +41,31 @@ namespace TSPAnde.Lib.GA
             var alpha = population.Environment.Alpha;
             var beta = population.Environment.Alpha;
             var newPopulation = new List<Chromosome>();
-            newPopulation.Add(population.TheBest.Copy());
+            var toMutatePopulation = new List<Chromosome>();
+
+            // add the best solution
+            //newPopulation.Add(population.TheBest.Copy());
+
+            //add the best current solution
             int index = population.TheBestAtByOneFit();
-            var bestCurrentChromosome = population.population[index];
+            var bestCurrentChromosome = population.population[index]; 
             newPopulation.Add(bestCurrentChromosome);
             population.population.RemoveAt(index);
 
-            var mutTheBest = new List<Chromosome> {population.TheBest.Copy()};
-            ChromosomeOperator.Mutation(mutTheBest, population.Environment);
-            newPopulation.Add(mutTheBest[0]);
+            //RSM and PSM
+            toMutatePopulation.Add(population.TheBest.Copy());
+            toMutatePopulation.Add(population.TheBest.Copy());
+            var mutR = population.Environment.MutationProbability;
+            population.Environment.MutationProbability = 1;
+            new MutationOperatorHalfRSMHalfPSM().Mutation(toMutatePopulation, population.Environment);
+            foreach (var item in toMutatePopulation)
+            {
+                item.CalculateDistance();
+                newPopulation.Add(item);
+            }
 
-            while (newPopulation.Count < population.Environment.popSize)
+            population.Environment.MutationProbability = mutR;
+            while (newPopulation.Count < population.Environment.PopulationSize)
             {
                 while (true)
                 {
@@ -59,8 +73,7 @@ namespace TSPAnde.Lib.GA
                     if (Randomizer.Random.NextDouble() <
                         population.population[index].GetOneFit(alpha, beta) / (bestCurrentChromosome.GetOneFit(alpha, beta)))
                     {
-                        newPopulation.Add(population.population[index]);
-                        population.population.RemoveAt(index);
+                        newPopulation.Add(population.population[index].Copy());
                         break;
                     }
                 }
@@ -80,7 +93,7 @@ namespace TSPAnde.Lib.GA
             int index = population.TheBestAtByOneFit();
             var bestChromosome = population.population[index];
             var newPopulation = new List<Chromosome>();
-            var k = population.Environment.k;
+            var k = population.Environment.SelectionCoefficient;
             while ((k--) > 0)
             {
                 while (true)
@@ -98,7 +111,7 @@ namespace TSPAnde.Lib.GA
 
             population.population = newPopulation;
             newPopulation = new List<Chromosome>();
-            var e = population.Environment.elitism;
+            var e = population.Environment.Elitism;
             while (e-- > 0)
             {
                 index = population.TheBestAtByOneFit();
@@ -116,12 +129,12 @@ namespace TSPAnde.Lib.GA
         {
             var alpha = population.Environment.Alpha;
             var beta = population.Environment.Alpha;
-            var k = population.Environment.k;
+            var k = population.Environment.SelectionCoefficient;
             int index = population.TheBestAtByOneFit();
             var bestChromosome = population.population[index];
 
             var newPopulation = new List<Chromosome>();
-            var e = population.Environment.elitism;
+            var e = population.Environment.Elitism;
             while (e-- > 0)
             {
                 index = population.TheBestAtByOneFit();
@@ -129,7 +142,7 @@ namespace TSPAnde.Lib.GA
                 population.population.RemoveAt(index);
             }
 
-            while (population.population.Count > 0 && (k-- ) > population.Environment.elitism)
+            while (population.population.Count > 0 && (k-- ) > population.Environment.Elitism)
             {
                 while (true)
                 {
@@ -154,7 +167,7 @@ namespace TSPAnde.Lib.GA
         {
             var alpha = population.Environment.Alpha;
             var beta = population.Environment.Alpha;
-            var k = population.Environment.k;
+            var k = population.Environment.SelectionCoefficient;
             int index = population.TheBestAtByOneFit();
             var bestChromosome = population.population[index];
 
@@ -191,11 +204,11 @@ namespace TSPAnde.Lib.GA
             var chromosome = population.population[index];
             var ratio = chromosome.Fit2 / chromosome.Fit1;
 
-            var k = population.Environment.k;
+            var k = population.Environment.SelectionCoefficient;
             while (k-- > 0)
             {
                 //randomize alpha 
-                if (population.Environment.travelers > 1 && population.Environment.Beta != 0 && population.Environment.Alpha == 0)
+                if (population.Environment.TravelersAmount > 1 && population.Environment.Beta != 0 && population.Environment.Alpha == 0)
                     population.Environment.Alpha *= Randomizer.Random.Next(SelectionOperator.Coefficient)*ratio;
                 
                 index = population.TheBestAtByOneFit();
@@ -217,7 +230,7 @@ namespace TSPAnde.Lib.GA
             int k;
             if (population.Environment.IsuseOneFit)
             {
-                k = population.Environment.k;
+                k = population.Environment.SelectionCoefficient;
                 while (k-- > 0)
                 {
                     var index = population.TheBestAtByOneFit();
@@ -227,7 +240,7 @@ namespace TSPAnde.Lib.GA
             }
             else
             {
-                k = population.Environment.k / 2;
+                k = population.Environment.SelectionCoefficient / 2;
                 while (k-- > 0)
                 {
                     var index = population.TheBestAtByFit1();
@@ -235,7 +248,7 @@ namespace TSPAnde.Lib.GA
                     population.population.RemoveAt(index);
                 }
 
-                k = population.Environment.k - population.Environment.k / 2;
+                k = population.Environment.SelectionCoefficient - population.Environment.SelectionCoefficient / 2;
                 while (k-- > 0)
                 {
                     var index = population.TheBestAtByFit2();
