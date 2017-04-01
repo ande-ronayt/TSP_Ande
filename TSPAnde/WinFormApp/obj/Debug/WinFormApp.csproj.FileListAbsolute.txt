@@ -81,3 +81,17 @@ C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\WinFormApp\obj\D
 C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\WinFormApp\obj\Debug\WinFormApp.csproj.GenerateResource.Cache
 C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\WinFormApp\bin\Debug\WinFormApp.exe
 C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\WinFormApp\bin\Debug\WinFormApp.pdb
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WinFormApp\bin\Debug\WinFormApp.exe.config
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WinFormApp\obj\Debug\WinFormApp.exe
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WinFormApp\obj\Debug\WinFormApp.pdb
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WinFormApp\bin\Debug\WinFormApp.exe
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WinFormApp\bin\Debug\WinFormApp.pdb
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WinFormApp\bin\Debug\TSPAnde.Lib.dll
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WinFormApp\bin\Debug\TspLibNet.dll
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WinFormApp\bin\Debug\TSPAnde.Lib.pdb
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WinFormApp\bin\Debug\TspLibNet.xml
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WinFormApp\obj\Debug\WinFormApp.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WinFormApp\obj\Debug\WinFormApp.ChooseOperatorForm.resources
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WinFormApp\obj\Debug\WinFormApp.Form1.resources
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WinFormApp\obj\Debug\WinFormApp.Properties.Resources.resources
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WinFormApp\obj\Debug\WinFormApp.csproj.GenerateResource.Cache

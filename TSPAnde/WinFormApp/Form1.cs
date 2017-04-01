@@ -30,9 +30,11 @@ namespace WinFormApp
             catch { }
         }
 
-        string MYTODO = 
+        string MYTODO =
 @"Q:
 Замечания:
+*** Analyzing the Performance of Mutation Operators to Solve the Travelling Salesman Problem -- 33 says that OX is better
+**** AEX works bad if don't use shortes distance
 *** попробовать инверсное вставочную мутацию. работает!! 
 0. После анализа решений пришел к выводу, что необходимо рандомное ставочное решеине. 
 1. При пересечени, возможные варианты... реверс пути, иначе, при разовой мутации пересечение уберается, но добавляется новое и с длинным путем. 
@@ -75,14 +77,14 @@ TODO:
 
         public List<Point> Points { get; set; }
 
-        static string tspLibPath = "\\\\Mac\\Home\\Documents\\Visual Studio 2013\\Projects\\TSP_Ande\\TSPAnde\\TSPLIB95";
+        static string tspLibPath = "\\\\Mac\\Home\\Documents\\Visual Studio 2013\\Projects\\TSPLIB95";
         ControlProgram cp = new ControlProgram();
         public Form1()
         {
             InitializeComponent();
             Points = new List<Point>();
             MessageBox.Show(MYTODO);
-          //  DisplayTspLib95Data();
+            DisplayTspLib95Data();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -93,8 +95,18 @@ TODO:
 
         private void DisplayTspLib95Data()
         {
-            TspLib95 lib = new TspLib95(tspLibPath);
-            var tspList = lib.LoadAllTSP().ToList();
+            TspLib95 lib;
+            List<TspLib95Item> tspList;
+            try
+            {
+                lib = new TspLib95(tspLibPath);
+                tspList = lib.LoadAllTSP().ToList();
+            }
+            catch(Exception){
+                MessageBox.Show("Please choose TspLib95 path");
+                return;
+            }
+
             var info = "";
             
             for(var i=0; i< tspList.Count; i++)
@@ -473,7 +485,7 @@ BestList from problem: {5}",
     public class ControlProgram
     {
         #region TspLibPath
-        static string tspLibPath = "\\\\Mac\\Home\\Documents\\Visual Studio 2013\\Projects\\TSP_Ande\\TSPAnde\\TSPLIB95";
+        static string tspLibPath = "\\\\Mac\\Home\\Documents\\Visual Studio 2013\\Projects\\TSPLIB95";//"\\\\Mac\\Home\\Documents\\Visual Studio 2013\\Projects\\TSP_Ande\\TSPAnde\\TSPLIB95";
 
         public string GetLibPath
         {

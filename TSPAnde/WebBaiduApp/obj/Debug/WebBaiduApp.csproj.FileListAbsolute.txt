@@ -20,3 +20,31 @@ C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\
 C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\WebBaiduApp\obj\Debug\WebBaiduApp.csprojResolveAssemblyReference.cache
 C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\WebBaiduApp\obj\Debug\WebBaiduApp.dll
 C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\WebBaiduApp\obj\Debug\WebBaiduApp.pdb
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\WebBaiduApp.dll.config
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\WebBaiduApp.dll
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\WebBaiduApp.pdb
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\Microsoft.Web.Infrastructure.dll
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\Newtonsoft.Json.dll
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\System.Net.Http.Formatting.dll
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\System.Web.Helpers.dll
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\System.Web.Http.dll
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\System.Web.Http.WebHost.dll
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\System.Web.Mvc.dll
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\System.Web.Razor.dll
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\System.Web.WebPages.Deployment.dll
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\System.Web.WebPages.dll
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\System.Web.WebPages.Razor.dll
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\Newtonsoft.Json.xml
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\System.Net.Http.Formatting.xml
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\System.Web.Helpers.xml
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\System.Web.Http.xml
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\System.Web.Http.WebHost.xml
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\System.Web.Mvc.xml
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\System.Web.Razor.xml
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\System.Web.WebPages.xml
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\System.Web.WebPages.Deployment.xml
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\System.Web.WebPages.Razor.xml
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\obj\Debug\WebBaiduApp.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\obj\Debug\WebBaiduApp.dll
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\obj\Debug\WebBaiduApp.pdb

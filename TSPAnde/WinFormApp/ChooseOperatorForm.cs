@@ -54,7 +54,7 @@ namespace WinFormApp
 
         private void rbCrossoverTwoPoint_CheckedChanged(object sender, EventArgs e)
         {
-            ChromosomeOperator.ChangeOperator(new CrossoverOperatorTwoPoints());
+            ChromosomeOperator.ChangeOperator(new CrossoverOperatorOX());
         }
 
         private void rbBalanceProportionDispersion_CheckedChanged(object sender, EventArgs e)

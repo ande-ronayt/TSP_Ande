@@ -47,11 +47,13 @@
   <ItemGroup>
     <Compile Include="DistanceOperator.cs" />
     <Compile Include="GA\City.cs" />
+    <Compile Include="GA\CrossoverOperator.cs" />
     <Compile Include="GA\Environment.cs" />
     <Compile Include="GA\ChooseParentOperator.cs" />
     <Compile Include="GA\Chromosome.cs" />
     <Compile Include="GA\ChromosomeOperator.cs" />
     <Compile Include="GA\Gene.cs" />
+    <Compile Include="GA\MutationOperator.cs" />
     <Compile Include="GA\Population.cs" />
     <Compile Include="GA\SelectionOperator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

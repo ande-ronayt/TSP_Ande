@@ -63,6 +63,8 @@ namespace TSPAnde.Lib.GA
 
         public int RandomTwoPointsMutationAmount { get { return (int)(CityAmount * 0.1)+2; } }
 
+        public double IncertionReverseProbability { get; set; }
+
         public bool IsuseOneFit = true;
 
         public static double BalanceCoefficient = 0.7;
@@ -73,6 +75,8 @@ namespace TSPAnde.Lib.GA
             MutationProbability = 0.5;
             PopulationSize = 60;
             SelectionCoefficient = 8;
+
+            IncertionReverseProbability = 0.5;
 
             MaximumStuckIteration = 500;
 
