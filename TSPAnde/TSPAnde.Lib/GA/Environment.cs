@@ -74,7 +74,7 @@ namespace TSPAnde.Lib.GA
             PopulationSize = 60;
             SelectionCoefficient = 8;
 
-            MaximumStuckIteration = 1000;
+            MaximumStuckIteration = 500;
 
             TravelersAmount = 3;
             CityAmount = 20;

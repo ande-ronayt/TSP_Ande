@@ -43,3 +43,10 @@ C:\Users\greedy\Desktop\Lunwen\Programming\3.24\TSP_Ande_C\TSPAnde\TSPAnde.Lib\o
 \\Mac\Home\Documents\Visual Studio 2013\Projects\3.27\TSP_Ande\TSPAnde\TSPAnde.Lib\obj\Debug\TSPAnde.Lib.csprojResolveAssemblyReference.cache
 \\Mac\Home\Documents\Visual Studio 2013\Projects\3.27\TSP_Ande\TSPAnde\TSPAnde.Lib\obj\Debug\TSPAnde.Lib.dll
 \\Mac\Home\Documents\Visual Studio 2013\Projects\3.27\TSP_Ande\TSPAnde\TSPAnde.Lib\obj\Debug\TSPAnde.Lib.pdb
+C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\TSPAnde.Lib\bin\Debug\TSPAnde.Lib.dll
+C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\TSPAnde.Lib\bin\Debug\TSPAnde.Lib.pdb
+C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\TSPAnde.Lib\bin\Debug\TspLibNet.dll
+C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\TSPAnde.Lib\bin\Debug\TspLibNet.xml
+C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\TSPAnde.Lib\obj\Debug\TSPAnde.Lib.csprojResolveAssemblyReference.cache
+C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\TSPAnde.Lib\obj\Debug\TSPAnde.Lib.dll
+C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\TSPAnde.Lib\obj\Debug\TSPAnde.Lib.pdb

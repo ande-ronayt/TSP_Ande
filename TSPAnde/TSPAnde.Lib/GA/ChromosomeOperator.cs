@@ -24,6 +24,8 @@ namespace TSPAnde.Lib.GA
             //mutationOperator = new MutationOperatorRandomAndThenRSM();
             //mutationOperator = new MutationOperatorPSM();
             mutationOperator = new MutationOperatorHalfRSMHalfPSM();
+            mutationOperator = new MutationOperatorInsertions();
+            mutationOperator = new MutationOperatorHalfRSMHalfInsertins();
         }
 
         public static List<Chromosome> Crossover(List<Gene> firstParent, List<Gene> secondParent, Environment environment)
@@ -130,6 +132,73 @@ namespace TSPAnde.Lib.GA
     #endregion
     #region mutation
 
+    public class MutationOperatorHalfRSMHalfInsertins : IMutationOperator
+    {
+        public void Mutation(List<Chromosome> chromosomes, Environment Environment)
+        {
+            var rsmMutationList = new List<Chromosome>();
+            var insertionsMutationList = new List<Chromosome>();
+            foreach (var item in chromosomes)
+            {
+                if (Randomizer.Random.NextDouble() < 0.5)
+                    rsmMutationList.Add(item);
+                else insertionsMutationList.Add(item);
+            }
+
+            var rsmMutation = new MutationOperatorRSM();
+            var insertionMutation = new MutationOperatorInsertions();
+            rsmMutation.Mutation(rsmMutationList, Environment);
+            insertionMutation.Mutation(insertionsMutationList, Environment);
+        }
+    }
+
+    public class MutationOperatorInsertions : IMutationOperator
+    {
+        public void Mutation(List<Chromosome> chromosomes, Environment Environment)
+        {
+            foreach (var item in chromosomes)
+            {
+                if (!(Randomizer.Random.NextDouble() < Environment.MutationProbability)) continue;
+
+                int i, j, z;
+                i = Randomizer.Random.Next(0, item.genes.Count);
+                j = Randomizer.Random.Next(0, item.genes.Count);
+                if (i > j)
+                {
+                    var tmp = i;
+                    i = j;
+                    j = tmp;
+                }
+
+                if (j - i + 1 == item.genes.Count) continue;               
+
+                do
+                {
+                    z = Randomizer.Random.Next(0, item.genes.Count);
+                } while (z >= i && z <= j);
+
+                List<Gene> start, start2, end, end2;
+                List<Gene> middle;
+                if (z < i)
+                {
+                    start = item.genes.Take(z+1).ToList();
+                    start2 = item.genes.Skip(z+1).Take(i-z-1).ToList();
+                    middle = item.genes.Skip(i).Take(j - i + 1).ToList();
+                    end = item.genes.Skip(j + 1).ToList();
+                    item.genes = start.Concat(middle).Concat(start2).Concat(end).ToList();
+                }
+                else
+                {
+                    start = item.genes.Take(i).ToList();
+                    middle = item.genes.Skip(i).Take(j - i + 1).ToList();
+                    end = item.genes.Skip(j + 1).Take(z - j).ToList();
+                    end2 = item.genes.Skip(z + 1).ToList();
+                    item.genes = start.Concat(middle).Concat(end).Concat(end2).ToList();
+                }
+            }
+        }
+    }
+
     public class MutationOperatorHalfRSMHalfPSM : IMutationOperator
     {
         public void Mutation(List<Chromosome> chromosomes, Environment Environment)
@@ -167,20 +236,30 @@ namespace TSPAnde.Lib.GA
             {
                 if (Randomizer.Random.NextDouble() < Environment.MutationProbability)
                 {
-                    int i,j;
+                    int i, j;
                     do
                     {
                         i = Randomizer.Random.Next(0, item.genes.Count);
                         j = Randomizer.Random.Next(0, item.genes.Count);
-                    } while (i >= j);
+                    } while (i == j);
+                    if (i > j)
+                    {
+                        var tmp = i;
+                        i = j;
+                        j = tmp;
+                    }
                     
                     start = item.genes.Take(i);
-                    middle = item.genes.Skip(i).Take(j - i).ToList();
-                    end = item.genes.Skip(j);
+                    middle = item.genes.Skip(i).Take(j - i+1).ToList();
+                    end = item.genes.Skip(j+1);
 
                     middle.Shuffle();
 
                     item.genes = start.Concat(middle).Concat(end).ToList();
+                    if (item.genes.Count == 47)
+                    {
+                        ;
+                    }
                 }
             }
         }
@@ -208,8 +287,12 @@ namespace TSPAnde.Lib.GA
             {
                 if (Randomizer.Random.NextDouble() < Environment.MutationProbability)
                 {
-                    int i = Randomizer.Random.Next(0, item.genes.Count);
-                    int j = Randomizer.Random.Next(0, item.genes.Count);
+                    int i, j;
+                    do
+                    {
+                        i = Randomizer.Random.Next(0, item.genes.Count);
+                        j = Randomizer.Random.Next(0, item.genes.Count);
+                    } while (i == j);
                     if (i > j)
                     {
                         var tmp = i;
@@ -218,8 +301,8 @@ namespace TSPAnde.Lib.GA
                     }
 
                     start = item.genes.Take(i);
-                    middle = item.genes.Skip(i).Take(j - i);
-                    end = item.genes.Skip(j);
+                    middle = item.genes.Skip(i).Take(j - i +1);
+                    end = item.genes.Skip(j+1);
 
                     item.genes = start.Concat(middle.Reverse()).Concat(end).ToList();
                 }
