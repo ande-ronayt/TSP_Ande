@@ -1,0 +1,19 @@
+﻿html, body, .container {
+    height: 100%;
+}
+        
+#header, #footer {
+        height: 10%;
+}
+
+#body {
+    min-height: 80%;
+}
+
+#allmap {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: "微软雅黑";
+}
+

@@ -1,0 +1,4 @@
+C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\ProgramManager\bin\Debug\ProgramManager.dll
+C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\ProgramManager\bin\Debug\ProgramManager.pdb
+C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\ProgramManager\obj\Debug\ProgramManager.dll
+C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\ProgramManager\obj\Debug\ProgramManager.pdb

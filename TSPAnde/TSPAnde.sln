@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormApp", "WinFormApp\WinFormApp.csproj", "{0024D510-70F1-48F1-AED1-CB1C61C03719}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgramManager", "ProgramManager\ProgramManager.csproj", "{B165E963-9C48-4A41-8A4E-56C4FBA37C73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBaiduApp", "WebBaiduApp\WebBaiduApp.csproj", "{0D1DAD0B-F600-4F1E-82D5-99C473C29EFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{0024D510-70F1-48F1-AED1-CB1C61C03719}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0024D510-70F1-48F1-AED1-CB1C61C03719}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0024D510-70F1-48F1-AED1-CB1C61C03719}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B165E963-9C48-4A41-8A4E-56C4FBA37C73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B165E963-9C48-4A41-8A4E-56C4FBA37C73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B165E963-9C48-4A41-8A4E-56C4FBA37C73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B165E963-9C48-4A41-8A4E-56C4FBA37C73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D1DAD0B-F600-4F1E-82D5-99C473C29EFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D1DAD0B-F600-4F1E-82D5-99C473C29EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D1DAD0B-F600-4F1E-82D5-99C473C29EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D1DAD0B-F600-4F1E-82D5-99C473C29EFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

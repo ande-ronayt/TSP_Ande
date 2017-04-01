@@ -67,3 +67,6 @@ C:\Users\greedy\Desktop\Lunwen\Programming\3.24\TSP_Ande_C\TSPAnde\WinFormApp\ob
 \\Mac\Home\Documents\Visual Studio 2013\Projects\3.27\TSP_Ande\TSPAnde\WinFormApp\obj\Debug\WinFormApp.Form1.resources
 \\Mac\Home\Documents\Visual Studio 2013\Projects\3.27\TSP_Ande\TSPAnde\WinFormApp\obj\Debug\WinFormApp.Properties.Resources.resources
 \\Mac\Home\Documents\Visual Studio 2013\Projects\3.27\TSP_Ande\TSPAnde\WinFormApp\obj\Debug\WinFormApp.csproj.GenerateResource.Cache
+C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\WinFormApp\bin\Debug\WinFormApp.exe.config
+C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\WinFormApp\obj\Debug\WinFormApp.exe
+C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\WinFormApp\obj\Debug\WinFormApp.pdb
