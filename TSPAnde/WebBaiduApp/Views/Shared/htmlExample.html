@@ -1,0 +1,96 @@
+<!-- Standrad Html file, in order don't work with VS -->
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Baidu API Example</title>
+    
+	<link href="~/../../../Scripts/css/HomePage.css" rel="stylesheet" />
+
+    <!-- Baidu script-->
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=GRiIouGyFQGMkYWSG0saCcOyellMvmt5"></script>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>   
+
+    <!-- Bootstrap framework-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="~/../../../Scripts/js/WorkingWithBaidu.js"></script>
+</head>
+<body>
+    <div class="container">
+       
+
+<!-- code for home/index -->    
+<!-- ADD:
+	add descriptions
+	save points to file
+	load from file
+	choose home
+	add icon for home
+-->
+
+
+
+<div id="header">
+        <h2>Balanced Multy TSP - Baidu Map Example</h2>
+    </div>
+    <div id="body">
+        <div class="mapContainer row">
+            <div class="mapContainer col-sm-8">
+                <div id="allmap"></div>
+            </div>
+            <div class="col-sm-4">
+            	<p class='text-center'>ToolBox: </p>
+            	<div class='row'>
+            		<div class="col-lg-4 text-center">
+            			<button class='btn' onclick="TestRoute()">Test route</button>
+            		</div>
+            		<div class="col-lg-4 text-center">
+            			<button class='btn' onclick="calculateAllDistances()">Calc Dist</button>
+            		</div>
+            		<div class="col-lg-4 text-center">
+            			<button class='btn' onclick="loadTestData()">Test Data</button>
+            		</div>
+            	</div>
+            	<div class='row'>
+            		<div class="col-lg-4 text-center">
+            			<button class='btn' onclick="findRoute()">Test route</button>
+            		</div>
+            		<div>
+            			<input class='text' type='text' value='1' />
+            		</div>
+            	</div>
+            	<div id='getDistanceProgressRow' class=' hide row'>
+	            	<div id="myProgress">
+					  	<div id="myBar"></div>
+					</div>
+            		<div id='getDistancesProgressBar'></div>
+            	</div>
+
+                <div id="pointsTable"></div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        Copyright
+    </div>    
+
+<script type="text/javascript">
+    $(function () {
+        var height = $(window).height();
+        $('#allmap').css("height", height*0.75 + "px");
+    })
+</script>
+
+<!-- End of home/index-->
+
+    </div>
+</body>
+</html>

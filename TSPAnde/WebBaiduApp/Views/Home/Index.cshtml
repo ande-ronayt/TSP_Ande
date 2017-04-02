@@ -17,87 +17,34 @@
                 <div id="allmap"></div>
             </div>
             <div class="col-sm-4">
-                <button class='btn' onclick="TestRoute()">Test route</button>
-                <br/>
-                ToolBox
-                <br />ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
-                <br />
-                ToolBox
+                <p class='text-center'>ToolBox: </p>
+                <div class='row'>
+                    <div class="col-lg-4 text-center">
+                        <button class='btn' onclick="TestRoute()">Test route</button>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <button class='btn' onclick="calculateAllDistances()">Calc Dist</button>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <button class='btn' onclick="loadTestData()">Test Data</button>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class="col-lg-4 text-center">
+                        <button class='btn' onclick="findRoute()">Test route</button>
+                    </div>
+                    <div>
+                        <input class='text' type='text' value='1' />
+                    </div>
+                </div>
+                <div id='getDistanceProgressRow' class=' hide row'>
+                    <div id="myProgress">
+                        <div id="myBar"></div>
+                    </div>
+                    <div id='getDistancesProgressBar'></div>
+                </div>
+
+                <div id="pointsTable"></div>
             </div>
         </div>
     </div>

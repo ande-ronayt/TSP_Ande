@@ -17,3 +17,41 @@
     font-family: "微软雅黑";
 }
 
+
+#allmap label{max-width:none;}
+
+#pointsTable .oneMarkerRow{
+	border-bottom: 1px dashed black;
+}
+
+#pointsTable .oneMarkerRow:last-child{
+	border-bottom: 0px;
+}
+
+#pointsTable{
+	border-bottom: 1px solid black;
+}
+
+#getDistanceProgressRow{
+	border: 1px solid black;
+	border-radius: 20%;
+	padding: 5%;
+}
+
+#myProgress {
+    width: 100%;
+    background-color: grey;
+}
+#myBar {
+    width: 1%;
+    height: 30px;
+    background-color: green;
+}
+
+.bgRed{
+	background-color: red;
+}
+
+.bgBlue{
+	background-color: blue;
+}
