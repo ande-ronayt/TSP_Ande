@@ -57,7 +57,7 @@ function showInfo(e) {
 }
 
 function setAsHome(indx){
-    alert("home" + indx);
+    $("#homeIdInput").val(indx+1);
 }
 
 function deleteMarker(indx){
@@ -192,24 +192,72 @@ function calculateAllDistances(){
 
 function findRoute(){
     //map.clearOverlays();
-    var mtspPath = getShortestPath();
+    getShortestPath();
+}
+
+function getShortestPath() {
+    var requestData = {};
+    requestData.Count = points.length;
+    requestData.Home = getHomeId();
+    requestData.DistancesList = converDistancesMatrixToList(distances);
+    requestData.DistancesMatrix = distances;
+    requestData.TravellerAmount = getTravellerAmount();
+    $.ajax({
+        type: 'post',
+        url: '/home/getShortestPath',
+        data: JSON.stringify(requestData),
+        contentType: 'application/json; charset=utf-8',
+        success: getShortestPathSuccess,
+        error: function (response) {
+            alert("error occured");
+        }
+    });
+}
+
+function converDistancesMatrixToList(ds) {
+    var disList = [];
+    for (var i = 0; i < ds.length; i++)
+        disList = disList.concat(ds[i]);
+    return disList;
+}
+
+function getShortestPathSuccess(response){
+    printPath(response);
+    var mtspPath = response;
     var fullPath = [];
-    for(var i = 0; i < mtspPath.length; i++){
+    for (var i = 0; i < mtspPath.length; i++) {
         var onePath = mtspPath[i];
         fullPath = fullPath.concat(onePath);
-        for(var j = 0; j < onePath.length - 1; j++){
-            drawRoute(onePath[j], onePath[j+1], colors[i])
+        for (var j = 0; j < onePath.length - 1; j++) {
+            drawRoute(onePath[j], onePath[j + 1], colors[i])
         }
     }
 
     drawPerson(fullPath);
 }
 
-function getShortestPath(){
-    var path = getRandomPath();
-    mPath = [];
-    mPath.push(path);
-    return mPath;
+function printPath(pathes){
+    var html = "";
+    var j;
+    for(var i = 0; i < pathes.length; i++){
+        html += "<div class='row'>"
+        html += "#" + (i+1) + " : ";
+        for(j = 0; j < pathes[i].length-1; j++){
+            html += pathes[i][j] + " - ";
+        }
+        html += pathes[i][j];
+        html += "</div>"
+    }
+
+    $("#path").html(html);
+}
+
+function getTravellerAmount() {
+    return $('#travAmInput').val();
+}
+
+function getHomeId() {
+    return $('#homeIdInput').val();
 }
 
 function getRandomPath(){
@@ -232,9 +280,9 @@ function getRandomPath(){
 
 function drawRoute(indx1, indx2, color) {
     {
-        var opacity = 0.45;
-        var path = directions[indx1][indx2][0];
-        map.addOverlay(new BMap.Polyline(path, {strokeColor: color,strokeOpacity:opacity,strokeWeight:6,enableMassClear:true}));
+    var opacity = 0.45;
+    var path = directions[indx1][indx2][0];
+    map.addOverlay(new BMap.Polyline(path, {strokeColor: color,strokeOpacity:opacity,strokeWeight:6,enableMassClear:true}));
     }
 }
 

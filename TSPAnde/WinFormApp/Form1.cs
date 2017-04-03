@@ -32,6 +32,9 @@ namespace WinFormApp
 
         string MYTODO =
 @"Q:
+Problems:
+1. If one city is really far from other, then it always will give bad fitness fanciton
+2. When it's imposible to find subtours with right proportion, then should use tsp for subtours. 
 Замечания:
 *** Analyzing the Performance of Mutation Operators to Solve the Travelling Salesman Problem -- 33 says that OX is better
 **** AEX works bad if don't use shortes distance

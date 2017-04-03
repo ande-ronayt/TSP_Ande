@@ -48,3 +48,7 @@ C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\WebBaiduApp\obj\
 \\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\obj\Debug\WebBaiduApp.csprojResolveAssemblyReference.cache
 \\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\obj\Debug\WebBaiduApp.dll
 \\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\obj\Debug\WebBaiduApp.pdb
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\TSPAnde.Lib.dll
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\TspLibNet.dll
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\TSPAnde.Lib.pdb
+\\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WebBaiduApp\bin\TspLibNet.xml

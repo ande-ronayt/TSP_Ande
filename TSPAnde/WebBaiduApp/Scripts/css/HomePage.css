@@ -17,6 +17,9 @@
     font-family: "微软雅黑";
 }
 
+#homeIdInput, #travAmInput{
+	width: 30%;
+}
 
 #allmap label{max-width:none;}
 

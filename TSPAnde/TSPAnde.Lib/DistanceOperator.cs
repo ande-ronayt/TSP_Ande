@@ -30,6 +30,20 @@ namespace TSPAnde.Lib
         }
 
         public static DistanceOperator dOperator;
+
+        public DistanceOperator(int count, IList<IList<double>> matrix)
+        {
+            Size = count;
+            Matrix = new double[Size + 1, Size + 1];
+            for (int i = 0; i < matrix.Count; i++)
+            {
+                for (int j = 0; j < matrix[i].Count; j++)
+                {
+                    Matrix[i, j] = matrix[i][j];
+                }
+            }
+        }
+
         public static void InitializeOperator(DistanceOperator op, GA.Environment environment){
             environment.CityAmount = op.Size;
             dOperator = op;
@@ -73,6 +87,7 @@ namespace TSPAnde.Lib
             Size = size;
             Matrix = new double[size + 1, size + 1];
         }
+
 
         /// <summary>
         /// Calculate by using TspLib95 functions

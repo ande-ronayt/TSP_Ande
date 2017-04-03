@@ -15,6 +15,11 @@
         <div class="mapContainer row">
             <div class="mapContainer col-sm-8">
                 <div id="allmap"></div>
+
+                <div id="path" class='row'>
+
+
+                </div>
             </div>
             <div class="col-sm-4">
                 <p class='text-center'>ToolBox: </p>
@@ -33,8 +38,15 @@
                     <div class="col-lg-4 text-center">
                         <button class='btn' onclick="findRoute()">Test route</button>
                     </div>
-                    <div>
-                        <input class='text' type='text' value='1' />
+                    <div class="col-lg-8">
+                        <div class='row'>
+                            <div class='col-sm-6'>
+                                 Home: <input id='homeIdInput' class='text' type='text' value='1' />
+                            </div>
+                            <div class='col-sm-6'>
+                                Travellers: <input id='travAmInput' class='text' type='text' value='1' />
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div id='getDistanceProgressRow' class=' hide row'>
