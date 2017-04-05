@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -52,7 +53,23 @@ namespace TSPAnde.Lib.GA
        
         public int DepoId { get; set; }
 
-        public int MaximumStuckIteration { get; set; }
+        private int _maxStuckIter;
+
+        public int MaximumStuckIteration
+        {
+            get
+            {
+                if (_maxStuckIter == 0)
+                {
+                    return CityAmount*1000;
+                }
+
+                return _maxStuckIter;
+            }
+            set { _maxStuckIter = value; }
+        }
+
+
         //public int elitism = 4;
         //public int depoId = 1;
         //public  int numCities = 20;
@@ -78,7 +95,7 @@ namespace TSPAnde.Lib.GA
 
             IncertionReverseProbability = 0.5;
 
-            MaximumStuckIteration = 500;
+            //MaximumStuckIteration = CityAmount*1000;
 
             TravelersAmount = 3;
             CityAmount = 20;

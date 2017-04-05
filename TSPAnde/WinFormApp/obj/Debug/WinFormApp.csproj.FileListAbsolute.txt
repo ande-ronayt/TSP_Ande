@@ -95,3 +95,19 @@ C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\WinFormApp\bin\D
 \\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WinFormApp\obj\Debug\WinFormApp.Form1.resources
 \\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WinFormApp\obj\Debug\WinFormApp.Properties.Resources.resources
 \\Mac\Home\Documents\Visual Studio 2013\Projects\4.1\TSP_Ande\TSPAnde\WinFormApp\obj\Debug\WinFormApp.csproj.GenerateResource.Cache
+C:\Users\greedy\Desktop\Lunwen\Programming\4.5\TSP_Ande\TSPAnde\WinFormApp\bin\Debug\WinFormApp.exe.config
+C:\Users\greedy\Desktop\Lunwen\Programming\4.5\TSP_Ande\TSPAnde\WinFormApp\bin\Debug\WinFormApp.exe
+C:\Users\greedy\Desktop\Lunwen\Programming\4.5\TSP_Ande\TSPAnde\WinFormApp\bin\Debug\WinFormApp.pdb
+C:\Users\greedy\Desktop\Lunwen\Programming\4.5\TSP_Ande\TSPAnde\WinFormApp\bin\Debug\TSPAnde.Lib.dll
+C:\Users\greedy\Desktop\Lunwen\Programming\4.5\TSP_Ande\TSPAnde\WinFormApp\bin\Debug\TspLibNet.dll
+C:\Users\greedy\Desktop\Lunwen\Programming\4.5\TSP_Ande\TSPAnde\WinFormApp\bin\Debug\TSPAnde.Lib.pdb
+C:\Users\greedy\Desktop\Lunwen\Programming\4.5\TSP_Ande\TSPAnde\WinFormApp\bin\Debug\TspLibNet.xml
+C:\Users\greedy\Desktop\Lunwen\Programming\4.5\TSP_Ande\TSPAnde\WinFormApp\obj\Debug\WinFormApp.csprojResolveAssemblyReference.cache
+C:\Users\greedy\Desktop\Lunwen\Programming\4.5\TSP_Ande\TSPAnde\WinFormApp\obj\Debug\WinFormApp.ChooseOperatorForm.resources
+C:\Users\greedy\Desktop\Lunwen\Programming\4.5\TSP_Ande\TSPAnde\WinFormApp\obj\Debug\WinFormApp.Form1.resources
+C:\Users\greedy\Desktop\Lunwen\Programming\4.5\TSP_Ande\TSPAnde\WinFormApp\obj\Debug\WinFormApp.Properties.Resources.resources
+C:\Users\greedy\Desktop\Lunwen\Programming\4.5\TSP_Ande\TSPAnde\WinFormApp\obj\Debug\WinFormApp.csproj.GenerateResource.Cache
+C:\Users\greedy\Desktop\Lunwen\Programming\4.5\TSP_Ande\TSPAnde\WinFormApp\obj\Debug\WinFormApp.exe
+C:\Users\greedy\Desktop\Lunwen\Programming\4.5\TSP_Ande\TSPAnde\WinFormApp\obj\Debug\WinFormApp.pdb
+C:\Users\greedy\Desktop\Lunwen\Programming\4.5\TSP_Ande\TSPAnde\WinFormApp\bin\Debug\ProgramManager.dll
+C:\Users\greedy\Desktop\Lunwen\Programming\4.5\TSP_Ande\TSPAnde\WinFormApp\bin\Debug\ProgramManager.pdb

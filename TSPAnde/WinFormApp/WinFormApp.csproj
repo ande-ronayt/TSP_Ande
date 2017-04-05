@@ -96,6 +96,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ProgramManager\ProgramManager.csproj">
+      <Project>{b165e963-9c48-4a41-8a4e-56c4fba37c73}</Project>
+      <Name>ProgramManager</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TSPAnde.Lib\TSPAnde.Lib.csproj">
       <Project>{e0efd161-510e-43d3-ad6b-2952f2ee8492}</Project>
       <Name>TSPAnde.Lib</Name>

@@ -24,8 +24,8 @@ namespace TSPAnde.Lib.GA
             //mutationOperator = new MutationOperatorRandomAndThenRSM();
             //mutationOperator = new MutationOperatorPSM();
             mutationOperator = new MutationOperatorHalfRSMHalfPSM();
-            mutationOperator = new MutationOperatorInsertionsWithReverse();
-            //mutationOperator = new MutationOperatorHalfRSMHalfInsertins();
+            //mutationOperator = new MutationOperatorInsertionsWithReverse();
+           // mutationOperator = new MutationOperatorHalfRSMHalfInsertins();
         }
 
         public static List<Chromosome> Crossover(List<Gene> firstParent, List<Gene> secondParent, Environment environment)

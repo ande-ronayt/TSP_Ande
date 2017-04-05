@@ -180,14 +180,35 @@ function calculateAllDistances(){
         directions.push(curDirection);
     }
 
-    for(var i =0; i<points.length; i++){
-        var point1 = points[i];
-        for(var j = 0; j < points.length; j++){
-            if (i == j) continue;
-            var point2 = points[j];
-            findDistanceBetweenTwoPoints(point1, point2);
-        }
-    }    
+    findDistanceWithSleep(0, 0, 50);
+    //for (var i = 0; i < points.length; i++) {
+    //    var point1 = points[i];
+    //    for (var j = 0; j < points.length; j++) {
+    //        if (i == j) continue;
+    //        var point2 = points[j];
+    //        findDistanceBetweenTwoPoints(point1, point2);
+    //    }
+    //}
+}
+
+function findDistanceWithSleep(i, j, sleepTime) {
+    var point1 = points[i];
+    if (i != j) {
+        var point2 = points[j];
+        findDistanceBetweenTwoPoints(point1, point2);
+    }
+
+    j++;
+    if (j == points.length) {
+        i++;
+        j = 0;
+    }
+    if (i < points.length) {
+        setTimeout(
+            findDistanceWithSleep(i, j, sleepTime),
+            sleepTime
+        );
+    }   
 }
 
 function findRoute(){
@@ -327,29 +348,43 @@ function findDistanceBetweenTwoPoints(point1, point2){
     driving.setPolicy(BMAP_DRIVING_POLICY_LEAST_DISTANCE);
     driving.search(point1, point2);
     driving.setSearchCompleteCallback(function (result) {
-        saveRoute(result);
-        writeDistance(result);
+        if (result.getStart() == undefined) {
+            findDistanceBetweenTwoPoints(point1, point2);
+        } else {
+            saveRoute(result);
+            writeDistance(result);
+        }
     });
 }
 
-function saveRoute(result){
+function saveRoute(result) {
+    try {
     var id1 = findIndex(result.getStart().point) + 1;
     var id2 = findIndex(result.getEnd().point) + 1;
 
     var route = result.getPlan(0).getRoute(0);
     directions[id1][id2].push(route.getPath());
+    } catch (e) {
+        alert(e);
+        console.error("writeDistance: " + e);
+    }
 }
 
-function writeDistance(result){
-    var id1 = findIndex(result.getStart().point) + 1;
-    var id2 = findIndex(result.getEnd().point) + 1;
+function writeDistance(result) {
+    try {
+        var id1 = findIndex(result.getStart().point) + 1;
+        var id2 = findIndex(result.getEnd().point) + 1;
 
-    var distance = result.getPlan(0).getDistance();
-    distance = extractDistance(distance);
+        var distance = result.getPlan(0).getDistance();
+        distance = extractDistance(distance);
 
-    distances[id1][id2] = distance;
-    getDistancesStatus++;
-    updateGetDistancesProgress();
+        distances[id1][id2] = distance;
+        getDistancesStatus++;
+        updateGetDistancesProgress();
+    } catch (e) {
+        alert(e);
+        console.error("writeDistance: " + e);
+    }
 }
 
 function updateGetDistancesProgress(){

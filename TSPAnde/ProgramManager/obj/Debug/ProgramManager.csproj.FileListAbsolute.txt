@@ -2,3 +2,12 @@ C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\ProgramManager\b
 C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\ProgramManager\bin\Debug\ProgramManager.pdb
 C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\ProgramManager\obj\Debug\ProgramManager.dll
 C:\Users\greedy\Desktop\Lunwen\Programming\4.1\TSP_Ande\TSPAnde\ProgramManager\obj\Debug\ProgramManager.pdb
+C:\Users\greedy\Desktop\Lunwen\Programming\4.5\TSP_Ande\TSPAnde\ProgramManager\bin\Debug\ProgramManager.dll
+C:\Users\greedy\Desktop\Lunwen\Programming\4.5\TSP_Ande\TSPAnde\ProgramManager\bin\Debug\ProgramManager.pdb
+C:\Users\greedy\Desktop\Lunwen\Programming\4.5\TSP_Ande\TSPAnde\ProgramManager\bin\Debug\TSPAnde.Lib.dll
+C:\Users\greedy\Desktop\Lunwen\Programming\4.5\TSP_Ande\TSPAnde\ProgramManager\bin\Debug\TspLibNet.dll
+C:\Users\greedy\Desktop\Lunwen\Programming\4.5\TSP_Ande\TSPAnde\ProgramManager\bin\Debug\TSPAnde.Lib.pdb
+C:\Users\greedy\Desktop\Lunwen\Programming\4.5\TSP_Ande\TSPAnde\ProgramManager\bin\Debug\TspLibNet.xml
+C:\Users\greedy\Desktop\Lunwen\Programming\4.5\TSP_Ande\TSPAnde\ProgramManager\obj\Debug\ProgramManager.csprojResolveAssemblyReference.cache
+C:\Users\greedy\Desktop\Lunwen\Programming\4.5\TSP_Ande\TSPAnde\ProgramManager\obj\Debug\ProgramManager.dll
+C:\Users\greedy\Desktop\Lunwen\Programming\4.5\TSP_Ande\TSPAnde\ProgramManager\obj\Debug\ProgramManager.pdb

@@ -8,6 +8,18 @@ namespace TSPAnde.Lib.GA
 {
     #region mutation
 
+    public enum MutationType
+    {
+        MutationOperatorHalfRSMHalfInsertins = 1,
+        MutationOperatorInsertionsWithReverse = 2,
+        MutationOperatorInsertions = 3,
+        MutationOperatorHalfRSMHalfPSM = 4,
+        MutationOperatorPSM = 5,
+        MutationOperatorRandomAndThenRSM = 6,
+        MutationOperatorRSM = 7,
+        MutationOperatorRandomTwoPoints = 8,
+    }
+
     public class MutationOperatorHalfRSMHalfInsertins : IMutationOperator
     {
         public void Mutation(List<Chromosome> chromosomes, Environment Environment)

@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProgramManager;
 using TSPAnde.Lib;
 using TSPAnde.Lib.GA;
 using TspLibNet;
@@ -33,6 +34,12 @@ namespace WinFormApp
         string MYTODO =
 @"Q:
 Problems:
+0. Report: T
+    Croosover,
+    Mutation,
+    Time - Generation - Total Distance
+
+
 1. If one city is really far from other, then it always will give bad fitness fanciton
 2. When it's imposible to find subtours with right proportion, then should use tsp for subtours. 
 Замечания:
@@ -85,6 +92,7 @@ TODO:
         public Form1()
         {
             InitializeComponent();
+            IsProgramAlive = true;
             Points = new List<Point>();
             MessageBox.Show(MYTODO);
             DisplayTspLib95Data();
@@ -215,17 +223,78 @@ TODO:
                 dOp = new DistanceOperator(this.Points.Count, Points);
             }
 
-            var environment = new TSPAnde.Lib.GA.Environment();
-            environment.TravelersAmount = travelers;
-            environment.DepoId = int.Parse(cmbDepoId.Text);
+            TspManager = new TSPManager(dOp, travelers, int.Parse(cmbDepoId.Text), NextGeneration);
+            ReportManager pManager = new ReportManager(1, 2, ControlProgram.tsp.Problem.Name);
+            TspManager.NextGenerationEvent += pManager.NextGeneration;
+            //TspManager.NextGenerationEvent += 
 
-            DistanceOperator.InitializeOperator(dOp, environment);
-            Population population = new Population(environment);
-            ControlProgram.Start(population, dOp, environment);
+            //var environment = new TSPAnde.Lib.GA.Environment();
+            //environment.TravelersAmount = travelers;
+            //environment.DepoId = int.Parse(cmbDepoId.Text);
+
+            //DistanceOperator.InitializeOperator(dOp, environment);
+            //Population population = new Population(environment);
+
+            ControlProgram.Start(TspManager.Population, TspManager.dOp, TspManager.Environment);
             btnRun.Enabled = true;
             btnChooseOperator.Enabled = true;
 
         }
+
+        public void NextGeneration(Population population)
+        {
+            SetControlPropertyThreadSafe(lblCurGen, "Text", "Gen: " + population.CurrentGeneration);
+            MyReport.CheckAndAddBest(ControlProgram.Population);
+            //lblCurGen.Text = "Gen: " + ControlProgram.Population.CurrentGeneration;
+
+            var p = population;
+            //GetBestFromProblem
+            var bestFromProblem = "null";
+            if (ControlProgram.tsp != null)
+            {
+                bestFromProblem = "Dis= " + ControlProgram.tsp.OptimalTourDistance;
+            }
+
+            if (population.Environment.IsuseOneFit)
+            {
+                if (MyReport.BestList.Count > 1 && MyReport.BestList.Last().Chromosome.ToString(population.Environment) == ControlProgram.LastTour)
+                    return;
+                SetControlPropertyThreadSafe(textBox1, "Text",
+                    string.Format(
+                        @"Distance: {0}  
+Fit {1} 
+Fit1 {4}
+Fit2 {5}
+Tour with Fit1: {2}
+BestList from problem: {3}",
+                        p.BestOneFitChromosome.Distance,    //1
+                        p.BestOneFit,                       //2
+                        p.BestOneFitChromosome,             //3 
+                        bestFromProblem,                    //4
+                        p.BestOneFitChromosome.Fit1,        //5
+                        p.BestOneFitChromosome.Fit2));      //6
+
+                DrawATour(p.BestOneFitChromosome.ToString(population.Environment), Color.Green);
+            }
+            #region two fit don't use
+            //two fit don't use
+            else
+            {
+                textBox1.Text = string.Format(
+                    @"Distance: {0}  
+Fit1: {1} 
+Fit2: {2} 
+Tour with Fit1: {3} 
+Tour with Fit2 {4}
+BestList from problem: {5}",
+                    p.BestFit1Chromosome.Distance, p.BestFit1, p.BestFit2, p.BestFit1Chromosome, p.BestFit2Chromosome,
+                    "null"); //ControlProgram.tsp.OptimalTourDistance??"null");
+                DrawATour(p.BestFit2Chromosome.ToString(ControlProgram.Environment), Color.Green);
+            }
+            #endregion
+        }
+
+        public TSPManager TspManager { get; set; }
 
         private void TransferTspLibItemToPoints()
         {
@@ -276,9 +345,13 @@ TODO:
             }
         }
 
+        public bool IsProgramAlive { get; set; }
+
         public void Process()
         {
-            while (true)
+            TspManager.Start((x => !IsProgramAlive));
+            //while (true)
+            while(false)
             {
                 
                 ControlProgram.Population.NextGeneration();
@@ -477,6 +550,11 @@ BestList from problem: {5}",
                 DrawAPoint(g, item, Color.Red);
             }
             DrawAPoint(g, Points[depoId - 1], Color.Blue);
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.IsProgramAlive = false;
         }
 
     }

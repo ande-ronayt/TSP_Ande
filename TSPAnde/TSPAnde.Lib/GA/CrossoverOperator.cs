@@ -7,6 +7,15 @@ using System.Threading.Tasks;
 namespace TSPAnde.Lib.GA
 {
     #region crossover
+
+    public enum CrossoverType
+    {
+        CrossoverOperatorOX = 1,
+        CrossoverOperatorAEXWithShortestDistance = 2,
+        CrossoverOperatorAEX = 3,
+        CrosooverOperatorPMX = 4
+    }
+
     public class CrossoverOperatorOX : ICrossoverOperator
     {
         public List<Chromosome> Crossover(List<Gene> first, List<Gene> second, Environment environment)
