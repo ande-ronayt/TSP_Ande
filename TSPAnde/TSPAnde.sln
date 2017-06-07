@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgramManager", "ProgramMa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBaiduApp", "WebBaiduApp\WebBaiduApp.csproj", "{0D1DAD0B-F600-4F1E-82D5-99C473C29EFC}"
 EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject", "ModelingProject\ModelingProject.modelproj", "{92AB1ED9-BDC5-43B5-97C0-71CE2F20B89B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{0D1DAD0B-F600-4F1E-82D5-99C473C29EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D1DAD0B-F600-4F1E-82D5-99C473C29EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D1DAD0B-F600-4F1E-82D5-99C473C29EFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92AB1ED9-BDC5-43B5-97C0-71CE2F20B89B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92AB1ED9-BDC5-43B5-97C0-71CE2F20B89B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92AB1ED9-BDC5-43B5-97C0-71CE2F20B89B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92AB1ED9-BDC5-43B5-97C0-71CE2F20B89B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

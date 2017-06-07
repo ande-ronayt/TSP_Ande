@@ -4,6 +4,8 @@ using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TSPAnde.Lib.GA.Crossover;
+using TSPAnde.Lib.GA.Mutation;
 
 namespace TSPAnde.Lib.GA
 {
@@ -17,15 +19,16 @@ namespace TSPAnde.Lib.GA
 
         static ChromosomeOperator()
         {
-            crossover = new CrossoverOperatorAEX();
-            //crossover = new CrosooverOperatorPMX();
+            //crossover = new CrossoverOperatorAEX();
+            //crossover = new CrossoverOperatorPMX();
+            crossover = new CrossoverOperatorOX(); 
             //mutationOperator = new MutationOperatorRandomTwoPoints();
-            //mutationOperator = new MutationOperatorRSM();
+            mutationOperator = new MutationOperatorRSM();
             //mutationOperator = new MutationOperatorRandomAndThenRSM();
             //mutationOperator = new MutationOperatorPSM();
-            mutationOperator = new MutationOperatorHalfRSMHalfPSM();
+            //mutationOperator = new MutationOperatorHalfRSMHalfPSM();
             //mutationOperator = new MutationOperatorInsertionsWithReverse();
-           // mutationOperator = new MutationOperatorHalfRSMHalfInsertins();
+           // mutationOperator = new MutationOperatorHalfRSMHalfInsertions();
         }
 
         public static List<Chromosome> Crossover(List<Gene> firstParent, List<Gene> secondParent, Environment environment)

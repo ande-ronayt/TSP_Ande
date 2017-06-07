@@ -1,0 +1,723 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="df2cf125-0efd-4771-b7df-9215b0969929"
+  name="Selection"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="4835c677-395c-4565-b1fb-89369824ba0c"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DTSPAnde.Lib.GA.Selection"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="c0042e67-3f66-4a97-8c8a-e639ab5b26bb"
+        name="SelectionOperator"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="98048577-b6a0-427b-9b81-c0108f1f3d09"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.Selection Type%3DSelectionOperator"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="59192a56-e149-45f4-af77-d5e843bc108b"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="06bbe049-2906-46bc-b5c1-ec0b50dfe3d2">
+                <propertyInstance
+                  Id="48edafb4-9dc9-4473-a479-ec55f0df9894"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6649dc35-c94a-4cf0-a916-d13f2a0dafc4">
+                <propertyInstance
+                  Id="8b06b4b1-d32c-4858-824a-072c1041953b"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="56949d1b-ab9d-457a-960e-8e334ace3877">
+                <propertyInstance
+                  Id="0a3ec54b-a6e8-4f54-aee1-017e086440e8"
+                  name="IsStatic"
+                  value="True" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ce1935c2-b26a-46aa-8423-f6ed60afffd2">
+                <propertyInstance
+                  Id="1970958c-0984-4fe6-b1ac-53e8a7c631ad"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="69108b4e-874d-48f0-97c2-8669640008d8">
+                <propertyInstance
+                  Id="905a6e1c-645e-4bcb-ad41-30c0b404e3c3"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="ed9f44e4-1a7a-417a-aec8-34519d1fcd55"
+            isDerived="false"
+            sourceEndRoleName="SelectionOperator"
+            targetEndRoleName="GetSelectionType"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="ed5567d1-3c79-446a-8e79-5a63565055d8"
+              LastKnownName="Type"
+              LastKnownLocation="Package3_1146.uml" />
+            <description>Property GetSelectionType references type Type.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a96ebdcf-c751-46a1-94e8-ea10b249e919"
+                  name="SelectionOperator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="72a06acb-9a0d-435a-b97a-aa32af57bd4b"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="3b5dadff-7ec7-40eb-a6d9-72cc620192ce"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0c2368f2-16dd-4162-ac0c-b2fcf4c5dda6"
+                  name="GetSelectionType"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="79fabcf3-9192-4778-9df5-edbc1f56d4e0"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="993742a6-f294-49a8-981c-cb39ab9e3baf"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="234a2de7-1c2a-4674-9062-af63edbc67ba"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="ac277c24-46b3-4da8-847f-95ae2ec5046b"
+              LastKnownName="ISelectionOperator"
+              LastKnownLocation="Package_1407.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8d9624c5-bb8c-44f0-8482-721fe9e7e902"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="398ef699-8f36-4bb4-9287-618fd6cfc910"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="cede3b7c-1751-4667-97fc-b1c128e11f0b"
+            name="Coefficient"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="36e40481-0a77-4162-870f-daa55f048d31"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.Selection Type%3DSelectionOperator Member%3DCoefficient"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="cf117b84-1acd-49f1-9e27-1b3ade2f2937"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b8261338-4d57-4417-a43f-cbcbe6c900d8">
+                    <propertyInstance
+                      Id="df61a37c-6b37-4f71-b1c6-0fd8d821675b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7d2c29d7-4a16-4c71-8522-a88e5ee69bd1">
+                    <propertyInstance
+                      Id="d88f7621-1da0-4d29-85a0-510a29e75680"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="af390b0f-3a1f-4afe-8d44-5e10cd976dd4">
+                    <propertyInstance
+                      Id="73b2a8d9-4dd6-4218-8916-18d769a5e55e"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="59ea286b-5923-40f3-8f97-07bf3da6d6ef">
+                    <propertyInstance
+                      Id="db4e14bf-17fb-444c-80a5-a3518f74cd14"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f3bf087e-568b-4d1d-9e1f-4e364c11da4c">
+                    <propertyInstance
+                      Id="b28880aa-405b-430b-9e87-b81dd24bf86e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="62a02ae9-cea3-4457-9899-ad1d2d66a92a">
+                    <propertyInstance
+                      Id="8faafd7d-2e09-4bbe-b181-114ba0c3a401"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="11fbdda2-5566-4098-91f7-5d024a808204">
+                    <propertyInstance
+                      Id="bba2f569-741d-421a-aac7-a1b8c1e3068f"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f7a4af4a-a196-42d7-92d2-d2b67e2c1b55"
+            name="GetSelectionType"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="ebf5161c-95df-426b-9392-5c9f822569fe"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.Selection Type%3DSelectionOperator Member%3DGetSelectionType"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="76b99c46-5c8e-417b-9cde-e4c101b8cedf"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="773ff323-cd33-4581-b026-fddaead024c8">
+                    <propertyInstance
+                      Id="c9ff90cd-5fd9-48db-828c-d680a47076cd"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7f1ed519-c07c-4a65-bc65-7d05ebe928f2">
+                    <propertyInstance
+                      Id="c542190a-dddc-4864-a85b-b62923004e95"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8af6c9d2-6b84-42a7-b4ec-915995275c03">
+                    <propertyInstance
+                      Id="75ecd1e5-cd86-4002-ac6a-803a8e84e5ab"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="acd0e646-1d69-40ab-92ac-35d860785643">
+                    <propertyInstance
+                      Id="c3d677c1-af28-4d16-a352-e9d4ddf68659"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d28b3935-2228-4ec8-b520-c7f49f843765">
+                    <propertyInstance
+                      Id="a340e69c-bbee-48cb-a3ef-e81a2719af32"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="61209656-c156-41f5-bf10-1704349ee4ff">
+                    <propertyInstance
+                      Id="9607f365-ff2d-4959-9d5d-8e2d4d7099e6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="55a88fe1-0761-4b2b-b12b-13248712b088">
+                    <propertyInstance
+                      Id="254c41da-2255-473e-8123-4e84de2b0c78"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="ed5567d1-3c79-446a-8e79-5a63565055d8"
+                LastKnownName="Type"
+                LastKnownLocation="Package3_1146.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="864949cb-93ed-4531-b360-1e63ce51c3ca"
+            name="selectionOperator"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="cff6e2fe-7dbc-4df7-9279-f61feee8a741"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.Selection Type%3DSelectionOperator Member%3DselectionOperator"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3f34992d-fea8-4cc5-bf8d-f422fc2165ff"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bb1ba961-7c37-4fb7-8dcd-f79a75df255d">
+                    <propertyInstance
+                      Id="193dbb41-f3c7-4c54-941b-e382860c817f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6bd6c211-fe2b-4427-8311-3e8771f5559d">
+                    <propertyInstance
+                      Id="8f33fdb5-787d-4e87-a6be-52bc4df2ec97"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f9486062-a2ed-4291-a1f5-53aa87d1589a">
+                    <propertyInstance
+                      Id="d4f21254-5788-4715-b97f-28b57f6efeb8"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="843c6a2b-9705-42a2-8df7-a33d45992e02">
+                    <propertyInstance
+                      Id="fec39dae-b809-4436-a4a0-59530554df38"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bf479df6-25cc-4df7-b81e-7d0f930e67f5">
+                    <propertyInstance
+                      Id="84c8b925-2ea0-45c0-bf17-2500024e80d3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="ac277c24-46b3-4da8-847f-95ae2ec5046b"
+                LastKnownName="ISelectionOperator"
+                LastKnownLocation="Package_1407.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="aea3ecdf-57dd-4df3-a4da-80ca37ca9b92"
+            name="Selection"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="f8d7b814-61f6-483e-b424-94fda77a8983"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.Selection Type%3DSelectionOperator Member%3D(Name%3DSelection OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DPopulation)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="63e0d9fb-f07b-41b5-ac13-a85eb4be4338"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="59ac5966-a74d-4ab4-aaab-ae99d7f27c8e">
+                    <propertyInstance
+                      Id="440446a8-e3d0-4240-9555-df3714f53678"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3caa9126-f774-47f2-9ceb-b51dad377b62">
+                    <propertyInstance
+                      Id="dcfb90e7-72c7-414e-b2ec-047c4a0f3a4a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4de9f6a1-767e-4fad-b008-2a6efdc70acd">
+                    <propertyInstance
+                      Id="37cc6d40-5174-41b8-b2c7-76ff4738f573"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fa18f3db-c47e-4439-9643-7e7069cfdce1">
+                    <propertyInstance
+                      Id="d9c87680-a131-42cf-bbec-48e6aba36ccf"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cb0b137d-800d-4e8b-8796-f72c03c30893">
+                    <propertyInstance
+                      Id="4fbc4cd8-7eba-4c61-bf4d-942ab3dc59de"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="658d2885-5612-4554-909f-00a16273d9e9">
+                    <propertyInstance
+                      Id="abd5785e-3367-4113-95b3-c48e76ab7d1d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="34d04db6-e292-4697-9c4c-1694add0c459"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="6f9648aa-7d0a-42df-9f4e-d0f93268514f"
+                      LastKnownName="List&lt;Chromosome‎&gt;"
+                      LastKnownLocation="Package5_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ad26b494-8ed6-4941-bc40-faba9d1fc61f"
+                  name="population"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="e82385d1-056d-4507-bf38-1d8c296272b4"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.Selection Type%3DSelectionOperator Member%3D(Name%3DSelection OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DPopulation)]) ParameterIdentifier%3Dpopulation"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2368323e-8a62-408a-ba0c-59702983d4ac"
+                      LastKnownName="Population"
+                      LastKnownLocation="Package2_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1d94be36-d989-4534-9032-fc04f26bc3fe"
+            name="static SelectionOperator"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="92ec2410-079b-4a38-b76c-3bd32d173fba"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.Selection Type%3DSelectionOperator Member%3D.cctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1a62aef9-9f8e-4e30-9545-2f1a177cfd49"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dbbcb3e8-aa5f-4f45-8611-5bd3d96c3d43">
+                    <propertyInstance
+                      Id="e7270693-18c7-4e74-a5a5-98cdff90d0eb"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="466913db-f66d-4747-8eea-b70e1781fa95">
+                    <propertyInstance
+                      Id="261a2af0-0ba4-49e9-ad14-5b6ec50471aa"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="65d8a3ab-cc09-4515-8f8c-8121bc3f1e37">
+                    <propertyInstance
+                      Id="78620c46-e9ff-4d21-bd28-21c1955d3336"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f891defa-2dc1-40c2-866e-f20cccecba72">
+                    <propertyInstance
+                      Id="457190e9-cbc2-4a54-bdd8-79f8ff4f3edd"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="de45db27-4508-490d-ae0f-224db7060b6e">
+                    <propertyInstance
+                      Id="1c04e46f-4bfb-417f-b63e-89546b5e08c6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c644b5a7-df5d-4931-96f9-e988b4ad7366">
+                    <propertyInstance
+                      Id="1e457055-bf98-4c24-96f5-513aca7ed4f8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="ac277c24-46b3-4da8-847f-95ae2ec5046b"
+        name="ISelectionOperator"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="a6cb394c-7f80-495a-b856-7db93d84bef4"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.Selection Type%3DISelectionOperator"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="002e9e8e-90c2-4755-bd64-2deb387b694e"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7eb91ab5-22b5-469d-821a-02ec459fac8d">
+                <propertyInstance
+                  Id="5614d2ba-dc41-49ef-99fd-8766f8e54b02"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b88482b5-e79f-4205-96fb-42f07c53cc44">
+                <propertyInstance
+                  Id="452f9bce-a908-413e-9e5f-823221f42d41"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="584f914a-d276-4f03-a760-bf8e62442a84">
+                <propertyInstance
+                  Id="dc40aa59-888b-416a-85f3-396a0d48438f"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="64cb474a-e749-4898-9825-5933f41bb1c9">
+                <propertyInstance
+                  Id="45e26500-8f45-49a0-b87f-07e4ae52af71"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperations>
+          <operation
+            Id="366a6171-bc33-4368-940d-36d463ceeaa4"
+            name="Selection"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ce7a6a1e-ce8f-4bad-9af3-f6f6495a9a91"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.Selection Type%3DISelectionOperator Member%3D(Name%3DSelection OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DPopulation)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3efac622-330d-436c-8f21-1ecaf0cd51dd"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c5e61118-6f35-42b0-9656-aa69f152d92f">
+                    <propertyInstance
+                      Id="1019f5f7-b323-4169-b5e7-1f385ba5ae9a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e9794ba7-9141-436d-ac44-b585ebc0c1ab">
+                    <propertyInstance
+                      Id="719c5276-2e76-4d46-890c-a63b135648b0"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7816a8a9-e1a4-41ba-9407-ca2b425b9060">
+                    <propertyInstance
+                      Id="94458c12-5345-4242-8f68-6d7b00e91a91"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8fd87c07-526a-4e7b-a21a-0a11001c5d34">
+                    <propertyInstance
+                      Id="5a1c021b-eaaf-4cea-bae1-aacd8690f11b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="869a5ce8-cb66-4328-a6b6-1b16251f6c7b">
+                    <propertyInstance
+                      Id="42e2be41-34a9-41d4-a67b-d9680e2982b0"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a9001251-c854-4cac-ad2b-0dd6d4292bbc">
+                    <propertyInstance
+                      Id="33c14b82-79c9-44ee-a858-22df5047a27c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4881240a-e4de-4f5e-a4fa-9085570f5abd"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="6f9648aa-7d0a-42df-9f4e-d0f93268514f"
+                      LastKnownName="List&lt;Chromosome‎&gt;"
+                      LastKnownLocation="Package5_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e85a9b85-6501-4cdc-bb4f-88e6d68a048e"
+                  name="population"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="c53209b2-5939-41e8-8d71-40c6f5c515d6"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.Selection Type%3DISelectionOperator Member%3D(Name%3DSelection OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DPopulation)]) ParameterIdentifier%3Dpopulation"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2368323e-8a62-408a-ba0c-59702983d4ac"
+                      LastKnownName="Population"
+                      LastKnownLocation="Package2_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

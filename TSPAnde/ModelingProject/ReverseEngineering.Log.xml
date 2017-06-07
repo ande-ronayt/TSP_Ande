@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2017-04-12T14:49:26" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'a9c51b06-1bbb-43db-81e8-ade93f906f24' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System' -  (Package)" />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Collections' -  (Package)" />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Collections::Generic' -  (Package)" />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Collections::Generic::List' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Collections::Generic::List&lt;Double‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::System::Double' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::TSPAnde' -  (Package)" />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::TSPAnde::Lib' -  (Package)" />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject::TSPAnde::Lib::BalanceProportionMaxDevideByMin' -  (Class)" />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject::TSPAnde::Lib::BalanceProportionMaxWithSumCalc' -  (Class)" />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::TSPAnde::Lib::BalanceProportionMaxWithSumCalc::BalanceProportionMaxWithSumCalc' -  (Operation)" />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::TSPAnde::Lib::BalanceProportionMaxWithSumCalc::GetBalanceProportion' -  (Operation)" />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::TSPAnde::Lib::BalanceProportionMaxWithSumCalc::GetBalanceProportion::distance' -  (Parameter)" />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::TSPAnde::Lib::BalanceProportionMaxWithSumCalc::GetBalanceProportion::distances' -  (Parameter)" />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject::TSPAnde::Lib::BalanceProportionVarianceCalc' -  (Class)" />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::TSPAnde::Lib::BalanceProportionVarianceCalc::BalanceProportionVarianceCalc' -  (Operation)" />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::TSPAnde::Lib::BalanceProportionVarianceCalc::GetBalanceProportion' -  (Operation)" />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::TSPAnde::Lib::BalanceProportionVarianceCalc::GetBalanceProportion::distance' -  (Parameter)" />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::TSPAnde::Lib::BalanceProportionVarianceCalc::GetBalanceProportion::distances' -  (Parameter)" />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject::TSPAnde::Lib::IBalanceProportionCalc' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject::TSPAnde::Lib::BalanceProportionMaxWithSumCalc to ModelingProject::TSPAnde::Lib::IBalanceProportionCalc (InterfaceRealization)" />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject::TSPAnde::Lib::BalanceProportionVarianceCalc to ModelingProject::TSPAnde::Lib::IBalanceProportionCalc (InterfaceRealization)" />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject::System::Collections::Generic::List&lt;Double‎&gt; to ModelingProject::System::Collections::Generic::IList&lt;Double‎&gt; (InterfaceRealization)" />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="High" Text="(3) type(s) fully reverse engineered." />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="High" Text="(4) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2017-04-12T14:49:28" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>

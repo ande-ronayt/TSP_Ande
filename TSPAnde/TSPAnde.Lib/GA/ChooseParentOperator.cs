@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TSPAnde.Lib.GA
+namespace TSPAnde.Lib.GA.ChooseParent
 {
     public static class ChooseParentOperator
    {

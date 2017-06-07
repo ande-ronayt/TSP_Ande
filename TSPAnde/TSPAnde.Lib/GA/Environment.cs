@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace TSPAnde.Lib.GA
 {
+
     public class Environment
     {
         private  object lockObj = new object();
@@ -45,7 +46,12 @@ namespace TSPAnde.Lib.GA
         public int SelectionCoefficient { get; set; }
 
         private int _travelersAmount;
-        public int TravelersAmount { get { return _travelersAmount; } set { _travelersAmount = value;  BigDist = int.MaxValue / value; } }
+
+        public int TravelersAmount
+        {
+            get { return _travelersAmount; }   
+            set { _travelersAmount = value;  BigDist = int.MaxValue / value; }
+        }
 
         public int CityAmount { get; set; }
 
@@ -61,7 +67,7 @@ namespace TSPAnde.Lib.GA
             {
                 if (_maxStuckIter == 0)
                 {
-                    return CityAmount*1000;
+                    return CityAmount*500;
                 }
 
                 return _maxStuckIter;
@@ -69,16 +75,10 @@ namespace TSPAnde.Lib.GA
             set { _maxStuckIter = value; }
         }
 
-
-        //public int elitism = 4;
-        //public int depoId = 1;
-        //public  int numCities = 20;
-        //public double mutRate = 0.80;
-        //public int popSize = 60;
-        //public int k = 12;
-        //public int travelers = 3;
-
-        public int RandomTwoPointsMutationAmount { get { return (int)(CityAmount * 0.1)+2; } }
+        public int RandomTwoPointsMutationAmount
+        {
+            get { return (int)(CityAmount * 0.1)+2; }
+        }
 
         public double IncertionReverseProbability { get; set; }
 
@@ -94,9 +94,6 @@ namespace TSPAnde.Lib.GA
             SelectionCoefficient = 8;
 
             IncertionReverseProbability = 0.5;
-
-            //MaximumStuckIteration = CityAmount*1000;
-
             TravelersAmount = 3;
             CityAmount = 20;
             Elitism = 3;
@@ -111,4 +108,5 @@ namespace TSPAnde.Lib.GA
             PopulationSize = popSize;
         }
     }
+
 }

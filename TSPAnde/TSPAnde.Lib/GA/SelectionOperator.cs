@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TSPAnde.Lib.GA.Mutation;
 
-namespace TSPAnde.Lib.GA
+namespace TSPAnde.Lib.GA.Selection
 {
     public static class SelectionOperator
     {
@@ -142,16 +143,19 @@ namespace TSPAnde.Lib.GA
                 population.population.RemoveAt(index);
             }
 
+            var removeLongCycle = 0;
             while (population.population.Count > 0 && (k-- ) > population.Environment.Elitism)
             {
                 while (true)
                 {
                     index = Randomizer.Random.Next(population.population.Count);
                     if (Randomizer.Random.NextDouble() <
-                        population.population[index].GetOneFit(alpha, beta) / (bestChromosome.GetOneFit(alpha, beta)))
+                        population.population[index].GetOneFit(alpha, beta) / (bestChromosome.GetOneFit(alpha, beta))
+                        || removeLongCycle++ > population.population.Count)
                     {
                         newPopulation.Add(population.population[index]);
                         population.population.RemoveAt(index);
+                        removeLongCycle = 0;
                         break;
                     }
                 }

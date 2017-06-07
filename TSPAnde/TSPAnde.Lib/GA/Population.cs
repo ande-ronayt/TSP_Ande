@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using TSPAnde.Lib.GA.ChooseParent;
+using TSPAnde.Lib.GA.Selection;
 
 namespace TSPAnde.Lib.GA
 {
@@ -279,9 +278,7 @@ namespace TSPAnde.Lib.GA
         public void NextGeneration()
         {
             Selection();
-            //Crossover();
             GenerateNewChildren(Environment.PopulationSize - population.Count);
-            //Mutation(population);
             CalculateBestFit();
             
             this.CurrentGeneration++;

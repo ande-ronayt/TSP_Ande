@@ -1,0 +1,2430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="1ccc211f-fdb7-49f2-bceb-ee157c9f5146"
+  name="Lib"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="e3152314-675b-4069-b451-da9ae0ef9151"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DTSPAnde.Lib"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="6c9659bd-abd5-4cfb-a789-22e6c6079f03"
+        LastKnownName="GA"
+        LastKnownLocation="Package2_1146.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1b197fea-eaaf-4d38-b457-83ecabc98ffa"
+        name="DistanceOperator"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="7c16962a-5792-42ad-bdc3-8287df193e59"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="2c489712-cae3-4c2e-ac26-3a8292c4f5b6"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f521360e-c99c-4af0-9c4e-3b0384c6e110">
+                <propertyInstance
+                  Id="5009dd73-71b0-4367-b5cd-9a9f5c0ff057"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3a1af65b-e6d4-47fa-849c-4e4e76272636">
+                <propertyInstance
+                  Id="361770d9-fa10-4092-90fa-e174f63b3b8d"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="eef72a51-ff9b-4306-b5d5-07b980f410c1">
+                <propertyInstance
+                  Id="37dd95d3-334f-467c-8db4-a8574aaf7a4e"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="70d6ed7f-83c1-4fe4-b899-d871a5910dd7">
+                <propertyInstance
+                  Id="dab345a9-c504-4418-8f05-93367f274301"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="11c4319e-c5da-4953-a8f0-c0d3516c20b1">
+                <propertyInstance
+                  Id="f6fd8039-b30f-4838-937e-f26ca2865dce"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="ba1eedae-cee6-412b-af7d-29e87289f62f"
+            isDerived="false"
+            sourceEndRoleName="DistanceOperator"
+            targetEndRoleName="GetBalanceProportionType"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="ed5567d1-3c79-446a-8e79-5a63565055d8"
+              LastKnownName="Type"
+              LastKnownLocation="Package3_1146.uml" />
+            <description>Property GetBalanceProportionType references type Type.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1c847338-033d-4a53-85c1-f6c9edb0f50a"
+                  name="DistanceOperator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a1d5ab19-fc5f-4611-be63-9ce60c58c398"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="36e0d402-0b80-473d-90d6-943eca2ff9b7"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a1595635-1719-4940-b35f-88b5524de219"
+                  name="GetBalanceProportionType"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="7bfc6991-d4f3-45d1-a558-d70365136127"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="f9850a14-fd3b-4398-a424-9a8d92b879a8"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="06ad3ccf-77bb-49d9-8d29-e1c06c41bf33"
+            isDerived="false"
+            sourceEndRoleName="DistanceOperator"
+            targetEndRoleName="Points"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="2cb9074b-f2c7-4620-af73-3a4b19bd34da"
+              LastKnownName="List&lt;Point‎&gt;"
+              LastKnownLocation="Package5_1146.uml" />
+            <description>Property Points references type List&lt;Point‎&gt;.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="831bd0bf-5882-4b02-8881-e12314a56790"
+                  name="DistanceOperator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="936889af-b8f9-4348-b7fb-ab0529f4f162"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="4490a201-efc1-4592-85ab-cc897c1982b3"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1391b7fd-dea8-4276-95cc-2e757f62f389"
+                  name="Points"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="9cc2491f-1bf0-4e9a-99c0-2aecec255342"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="3bfe31ca-570b-4269-91d9-aff4e5de02d2"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9c80a256-c1e2-49cd-aa7a-2a19f1fedec3"
+            isDerived="false"
+            sourceEndRoleName="DistanceOperator"
+            targetEndRoleName="Matrix"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="78f21af0-bd86-4fcc-b1cf-e2d3a1f58288"
+              LastKnownName="Double"
+              LastKnownLocation="Package3_1146.uml" />
+            <description>Property Matrix references type Double.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="15f6e8b0-c3b0-4f67-a814-612af71edafc"
+                  name="DistanceOperator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="36a4c8f5-c501-47da-85d2-35ba4b9d7040"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="1c74b155-f71e-4274-9640-4800dc226e18"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b1bcd7ff-de9c-427d-a9bc-1cb300e90dc1"
+                  name="Matrix"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isOrdered="true"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b416863b-4b02-48fd-961e-d2e149aea2cd"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="18364816-5886-47f2-85ef-f426ab59704b"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="112c47ab-ba2d-43ec-a453-e9cec8cdd2be"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="783faa4a-e160-4a46-a906-167844e90931"
+              LastKnownName="IBalanceProportionCalc"
+              LastKnownLocation="Package1_1146.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d0410bd7-b312-4b5d-b7d2-c556e305eb37"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4bf487a9-6f0b-47b5-8596-09cdb86c6548"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="03403538-69de-414f-9d38-f4b71a1447e8"
+            name="GetBalanceProportionType"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="711c6b57-4ce6-4bfe-a154-ed51a4875fff"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3DGetBalanceProportionType"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f18849d8-e218-411f-bcf5-6937d6d33483"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9b2b3676-e567-4cb9-8c65-0928b7d3f97a">
+                    <propertyInstance
+                      Id="8f9a8d65-71ac-4408-ace5-16f4afb67ded"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="806657a6-685d-414e-8376-f64db9816517">
+                    <propertyInstance
+                      Id="2e0ede65-87a2-45bd-bdeb-ada9a5a3ee04"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7cd78882-0542-47a7-a8b4-8f94cad79107">
+                    <propertyInstance
+                      Id="c62d573e-7e0f-4790-9d27-36c708bc0424"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b41f90a1-467e-419b-98ff-b3c13518e0ad">
+                    <propertyInstance
+                      Id="e32a94b6-4670-470c-b8a1-3fa7a04619de"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="34694b39-cd3d-4a96-94de-847fb3e2bca8">
+                    <propertyInstance
+                      Id="1b418a89-0989-420f-8f58-03c4453f1db1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="405f5b3d-3578-4aa9-822d-202b3d7c271a">
+                    <propertyInstance
+                      Id="7b9758ad-0a41-469d-80ba-5567109d62ac"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="194bb11c-3102-46f9-803e-3b831683a937">
+                    <propertyInstance
+                      Id="c0f8d5e4-197d-46ef-ae9e-71aeeed24df1"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="ed5567d1-3c79-446a-8e79-5a63565055d8"
+                LastKnownName="Type"
+                LastKnownLocation="Package3_1146.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a00ebd86-c441-4fcb-8268-a7f1e70fd0f4"
+            name="Size"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="8d7d8cd5-f7d8-4bd6-8c95-e13ffcb1fe21"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3DSize"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="62a1c424-4563-4727-be67-cb4a368fd591"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="252af612-b464-438f-a469-53708f81f037">
+                    <propertyInstance
+                      Id="61107256-b9cc-4945-b1d6-4eaaeb149f36"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="417383db-b559-4012-b488-4c0a94950f45">
+                    <propertyInstance
+                      Id="36005160-f0b1-44b4-a8fc-a0eb18b32a4c"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="69cc2ff3-df8d-465a-88fa-b20c68d9f55e">
+                    <propertyInstance
+                      Id="2894192e-e158-402c-866e-58044d67d2c6"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ffe4975-e52e-467b-baf4-d3be8f76cc9a">
+                    <propertyInstance
+                      Id="049842b0-1275-495b-81b7-6a6ff5c5385c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e7ff6973-8cee-4907-a27e-e41b5d54b4fc">
+                    <propertyInstance
+                      Id="4b502ef3-38b4-4a61-b4e8-01a484f77edd"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="80146d7e-b7a1-4115-a39e-b7f498e02673">
+                    <propertyInstance
+                      Id="5bab7c68-796c-476c-b548-880397637868"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="af08206f-b79d-4b75-8352-d0f238d3fb62">
+                    <propertyInstance
+                      Id="74b3a0ff-d08a-4e21-b67c-1ecaa8952891"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="cee1f76d-4b89-498c-8a36-ee879668b66f"
+            name="Points"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="69990be1-ac54-4b25-83c1-3f7ffe4a70c1"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3DPoints"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5925217e-1dee-4735-b937-57d6c8825578"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5e9e3c61-7c71-448a-bd34-424790d785cb">
+                    <propertyInstance
+                      Id="afcaa1f5-2d6d-4d5f-8f14-6a0300570ca0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cd9e73fe-3eac-41b8-a901-65a16ca20cc2">
+                    <propertyInstance
+                      Id="ad9e1023-71c1-45e8-b306-7dac3419fa56"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="77602ac1-7a7e-4c77-a081-a8426ff2d11e">
+                    <propertyInstance
+                      Id="6aba9193-86ab-40c9-be56-7bd1f823ebea"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6fb9da47-0b9a-436f-80fd-600b920e8334">
+                    <propertyInstance
+                      Id="ae7808de-faee-4216-999f-2008107a919d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3a744d76-007c-49d2-abba-1bd3e633342f">
+                    <propertyInstance
+                      Id="42e5c86f-7fdc-4a55-847a-41ef2995ac39"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4c0ac7a6-e9a4-43b2-a828-808faecb150e">
+                    <propertyInstance
+                      Id="0c135743-cc4d-47cc-a917-77c1210c3a59"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="94a5ed15-d0b5-4e40-8052-3770cb75a4cd">
+                    <propertyInstance
+                      Id="6f6e01ac-f74f-413a-a503-0b0ec9342e7b"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="2cb9074b-f2c7-4620-af73-3a4b19bd34da"
+                LastKnownName="List&lt;Point‎&gt;"
+                LastKnownLocation="Package5_1146.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="0e6423b4-8760-4518-be5e-5af21ae7b2d3"
+            name="Matrix"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isOrdered="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="bb4e22b3-4bdc-4fdb-b01b-5be147c5c3d9"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3DMatrix"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="65081e19-9c30-42f5-8c5e-d56b359746b0"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c0372c09-b1c0-4518-9dfc-9e6bcd0bc6f5">
+                    <propertyInstance
+                      Id="40706a93-5237-4cdf-a511-9bf9ff5f107a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7ff47a05-a5c4-4227-8ee2-a80a99cfb714">
+                    <propertyInstance
+                      Id="eefd9ec3-946b-4027-98e8-fee127f57360"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7c606438-026b-4e7a-aea1-60eeda47c2a1">
+                    <propertyInstance
+                      Id="e2623ac3-d6ac-4270-a6e1-db7557276530"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="107cf144-b6e6-4802-bf0c-ab2ea579dd50">
+                    <propertyInstance
+                      Id="1d17c148-7465-4bdf-abef-0c87da4e7b43"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="49e588ee-0c58-48cc-b79b-13b0137afd5e">
+                    <propertyInstance
+                      Id="ab2a801c-602a-4ef1-b605-e2c36d97769e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8de89d5d-d31a-4108-882b-a0beb7e7d66d">
+                    <propertyInstance
+                      Id="1c5c5938-c298-495b-902e-730bd6683447"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5c312c3f-c63b-4c16-9c7c-725e8b84c8ea">
+                    <propertyInstance
+                      Id="e45b6f77-2ea9-4147-949c-498fa88c85b0"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <lowerValueInternal>
+              <literalString
+                Id="ffd38318-ed7a-418c-b2f3-2ad2f1ff3192"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="29b26592-1784-4f88-b232-057e8a643499"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="78f21af0-bd86-4fcc-b1cf-e2d3a1f58288"
+                LastKnownName="Double"
+                LastKnownLocation="Package3_1146.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="2b703828-1af6-4094-991c-8befc8435f68"
+            name="BalanceProportionCalc"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="fcf3ecca-7a5e-4f8c-8bae-8e6232af4c71"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3DBalanceProportionCalc"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8e415a8e-5cc6-425b-bceb-446df47d4f4e"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7fec976a-ca6a-4cdc-9c14-eab06db4b5b8">
+                    <propertyInstance
+                      Id="5cbbf719-9a5d-45d0-b121-7a610d3f4129"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="be0dfaee-daf4-4c4d-9074-b833b97a4a73">
+                    <propertyInstance
+                      Id="957290a0-f9eb-4d08-846c-4d4054230fb3"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cf6e7874-7cb7-4d8d-afb5-dac4f6e62cae">
+                    <propertyInstance
+                      Id="80c65962-2849-4941-bd66-efd239980f72"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fbd16896-858b-4acc-878c-8b7ddbc204a9">
+                    <propertyInstance
+                      Id="b133d49b-9b25-4c10-8f2c-44f3474a1aa9"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8f38e2e4-fff2-4294-a7e4-ace9d2da8099">
+                    <propertyInstance
+                      Id="c4deefe6-2f3d-4c62-b2d0-e242834dbd79"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="783faa4a-e160-4a46-a906-167844e90931"
+                LastKnownName="IBalanceProportionCalc"
+                LastKnownLocation="Package1_1146.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="7216379d-91c3-4ea8-8f95-6bd98841e79b"
+            name="dOperator"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="5506036b-129f-4976-aaa2-d68ff7d70d77"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3DdOperator"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="386a813e-788a-4112-8c0f-9fe61584131d"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ee268579-d400-4819-93f5-fad1bb114030">
+                    <propertyInstance
+                      Id="460b2721-01e8-414a-af9b-24f27c0abe63"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b2bfaa75-4493-44cf-9ded-83f1dc4c7ac9">
+                    <propertyInstance
+                      Id="57329526-0a33-47bc-bb22-bd720ee14c38"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b5b1bdbd-26e8-4094-800a-73ab247e2ba6">
+                    <propertyInstance
+                      Id="f0336dee-1b32-49b9-ae41-e2f2657d5014"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bccdcbe1-432b-4af3-88a2-f632bb155178">
+                    <propertyInstance
+                      Id="c8ca66c4-3827-4a9d-9750-0a04ebe1fa8d"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7fc621da-f2af-4790-8151-1cb7990faccc">
+                    <propertyInstance
+                      Id="05c2412c-4913-4318-b452-db67d82b4fdb"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="1b197fea-eaaf-4d38-b457-83ecabc98ffa"
+                LastKnownName="DistanceOperator"
+                LastKnownLocation="Package1_1146.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="faac21f4-0d99-4956-b19d-78e64a511c09"
+            name="problem"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="ef8da4f3-82a3-4ece-8616-2873e16d3952"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3Dproblem"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="522eafa6-d1c8-4ce8-b41b-368d8872e426"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b41792be-f79c-4a7d-84e6-d4b906e6c627">
+                    <propertyInstance
+                      Id="486f44fd-1b81-4de3-96a5-8e1ef51ee909"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="73706cc6-577c-4949-a21f-9452e7ae34c5">
+                    <propertyInstance
+                      Id="e2b53ddf-ddb6-452c-9a5a-7ff2e885a586"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="feaf62c8-9467-4fc2-be58-072ced3ded0e">
+                    <propertyInstance
+                      Id="2c8800ef-381e-4901-bbbc-21343bce7b33"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b6d8c1af-a820-43e3-aac1-ebdb6434b9ac">
+                    <propertyInstance
+                      Id="b34c8223-62ad-442e-9c58-1e4985542403"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="84522933-e558-4d39-8771-b29be7db463a">
+                    <propertyInstance
+                      Id="78a0394e-47c3-45ce-99cd-dd490a7715be"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="c5170ca2-1c97-4df5-80d4-8efb33df5109"
+                LastKnownName="IProblem"
+                LastKnownLocation="Package1_1152.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="35bc359b-9a6e-471a-9c9a-55316c019272"
+            name="SetBalanceProportionCalc"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="b5f31896-efea-4855-a793-4ad773712ee3"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3D(Name%3DSetBalanceProportionCalc OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DIBalanceProportionCalc)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7a8dc7ba-2ea0-4272-8b8f-c76e55a42a2b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9ebbbf8e-2832-408d-8615-c2bc1601c732">
+                    <propertyInstance
+                      Id="10c85abf-f15c-479f-9a42-849947b1ccbb"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="28de6985-e079-455e-af5e-822b4bedfa5b">
+                    <propertyInstance
+                      Id="6f757f7d-85bd-4318-a26c-90c06c87fc69"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fc509743-0efd-4b0b-9192-bd9fe4e9fe7e">
+                    <propertyInstance
+                      Id="e07f63e6-c849-49c6-8c7d-3539836923aa"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1c6c4b14-955a-4fdc-ac78-faddaca3a37f">
+                    <propertyInstance
+                      Id="681c578a-1382-4532-af62-f8c47e28b1e3"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="53b59e09-34a9-4b9c-aa82-87793b4992d1">
+                    <propertyInstance
+                      Id="bdd2c51c-a543-4610-b7ab-f9a4ec68731d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="de32cab1-d46c-467a-b477-e8b6a2c45a31">
+                    <propertyInstance
+                      Id="d3d96d2d-2537-4c5b-ae5a-ce8f29233518"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9f70d0f2-ee25-4192-b9cb-dda06d1fbe55"
+                  name="bpc"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="57c4a02c-3487-4495-8957-ad10d2f36d80"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3D(Name%3DSetBalanceProportionCalc OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DIBalanceProportionCalc)]) ParameterIdentifier%3Dbpc"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="783faa4a-e160-4a46-a906-167844e90931"
+                      LastKnownName="IBalanceProportionCalc"
+                      LastKnownLocation="Package1_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4bba99e0-1174-4318-95aa-977b68c17666"
+            name="static DistanceOperator"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2a5cf6bf-1270-4a82-8e3c-5d6257003946"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3D.cctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ceb8e25a-9f7d-41d1-be16-a8b28360c97e"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1f923f29-6c21-4fb6-afed-9022ce44cd52">
+                    <propertyInstance
+                      Id="7dfd67ce-7d72-4a03-9a92-8910cfbb934b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6dbcab3b-7705-4213-9048-98d886bbddb3">
+                    <propertyInstance
+                      Id="4dbbdcd8-488d-46d4-b62f-ca13dc7c8853"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="60d34d29-7d97-4d96-b55f-fd16d6ab289b">
+                    <propertyInstance
+                      Id="77fffc72-35c5-4c9c-919d-ad3013c08ab2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eeecf819-cca1-4839-a547-a3616f1e4415">
+                    <propertyInstance
+                      Id="9f248b69-ab7a-4785-afc8-72e51a99cff2"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="94a80c29-dde7-47e8-b2c7-746ed8cd6128">
+                    <propertyInstance
+                      Id="d3390dbc-ce70-4a47-b7fc-9eb06c5dabdd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="20c0ce42-a3ac-4928-a42d-55de4d515077">
+                    <propertyInstance
+                      Id="80c138d3-1529-4c0a-90e1-8644b69f6490"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="f5d53dad-b3d2-49c0-95f7-75a267650051"
+            name="GetBalanceProportion"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a3bc43ed-deb8-448d-a803-f42531beb216"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3D(Name%3DGetBalanceProportion OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="12526d6a-8f26-4e5a-b869-90006f07c013"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="833f6f02-f6fd-44a4-9aab-d6992bd11430">
+                    <propertyInstance
+                      Id="0e8ce61f-27b5-44da-914f-2fe9004b163a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="14024ba4-d5c2-45f3-bae5-4d533c6aab9d">
+                    <propertyInstance
+                      Id="2919b505-0507-4541-b1e0-3a9f9d1ad356"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="43f4e774-f840-477a-9653-e680ee4137a6">
+                    <propertyInstance
+                      Id="2a69948c-6bc9-4e23-9151-63b4c0bdef18"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="568fe424-df27-41ad-a741-3e5af35e78e9">
+                    <propertyInstance
+                      Id="2cbb13fe-a1c0-4585-87b1-f3943de47f8a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="30944d5e-30a3-4c28-b14e-5fdc0b027922">
+                    <propertyInstance
+                      Id="2306082c-9370-48d7-8b74-0018db9525ba"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1f1cf35e-68ec-4012-a788-4b9108e9e749">
+                    <propertyInstance
+                      Id="a08ab7a9-0afc-475d-94fb-7a46d4b07109"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4718eb2e-bc12-4a28-8d07-19cb9f9413ee"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="78f21af0-bd86-4fcc-b1cf-e2d3a1f58288"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package3_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="61685fa3-5e39-4b74-ac2b-e33fc6b9760b"
+                  name="distances"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="0767404a-950e-41f6-985a-d69b6072f6e0"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3D(Name%3DGetBalanceProportion OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Ddistances"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="21b7814d-523d-4305-aadf-9e116e064a48"
+                      LastKnownName="List&lt;Double‎&gt;"
+                      LastKnownLocation="Package5_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f4f4f0e8-8186-442a-a1e2-8e0cb8a6836d"
+                  name="distance"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="405ebd52-1d0b-4e39-a812-27b68f407e46"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3D(Name%3DGetBalanceProportion OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Ddistance"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="78f21af0-bd86-4fcc-b1cf-e2d3a1f58288"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package3_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="946c076d-4d70-4bab-a022-2d9e84a83053"
+            name="DistanceOperator"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="1daa046c-8ebc-4f49-bc21-988bb278ecb1"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]))]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f866797c-642f-413e-9d4d-829327ed8143"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="de805744-475b-419e-8ac2-e2db186db9a8">
+                    <propertyInstance
+                      Id="ea4588ab-b15e-4a12-b632-9e23400c2990"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5dc059f5-8db4-4479-aa41-7ed6e775b3b0">
+                    <propertyInstance
+                      Id="999776ab-7b7e-4cfd-abdd-9b63c09dc7fa"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="850aef10-57ee-475f-a1cc-cf77ad1be493">
+                    <propertyInstance
+                      Id="9a023202-9bad-4acd-ba1f-b557d1b538a5"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fdb8e725-78d9-4808-b3c2-680d9868ddbd">
+                    <propertyInstance
+                      Id="7587aa22-18ea-4d3e-8e59-05c1a7b93eab"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3f455987-68bb-4490-9e90-cc6ae7c4cc00">
+                    <propertyInstance
+                      Id="1df01bcb-a7a5-4d99-976c-1765cfdea0e8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5770922b-7060-4c8c-adf6-55025073ee2c">
+                    <propertyInstance
+                      Id="d839d1a3-52a6-4b4f-be43-6a096a3c1624"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b3d47592-3c79-490f-ad74-a6da225fedd8"
+                  name="count"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="90c3b9b0-17cb-4b0f-a4f4-301b257a546e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]))]))]) ParameterIdentifier%3Dcount"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e5d0ef4a-11e6-4a51-a019-32d73635ba13"
+                  name="matrix"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="83d19735-b42f-4776-9633-28a12ffe86bb"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]))]))]) ParameterIdentifier%3Dmatrix"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="80efcecb-c90b-4348-9e0e-2aef5ba2e095"
+                      LastKnownName="IList&lt;IList‎&lt;Double‎&gt;‎&gt;"
+                      LastKnownLocation="Package5_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2f6574aa-65ae-482e-a971-b733037d22de"
+            name="InitializeOperator"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e24a26fa-b9c3-49e9-8da1-d627a7764dd6"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3D(Name%3DInitializeOperator OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DEnvironment)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="278d906c-374e-4a54-ae13-4d6c3f18086b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="44c34a02-ff41-471f-9fa0-f8cb926e18d0">
+                    <propertyInstance
+                      Id="2e0efd49-90a4-44e7-a535-4951b8c5f6ef"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d0165d02-0ac3-4499-a3c4-f62190eaaf44">
+                    <propertyInstance
+                      Id="e059c83d-e170-4cb4-8f36-3dcdba958ee7"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="976f0a0a-0e43-4b76-ad1e-ba9a96612207">
+                    <propertyInstance
+                      Id="98aa746f-a35d-4f36-b73c-c40dbaf031df"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c633c085-ec63-4471-b64c-727b95e53b35">
+                    <propertyInstance
+                      Id="daf95ac5-8bd3-4c08-9166-8a085b012198"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9a0ecc66-d9fc-41dd-839f-901d8d71dbcc">
+                    <propertyInstance
+                      Id="056cf709-18ab-4e74-83d9-e33fbf9eda25"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a41ae953-3cb4-4f4d-a3d6-c0ae02395c89">
+                    <propertyInstance
+                      Id="60a2d2fa-e6fb-45c7-b658-4a752112e40e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0f517c2d-9003-4700-9e3a-715394637d50"
+                  name="op"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7a67ff82-a029-417a-bbd9-bf053896a0f7"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3D(Name%3DInitializeOperator OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DEnvironment)]) ParameterIdentifier%3Dop"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1b197fea-eaaf-4d38-b457-83ecabc98ffa"
+                      LastKnownName="DistanceOperator"
+                      LastKnownLocation="Package1_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="27f22b9d-c156-4a91-bd7c-422f32386d93"
+                  name="environment"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="96d1d4b3-6b3e-42f5-96c9-4e3d46806b36"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3D(Name%3DInitializeOperator OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DEnvironment)]) ParameterIdentifier%3Denvironment"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="5b2b5f91-abf5-4c9c-a458-e6a95d864ecf"
+                      LastKnownName="Environment"
+                      LastKnownLocation="Package2_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ebca1db4-1aac-41f1-85a7-cde7c6a9c6d8"
+            name="DistanceOperator"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="cd983b2f-8adf-46dd-81bf-09c59bfe7e12"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2FSystem.Drawing.dll&quot; Namespace%3DSystem.Drawing Type%3DPoint)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="cbcfeb56-6b60-4c85-9664-8318b8ec5b6a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="01695710-ec37-4aec-bc41-c06931516d61">
+                    <propertyInstance
+                      Id="54464468-26b9-4923-8a15-1d172ff8670c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="843acbe5-4783-4004-a143-05df57823b11">
+                    <propertyInstance
+                      Id="90ab5461-1904-4613-bad9-595abf359da1"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c354ac26-a463-4589-993f-6ceb735de412">
+                    <propertyInstance
+                      Id="29dba235-9ea3-4886-82b2-139c30361929"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="38f53b82-35f4-4f2b-a6b9-8b8ec196129e">
+                    <propertyInstance
+                      Id="0a5b0b4d-c915-4c6d-91e4-94b72e0df7c6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="29b06c76-bb8c-417c-997b-e7e7fe2729fb">
+                    <propertyInstance
+                      Id="a53b15b1-0032-414d-8cae-1f2f622a5639"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8464b9d1-0644-4783-8749-48b533f73597">
+                    <propertyInstance
+                      Id="2298da0c-27e7-41d5-81b1-63f718707d34"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9e0b36e5-fdef-4786-a9e0-496c0cda072b"
+                  name="count"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ead6b18d-c319-42b8-aa4e-c7329580d94c"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2FSystem.Drawing.dll&quot; Namespace%3DSystem.Drawing Type%3DPoint)]))]) ParameterIdentifier%3Dcount"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c6655c29-116e-4e22-a2bf-914b1d25acb9"
+                  name="points"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ebd34396-a03e-4ae7-957e-184ff405467f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2FSystem.Drawing.dll&quot; Namespace%3DSystem.Drawing Type%3DPoint)]))]) ParameterIdentifier%3Dpoints"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2cb9074b-f2c7-4620-af73-3a4b19bd34da"
+                      LastKnownName="List&lt;Point‎&gt;"
+                      LastKnownLocation="Package5_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f40d98d5-4778-4a90-9840-63e15b5932a4"
+            name="CalculateDistance"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3f15d0ea-f5f1-4c9f-b1cc-9bd443d90d0c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3D(Name%3DCalculateDistance OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2FSystem.Drawing.dll&quot; Namespace%3DSystem.Drawing Type%3DPoint)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="532822b8-1f6a-4f1b-9cd6-df6fa52b08dd"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0a490e7e-207d-4ba4-9b72-fe8b5bfbacd7">
+                    <propertyInstance
+                      Id="b2471262-3dca-4e44-a554-0da7e37e90ef"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0582b9a5-0184-4ec4-9165-c9489250f875">
+                    <propertyInstance
+                      Id="eedf9b2c-8978-4661-87c5-cac5b5f1dea0"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9a20bbbe-070d-412c-9338-612053ccc4d2">
+                    <propertyInstance
+                      Id="17abd6f3-de15-48d6-9dbf-8aa81cc021ba"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2889293b-a3b9-48d0-9faa-62a3a5539fd3">
+                    <propertyInstance
+                      Id="4a799146-1717-4ad0-9eb0-d7c1133cec1d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="97a41a32-3c38-4cc3-9277-c6678051e8f3">
+                    <propertyInstance
+                      Id="97fc02fa-a25a-4423-bb1b-4c70fd331b6d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="61f4935f-04f3-4928-8b0c-20af6f6792af">
+                    <propertyInstance
+                      Id="33f247cc-a2c8-4a9c-9820-f3278985ab4c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cb7943ae-7a20-4e05-9f37-8a9ed66e58cb"
+                  name="points"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f5df4fa6-4593-4e70-9f4a-d8856969df6f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3D(Name%3DCalculateDistance OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2FSystem.Drawing.dll&quot; Namespace%3DSystem.Drawing Type%3DPoint)]))]) ParameterIdentifier%3Dpoints"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2cb9074b-f2c7-4620-af73-3a4b19bd34da"
+                      LastKnownName="List&lt;Point‎&gt;"
+                      LastKnownLocation="Package5_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="41777b49-553d-4ad0-9fad-aff07044a181"
+            name="GetDistanceFromTo"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="90858904-b8a1-441f-97e4-8ea8abec1cd0"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3D(Name%3DGetDistanceFromTo OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ddc71c6e-dd0a-4704-b847-172da91529f6"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0c581df5-d7fd-4c2d-a165-0a3ef2e1b8dc">
+                    <propertyInstance
+                      Id="5d6d7ab3-e2fb-4257-8ead-142ada394187"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9a402d02-33e0-4ce9-8e2d-111a1abb4a8d">
+                    <propertyInstance
+                      Id="a5464611-7616-4507-9810-a03b1c64ca3c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f4337cb9-aab4-4db1-a5bb-1e6898a71f33">
+                    <propertyInstance
+                      Id="771bf812-8bd8-48c8-9837-40874685d75e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="36b99f37-fbe4-444e-99d7-9fffa940c8cf">
+                    <propertyInstance
+                      Id="af977807-1bf0-40c3-a0fa-131362fae11d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b252d434-5e72-4b64-960f-ff1f08b9efb6">
+                    <propertyInstance
+                      Id="54645362-8230-499f-ab38-d89b670cec28"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8103a1dc-c100-4c6b-8f40-03e986698e82">
+                    <propertyInstance
+                      Id="1e08930c-1110-412c-980d-f00aea5630bd"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d5568d36-1d61-4036-85fa-8f4551548d03"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="78f21af0-bd86-4fcc-b1cf-e2d3a1f58288"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package3_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="07baaf98-19c7-47ce-a404-6e7137256446"
+                  name="i"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="2223618b-af06-4433-804a-875844ebfca6"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3D(Name%3DGetDistanceFromTo OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Di"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f6c0d16a-5993-4e4b-8aa6-f1217fccee75"
+                  name="j"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="6307fdce-3281-4be1-b6d3-a5ec14b638f9"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3D(Name%3DGetDistanceFromTo OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dj"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fbc22c58-3a55-4bcc-a666-77741e3c58a8"
+            name="DistanceOperator"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="c7a5ceee-ee55-4146-a675-529cc591badc"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8a845f82-35f0-4b24-8b1b-eb079008c3d6"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="82636cc4-f2b9-4499-a27b-038f6951a519">
+                    <propertyInstance
+                      Id="5314cd18-01a2-4e9e-86fe-0b3e3b61fe35"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8486f0e6-eeb4-4374-b3fb-3055b452cdc4">
+                    <propertyInstance
+                      Id="3587e472-b269-4758-b353-96140787e6d0"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7c1d57d7-525d-439d-af68-a2a8483fe477">
+                    <propertyInstance
+                      Id="63106be2-302e-4f92-957f-d0ef59d9701c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8d186583-e2bd-4db1-aa05-a44f0aa041e4">
+                    <propertyInstance
+                      Id="710d49c0-de66-4928-bffb-93fd1fcb96ed"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="45ee75ae-58b0-492b-a2ef-c30f59fee685">
+                    <propertyInstance
+                      Id="4d9f40ca-1c4f-4723-87b9-f8a989e54c51"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="375a9f1e-2b2a-4d3d-bc52-c3d2153ef136">
+                    <propertyInstance
+                      Id="e10b413e-aa17-49a4-8de8-9a8ca5247b6a"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9a5e25b3-b9cf-42d3-b464-4446ac81ebc4"
+                  name="size"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="bb0928db-6c54-4aeb-979e-f7282adbf255"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dsize"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9c93cad7-3d4a-4905-893f-aa24b7a0ac4a"
+            name="CalculateDistance"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d8b4276d-2a0d-4c22-a31e-62f2c71d4192"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3D(Name%3DCalculateDistance OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2Fpackages%2FTSPLib.Net.1.1.5%2Flib%2Fnet451%2FTspLibNet.dll Namespace%3DTspLibNet Type%3DIProblem)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b24b57bd-8f23-4b99-b765-7e9634be99c4"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8c9daafd-cc31-452f-97d4-2e55469617f9">
+                    <propertyInstance
+                      Id="79688841-1a81-4ec2-986d-c27c1d1a303e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="710cd862-b20a-43d7-bab8-7c98e5c9c80e">
+                    <propertyInstance
+                      Id="baa297f4-e4b7-4fdd-a0da-1aee5863bcf9"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6fd4ce70-aa8a-4131-b549-5a3c0f456e3d">
+                    <propertyInstance
+                      Id="9fb7f6b1-7cb3-4a49-8070-ee5a0c084cf0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4b8edcda-6d1e-4238-a669-61a338bfcb88">
+                    <propertyInstance
+                      Id="d664d5b4-0e7e-4311-a126-a3c6c07d197e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fcb89069-a04c-482a-81ea-a3e03adf51a0">
+                    <propertyInstance
+                      Id="ebf692e9-efda-40f9-823f-3f6d41077d7d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e09a4f2e-4f68-4215-8be0-49b2f0afb75d">
+                    <propertyInstance
+                      Id="21427b25-367e-4990-8eeb-bdb9e817ede5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a8eaa597-52a0-4ad5-9fef-e2a261ff35a3"
+                  name="tspLibProblem"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="177245a0-1e98-43b1-92ae-1a79eda87399"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DDistanceOperator Member%3D(Name%3DCalculateDistance OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2Fpackages%2FTSPLib.Net.1.1.5%2Flib%2Fnet451%2FTspLibNet.dll Namespace%3DTspLibNet Type%3DIProblem)]) ParameterIdentifier%3DtspLibProblem"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="c5170ca2-1c97-4df5-80d4-8efb33df5109"
+                      LastKnownName="IProblem"
+                      LastKnownLocation="Package1_1152.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="783faa4a-e160-4a46-a906-167844e90931"
+        name="IBalanceProportionCalc"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="7ff2b0a8-88f8-4c4c-bb6b-dff5e7f38e0a"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DIBalanceProportionCalc"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="f4945ae3-aa9f-443f-b5d5-ba35a17bb31c"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bc266920-c989-4c29-ad50-7339332861f4">
+                <propertyInstance
+                  Id="a8d5f572-a32a-403a-851d-c1981ffc30c2"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="172fdbc4-cf43-4ad6-888f-993783f98b06">
+                <propertyInstance
+                  Id="02dee575-acc1-40a3-b5e0-3aaf1636552b"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6cca995a-ad07-4cef-a053-ff5633d452d2">
+                <propertyInstance
+                  Id="a9985211-7d85-4c3e-b416-f65f4a629850"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="23c111ad-02ea-409b-ba0a-ca6733e02737">
+                <propertyInstance
+                  Id="1b56bc9c-beff-4cb8-9df8-c57580e46d28"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9149916e-aaef-4392-b4a9-d632a095a6cc"
+        name="BalanceProportionMinDevideByMax"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="17667095-2770-4822-9d6e-b7392aff5196"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DBalanceProportionMaxDevideByMin"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="69b3a968-5497-40c1-9f1e-7fc97425068c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e72cc858-14fa-4eb0-b666-f07f9e44bec8">
+                <propertyInstance
+                  Id="ad4a055b-c0c8-49a2-8bf7-f7e6e0efae86"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="050703a5-f475-4215-a2f8-480f6ce31de6">
+                <propertyInstance
+                  Id="c4b9b992-a5b1-4b7e-b89e-5a4f5e9cde8f"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1bfff956-a286-43d3-ba9c-23bf31cc8772">
+                <propertyInstance
+                  Id="af2737be-2dd9-4ec7-acf8-34b28376e416"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bcaf7359-2e59-415a-8bc4-765d2d27b298">
+                <propertyInstance
+                  Id="645c31c6-bf63-4c05-9911-f0f058c92a9f"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dfeac290-68e6-4239-8187-7b01dad7aca7">
+                <propertyInstance
+                  Id="1a510cb1-926e-438b-ba9e-6528e61c80e0"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="046ed2af-359a-4ad6-9c57-8e4ed91d2ae0">
+            <interfaceMoniker
+              Id="783faa4a-e160-4a46-a906-167844e90931"
+              LastKnownName="IBalanceProportionCalc"
+              LastKnownLocation="Package1_1146.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6eae6e5a-fb88-49e0-964a-82e5aa6a8c8d"
+        name="BalanceProportionMaxWithSumCalc"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="a020da8b-7722-496e-ac65-5734e72ab01c"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DBalanceProportionMaxWithSumCalc"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="6b32c64e-00f8-4544-ad44-ec9ac7727285"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6be90304-ea9f-464c-99d4-eb1a2c3d026e">
+                <propertyInstance
+                  Id="44d6abca-2de4-4cc4-824b-078965038472"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="12b55a75-701d-4707-9096-11c5410ef64d">
+                <propertyInstance
+                  Id="d2629af1-f377-41d2-b49b-25ad63c8b98c"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6f51c2b1-81df-4179-b56b-4993e615e63d">
+                <propertyInstance
+                  Id="094f40b9-ce94-4621-bd65-803d9c83764d"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1e157e0e-a6f9-45c4-92f0-e899cf26e094">
+                <propertyInstance
+                  Id="fabb120c-3bfa-45b9-b2ea-807fa069d554"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fc120dce-93b1-4f9d-9196-d259216a44c5">
+                <propertyInstance
+                  Id="4181a07b-3e76-47ab-9013-10877ef441ad"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="8d98c4ac-a3ca-44f4-9451-b7f9d224c7f2">
+            <interfaceMoniker
+              Id="783faa4a-e160-4a46-a906-167844e90931"
+              LastKnownName="IBalanceProportionCalc"
+              LastKnownLocation="Package1_1146.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="16cdc8f3-aec1-4bea-9dcb-79d4378ebe66"
+            name="GetBalanceProportion"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="40786768-c860-4796-8756-e75c5e65c5ea"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DBalanceProportionMaxWithSumCalc Member%3D(Name%3DGetBalanceProportion OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c7ce39ea-7c59-4b97-ae26-374d7f179bf8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="14c72831-82fe-4f6b-9a94-7b4662589a7d">
+                    <propertyInstance
+                      Id="427288b0-d62c-47b9-bdc0-ae01d49f6944"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6f479ed1-57a4-4f0f-9220-5f8f85c0db12">
+                    <propertyInstance
+                      Id="f48d3a9b-9f35-4d4e-9546-298c3ce27298"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="19aea460-213c-4d61-b247-12c70f10eaaa">
+                    <propertyInstance
+                      Id="f112b299-6af0-4cb4-9219-681c6b76116b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4b6213d8-2734-4768-9b7e-7e5249966b15">
+                    <propertyInstance
+                      Id="c6de5227-3391-4538-ac08-20037be15a8c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a7e3e509-5541-4ac9-b2a9-735cb3ff3d87">
+                    <propertyInstance
+                      Id="ce2b8e56-dcff-41eb-84fa-181553db14a5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d4ad9f7e-04b2-4603-9fb4-d6ef6c74bd0a">
+                    <propertyInstance
+                      Id="2283ed84-472c-42d9-b8c2-5ec41f97efb8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b130533c-c0af-461e-abb9-f3e690baf31c"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="78f21af0-bd86-4fcc-b1cf-e2d3a1f58288"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package3_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="254cdde1-089d-47ed-882e-d56c8693c9a2"
+                  name="distances"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="227e2a78-2666-42cb-b19d-8ffab71e4ea8"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DBalanceProportionMaxWithSumCalc Member%3D(Name%3DGetBalanceProportion OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Ddistances"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="21b7814d-523d-4305-aadf-9e116e064a48"
+                      LastKnownName="List&lt;Double‎&gt;"
+                      LastKnownLocation="Package5_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="64ac4d04-655e-4266-9b4a-4e488c8d0805"
+                  name="distance"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="5281e069-c074-4532-80ba-a7f1b8a01533"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DBalanceProportionMaxWithSumCalc Member%3D(Name%3DGetBalanceProportion OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Ddistance"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="78f21af0-bd86-4fcc-b1cf-e2d3a1f58288"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package3_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="7e18be6b-d1bf-4ea9-ae92-54a3d8623eb2"
+            name="BalanceProportionMaxWithSumCalc"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9145fe18-4522-40dc-99d0-c4d97efbea72"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DBalanceProportionMaxWithSumCalc Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="da004c71-c6e3-4caa-920b-7fe8ff8addd5"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ea8bc517-a321-465f-86f5-9b96814865ba">
+                    <propertyInstance
+                      Id="af6178d9-e0c0-47cf-aa7b-9ad44cfc07a5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e306898-1e82-4304-82ad-e81085c54d11">
+                    <propertyInstance
+                      Id="24aa000f-ec04-4599-9746-7aa76184ddb4"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="43725532-c377-4cdb-ac28-36a7fc46ef32">
+                    <propertyInstance
+                      Id="36ac8ba4-c131-4b66-b51b-5770296161ea"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="28b89af8-c071-4de0-add7-6c9c10727ffe">
+                    <propertyInstance
+                      Id="13c453c2-7436-43be-a297-78d03966a5e9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="db2912e1-b46f-4d5f-8129-fb77aff57ec5">
+                    <propertyInstance
+                      Id="3d871980-39a4-48c6-8cfb-b6df14b8a73e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1cbf7a88-db40-4c48-a700-96a19e8482c8">
+                    <propertyInstance
+                      Id="1ab1d0af-8377-432d-a0e6-1b224cb309f6"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="eaeaeb26-3e0a-42c2-9ddc-0fa7ef25aea0"
+        name="BalanceProportionVarianceCalc"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="ed4fcd43-7839-4610-a936-da6e216841c0"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DBalanceProportionVarianceCalc"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="05f5a9c4-4ece-47c2-b69e-4543d0196e83"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1e2f0984-44a0-497b-bc8d-497e70b0f18d">
+                <propertyInstance
+                  Id="706eddd0-2ef6-471c-af53-c2e53f7956aa"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d2efee40-cbd9-4bf3-90fc-73a432fc8589">
+                <propertyInstance
+                  Id="e0559889-2382-4e10-b81a-634b3a45b7ba"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="edfa1073-c417-4119-8eff-bdcc0f0cf50a">
+                <propertyInstance
+                  Id="4182fa85-ceae-4824-99ac-a24c8cc83c65"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0985c13e-046e-4cf2-92fd-c24ab6da43bb">
+                <propertyInstance
+                  Id="7e07cf5e-d365-4c5f-84e6-914fe50bc327"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="10a4a3b5-043c-49b4-bb86-7edb03761ab5">
+                <propertyInstance
+                  Id="20d40fbe-986b-4378-a917-89eb01a21fea"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="a0a68b4f-c785-4ee6-b09c-35b1d7a26da3">
+            <interfaceMoniker
+              Id="783faa4a-e160-4a46-a906-167844e90931"
+              LastKnownName="IBalanceProportionCalc"
+              LastKnownLocation="Package1_1146.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="062cece9-5109-44a8-a385-1c29c2e6b59c"
+            name="GetBalanceProportion"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="21284a81-ed89-4b11-b9bf-77058e88f60e"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DBalanceProportionVarianceCalc Member%3D(Name%3DGetBalanceProportion OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2ac492c9-aba6-4fde-8f2f-a138069cf1fc"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="75b9a389-759d-4418-af9d-ed31448f290d">
+                    <propertyInstance
+                      Id="4846ffaf-f51b-46ce-8b09-9b5d202e4470"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a8fcc75e-89b2-49b3-95b8-d6d228192bac">
+                    <propertyInstance
+                      Id="c5f9bd8c-0cd7-4b05-bd6b-9c976febeaa9"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b771eb33-8ec9-429e-9c22-80077699e5cd">
+                    <propertyInstance
+                      Id="6dce256a-7e34-40b8-abd6-8e3b7eb41fcf"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fae19655-2a01-4fe3-83d9-6d179e03c6c4">
+                    <propertyInstance
+                      Id="adb47c54-b834-448f-acb8-834c8e4c3056"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fefd556e-5be5-4d46-b412-79932a73a2ee">
+                    <propertyInstance
+                      Id="c354cffb-0ffc-4f58-a0b5-bc23b20812f4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1fd0182d-97fd-44c6-9430-fe49e9b87f18">
+                    <propertyInstance
+                      Id="a442afa1-f0d8-4f65-9e0a-2d9df36a44a4"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4cb0b521-707e-42cb-8ce3-70de57bb2fa3"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="78f21af0-bd86-4fcc-b1cf-e2d3a1f58288"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package3_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="68179950-037c-46fe-a96b-c0fd7d2dfc74"
+                  name="distances"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="344cbf3b-0aea-4cca-b1c5-cfd4a9c7a317"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DBalanceProportionVarianceCalc Member%3D(Name%3DGetBalanceProportion OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Ddistances"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="21b7814d-523d-4305-aadf-9e116e064a48"
+                      LastKnownName="List&lt;Double‎&gt;"
+                      LastKnownLocation="Package5_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="abf0eef7-bd53-4d4a-828b-fe499bd28d67"
+                  name="distance"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="27e4187c-e3da-4006-990a-48b43ba1b48e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DBalanceProportionVarianceCalc Member%3D(Name%3DGetBalanceProportion OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Ddistance"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="78f21af0-bd86-4fcc-b1cf-e2d3a1f58288"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package3_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d0fa148e-e0f4-4b6b-9a7b-ea146a52bb35"
+            name="BalanceProportionVarianceCalc"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="90b51054-81b0-45df-8e58-515b91a86da4"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib Type%3DBalanceProportionVarianceCalc Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1ad9a1f0-f230-4746-b788-e330c92901fa"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3cec7630-badb-487f-b950-6b608a8fec42">
+                    <propertyInstance
+                      Id="5d3760d9-4747-47d2-86df-463c75cc1736"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7c744b92-c51f-401d-bf9a-a1bc870ccfe8">
+                    <propertyInstance
+                      Id="72beea74-eecc-465e-8c2e-312f9aca283d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2b688f9c-e665-45d3-ba60-3e8482da9bcb">
+                    <propertyInstance
+                      Id="621075ae-d450-4954-9e16-403a6b6873c7"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="47354d21-55a3-4414-bdbe-d3793e4c06bb">
+                    <propertyInstance
+                      Id="2d6edab7-628d-4fd5-98c3-3e89a965719e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="71b7b51d-32a9-44bb-9b60-7d2307b658c7">
+                    <propertyInstance
+                      Id="4d4f4a17-e489-4e11-a70f-7aaaf6299736"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f090264a-db26-42e1-a04e-59dade7a003d">
+                    <propertyInstance
+                      Id="da0870d5-c6ab-41bf-83ef-49c99bfd2eac"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TSPAnde.Lib.GA
+namespace TSPAnde.Lib.GA.Mutation
 {
     #region mutation
 
     public enum MutationType
     {
-        MutationOperatorHalfRSMHalfInsertins = 1,
+        MutationOperatorHalfRSMHalfInsertions = 1,
         MutationOperatorInsertionsWithReverse = 2,
         MutationOperatorInsertions = 3,
         MutationOperatorHalfRSMHalfPSM = 4,
@@ -20,7 +20,7 @@ namespace TSPAnde.Lib.GA
         MutationOperatorRandomTwoPoints = 8,
     }
 
-    public class MutationOperatorHalfRSMHalfInsertins : IMutationOperator
+    public class MutationOperatorHalfRSMHalfInsertions : IMutationOperator
     {
         public void Mutation(List<Chromosome> chromosomes, Environment Environment)
         {

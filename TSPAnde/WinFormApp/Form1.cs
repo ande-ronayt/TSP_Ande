@@ -31,70 +31,17 @@ namespace WinFormApp
             catch { }
         }
 
-        string MYTODO =
-@"Q:
-Problems:
-0. Report: T
-    Croosover,
-    Mutation,
-    Time - Generation - Total Distance
-
-
-1. If one city is really far from other, then it always will give bad fitness fanciton
-2. When it's imposible to find subtours with right proportion, then should use tsp for subtours. 
-Замечания:
-*** Analyzing the Performance of Mutation Operators to Solve the Travelling Salesman Problem -- 33 says that OX is better
-**** AEX works bad if don't use shortes distance
-*** попробовать инверсное вставочную мутацию. работает!! 
-0. После анализа решений пришел к выводу, что необходимо рандомное ставочное решеине. 
-1. При пересечени, возможные варианты... реверс пути, иначе, при разовой мутации пересечение уберается, но добавляется новое и с длинным путем. 
-И ЭТО СУКА БОЛЬШОЙ МИНУС GA!
-1. What type of reports should  I do?
-... What type of graphics?
-
-2. Is it ok just work with GA and compare different variation of operators. 
-
-3. Implement differnt operators
-(selectin, crossover, balance criteria, ?generetion first random population?by using some other algorithms?? ) and compare 
-
-4. I want to add code, that can apply TSP for subtours.
-
-5. Which balance criteria do you think I should use?
-
-6. What type of data should I use? I didn't find data with answers for balanced mTsp.
-
-7. Problems: after change parameters, solution often stucks on one answer. 
-7.1 Should I use some random fanction for selection with different parameters?
-
-8. So I can make 'ELIT' list, to save temporary results, and include them into parent list. 
-
-9. I can make parralel programming for
-  - generating children
-  - starting new population from random population in order to find new solution after, and then can add solution from that population to the 'ELIT' list. 
-TODO: 
-1. TSP for subtours. 
-2. Take part of task and do mTSP for that task. 
-
-1. Сохранять элиту в список
-2. TSP для подтуров
-3. Рисовать элиту
-4. Сохранять дженерейшин
-5. Таймер
-
-3. В Пейпере говорить об аутлаеров. об ";
-
         private Point MousePoint = new Point();
 
         public List<Point> Points { get; set; }
 
-        static string tspLibPath = "\\\\Mac\\Home\\Documents\\Visual Studio 2013\\Projects\\TSPLIB95";
+        static string tspLibPath = "TSPLIB95"; //"C:\\Users\\greedy\\Desktop\\Lunwen\\Programming\\4.5\\TSP_Ande\\TSPAnde\\packages\\TSPLib.Net.1.1.5\\TSPLIB95"
         ControlProgram cp = new ControlProgram();
         public Form1()
         {
             InitializeComponent();
             IsProgramAlive = true;
             Points = new List<Point>();
-            MessageBox.Show(MYTODO);
             DisplayTspLib95Data();
         }
 
@@ -202,7 +149,7 @@ TODO:
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button5_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e) // create a problem
         {
             int travelers;
             if (!int.TryParse(txtTravelersAmount.Text, out travelers))
@@ -226,14 +173,6 @@ TODO:
             TspManager = new TSPManager(dOp, travelers, int.Parse(cmbDepoId.Text), NextGeneration);
             ReportManager pManager = new ReportManager(1, 2, ControlProgram.tsp.Problem.Name);
             TspManager.NextGenerationEvent += pManager.NextGeneration;
-            //TspManager.NextGenerationEvent += 
-
-            //var environment = new TSPAnde.Lib.GA.Environment();
-            //environment.TravelersAmount = travelers;
-            //environment.DepoId = int.Parse(cmbDepoId.Text);
-
-            //DistanceOperator.InitializeOperator(dOp, environment);
-            //Population population = new Population(environment);
 
             ControlProgram.Start(TspManager.Population, TspManager.dOp, TspManager.Environment);
             btnRun.Enabled = true;
@@ -500,7 +439,7 @@ BestList from problem: {5}",
             double number;
             if (double.TryParse(txtAlpha.Text, out number))
             {
-                if (number == 0 & ControlProgram.Environment.Beta == 0)
+                if (number <= 0.0001) //if (number == 0 & ControlProgram.Environment.Beta == 0)
                 {
                     txtAlpha.Text = "1";
                     return;
@@ -514,7 +453,7 @@ BestList from problem: {5}",
             double number;
             if (double.TryParse(txtBeta.Text, out number))
             {
-                if (number == 0 & ControlProgram.Environment.Alpha == 0)
+                if (number <= 0.0001) //if (number == 0 & ControlProgram.Environment.Alpha == 0)
                 {
                     txtBeta.Text = "1";
                     return;
@@ -527,7 +466,13 @@ BestList from problem: {5}",
         private void btnChooseOperator_Click(object sender, EventArgs e)
         {
             var chooseOperatorForm = new ChooseOperatorForm();
-            button6_Click(sender, e);
+            if (this.IsStarted)
+            {
+                ControlProgram.RunPopulation.Suspend();
+                this.IsPaused = true;
+                btnRun.Text = "Resume";
+            }
+            //button6_Click(sender, e);
             chooseOperatorForm.ShowDialog();
         }
 

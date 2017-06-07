@@ -1,0 +1,811 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="1f2e9898-7b1c-4fff-b6cf-064f68f8d1bc"
+  name="ChooseParent"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="b3fc7784-1e0e-4e49-a3ac-371a17f7182b"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DTSPAnde.Lib.GA.ChooseParent"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="735a9a03-7901-489f-bcfc-681c5c1de5cc"
+        name="ChooseParentOperator"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="4c7d33ba-f9bb-4aad-b533-11aa5e282347"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.ChooseParent Type%3DChooseParentOperator"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="180af8da-622a-4e7b-9006-75b8be24d88f"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="11981418-0c17-455c-877f-1260eb5c3464">
+                <propertyInstance
+                  Id="e6e8ace3-f187-4b67-be57-43277f35582e"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="60c2e007-a107-4a79-b509-c5b3ff554742">
+                <propertyInstance
+                  Id="b1735c94-7ce5-4be4-a931-7b6442da8c75"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="44d02aa8-7a2c-4c92-a24d-f0a79e3488d2">
+                <propertyInstance
+                  Id="785d0322-11f9-41ce-9647-4d7bcf4497e2"
+                  name="IsStatic"
+                  value="True" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="29f1969b-000f-4ffa-8c3f-abadb056aa5e">
+                <propertyInstance
+                  Id="b49e8321-e8b7-4ad0-816c-48a9a821f464"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="40ea666d-9efc-42e7-8111-b7cc5543005a">
+                <propertyInstance
+                  Id="23b30a84-4324-45e3-88b1-20af3fdc2b4b"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="927fcce2-48eb-4c48-b9e6-c829fe421e1e"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="7e099d81-8190-4433-8a08-82ed2dd86688"
+              LastKnownName="IChooseParentOperator"
+              LastKnownLocation="Package_1405.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a45ef280-270b-471b-ac88-7e46531b59b0"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8c083b46-da3b-46d3-b259-c5b9357a94ba"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="3df149c3-1109-48bb-b381-e20a392b5226"
+            name="_chPOperator"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="9bf24368-97ae-46ad-964a-d5e9aa387dbb"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.ChooseParent Type%3DChooseParentOperator Member%3D_chPOperator"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4faf5d90-ceb8-4960-b76f-614c3818a55b"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a92fcf80-ec7c-45e2-9ac0-ff165a4e7af6">
+                    <propertyInstance
+                      Id="02a9377a-011a-4243-9d0c-add55b75e28e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1845f252-a48d-4844-a0d9-3c76ed93a785">
+                    <propertyInstance
+                      Id="abf2840f-2735-4091-bf29-e5d722eb19a2"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="68f5d3f7-df3c-46a2-9b2c-df4211faedcd">
+                    <propertyInstance
+                      Id="0c71745c-8e75-4564-8879-4833b9e0b6b2"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="19d186a3-c93c-402f-a99f-011af95ccc88">
+                    <propertyInstance
+                      Id="1189a268-2594-4128-ac8e-2c6556fe2521"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a1a1ad9a-eb9f-4a28-b8a6-e67440dac8f4">
+                    <propertyInstance
+                      Id="d42f2736-c4b5-42a1-a428-0827d9e978e3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="7e099d81-8190-4433-8a08-82ed2dd86688"
+                LastKnownName="IChooseParentOperator"
+                LastKnownLocation="Package_1405.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="d7af7694-7d10-45b5-923c-d4d990461ea3"
+            name="static ChooseParentOperator"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="b110a174-689a-40ec-a27a-59bae227a214"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.ChooseParent Type%3DChooseParentOperator Member%3D.cctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="de38414e-bfbc-4a9a-b304-3b5811086f15"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aabb94a0-2138-49cf-92b8-ba55976a5c26">
+                    <propertyInstance
+                      Id="f6b5516e-954f-4753-b8b5-8d3381d89804"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e402ac66-010c-4b2b-95ab-0ffee28f8d3c">
+                    <propertyInstance
+                      Id="43cf2343-5ea6-43bc-b720-71c4762fb18a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="38ff590a-603f-43ac-aefc-6e61952c6637">
+                    <propertyInstance
+                      Id="80abb209-0ab8-4300-b9ba-18427c0d4ca5"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="739f4a4d-2b75-48aa-bc9b-271ff7a58f76">
+                    <propertyInstance
+                      Id="8e29bda0-17e9-4d7c-a04c-81d9f4cef631"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e946dab7-7502-440d-b34c-90931ce05a14">
+                    <propertyInstance
+                      Id="5d5487d6-0111-4aff-ab01-1f726da5d239"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f1ba081d-e1a9-4d6a-935d-68768ce5aa37">
+                    <propertyInstance
+                      Id="f50c0f8c-7e3a-47fb-bec1-5699d6c03d42"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="f4032e31-1636-434d-8d5f-c7b20f6d6d0b"
+            name="ChooseParent"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="c15323dd-5736-4061-89cf-7fd2aa697a8e"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.ChooseParent Type%3DChooseParentOperator Member%3D(Name%3DChooseParent OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DChromosome)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b1b9a36e-08ce-4e77-86b1-09316b9dc804"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ebf1ad06-b3df-42c1-bc20-a2f0c19308cc">
+                    <propertyInstance
+                      Id="b41b0753-87bc-4855-b6f5-86cff437c58e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bd03abf0-46ef-4ff6-a43e-49ca5bca835b">
+                    <propertyInstance
+                      Id="473e9846-4263-47d4-8b27-39839ce24f6b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e63e6bad-8d60-45e3-afb6-7e0c191371c5">
+                    <propertyInstance
+                      Id="277c8fd4-6609-4c19-8cfb-828863634a11"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6c99d32f-5fae-446e-97ac-a95ce2bb120b">
+                    <propertyInstance
+                      Id="2de8d825-ebfa-4e9f-89b4-d21708cb978c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="700f1047-a7b2-4caf-bcda-303795437815">
+                    <propertyInstance
+                      Id="b18971e0-185a-406b-9c85-fdb41acd54b7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f3315952-77d1-40cf-b5ab-9fced75fb8ae">
+                    <propertyInstance
+                      Id="35652aca-2c5b-45a1-9ac4-8c38462c5283"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cea4366d-903b-4552-89a3-f8f99d45d82f"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fe9550ff-8d96-4912-97c3-4dbdf517d6f4"
+                  name="population"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f08215b8-e9de-4feb-8414-33f18e015153"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.ChooseParent Type%3DChooseParentOperator Member%3D(Name%3DChooseParent OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DChromosome)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Dpopulation"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="6f9648aa-7d0a-42df-9f4e-d0f93268514f"
+                      LastKnownName="List&lt;Chromosome‎&gt;"
+                      LastKnownLocation="Package5_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="11744a82-b728-4856-b6fe-9cabeb4d15bd"
+                  name="another"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="2589d52a-f457-4123-abde-306f3272ceb4"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.ChooseParent Type%3DChooseParentOperator Member%3D(Name%3DChooseParent OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DChromosome)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Danother"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="31f47488-02cc-496f-99ec-e2ae65ce98a4"
+                  name="maxFit"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="649e6d1a-7092-4855-b4f9-9e554106adc0"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.ChooseParent Type%3DChooseParentOperator Member%3D(Name%3DChooseParent OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DChromosome)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3DmaxFit"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="78f21af0-bd86-4fcc-b1cf-e2d3a1f58288"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package3_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ef7939ec-bc93-4eb4-b31f-f2cc46a58797"
+                  name="k"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="fe028951-b50f-4a8a-8f72-4feff362afe5"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.ChooseParent Type%3DChooseParentOperator Member%3D(Name%3DChooseParent OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DChromosome)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Dk"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="73fdbf15-edd6-49fd-ba2b-757f5890d27f"
+                  name="type"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f73ba5f4-de65-42be-95ee-d156c74cb8e3"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.ChooseParent Type%3DChooseParentOperator Member%3D(Name%3DChooseParent OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DChromosome)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Dtype"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="02432768-d00c-4fce-a0eb-25bd412f54b0"
+                  name="alpha"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="dca44785-9698-4dfb-9e4a-404c65057a0e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.ChooseParent Type%3DChooseParentOperator Member%3D(Name%3DChooseParent OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DChromosome)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Dalpha"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="78f21af0-bd86-4fcc-b1cf-e2d3a1f58288"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package3_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1f20bafd-75b0-4857-ba84-37e185208f95"
+                  name="beta"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f6489fa4-4104-4d0e-a72e-5a553d6e64b4"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.ChooseParent Type%3DChooseParentOperator Member%3D(Name%3DChooseParent OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DChromosome)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Dbeta"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="78f21af0-bd86-4fcc-b1cf-e2d3a1f58288"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package3_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="333f6e5b-9cbb-499e-96f9-3e2262193ed8"
+            name="ChangeOperator"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="491cf769-47d4-42ff-91ba-973857109ff2"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.ChooseParent Type%3DChooseParentOperator Member%3D(Name%3DChangeOperator OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.ChooseParent Type%3DIChooseParentOperator)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="596fb33c-931b-4b3d-a06e-244a2232ce6c"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a602d37a-07c0-4897-819b-c3c4f846c392">
+                    <propertyInstance
+                      Id="b8705fb3-3ac0-457a-a35e-2b6afb73ae0d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ab722558-329a-48c3-ac9f-1bc8c39edc4c">
+                    <propertyInstance
+                      Id="f7108300-6358-4675-9d7a-570447e8c3d3"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fd0986f0-a9be-423e-9fe3-d629183cf46c">
+                    <propertyInstance
+                      Id="6f53a8ad-41c6-46d7-93b1-d562403496b9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="18669209-576d-44f7-8f17-88c08f262bc9">
+                    <propertyInstance
+                      Id="fecc2753-9a9a-499d-a8fd-1f07dc29a3a9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4f2fecae-4502-4cbd-a153-0f99ffafbc87">
+                    <propertyInstance
+                      Id="7eb3846a-eaac-4b64-aa29-1fd952c911e9"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="37f98b34-3049-4a42-b394-13cf6503ad2f">
+                    <propertyInstance
+                      Id="25fd8da4-af0f-44c5-b1b4-b0a429d48eda"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f314e89a-c5b3-4777-a427-89b81f352bb4"
+                  name="chPOperator"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="3bbbe2cb-b8f0-46fe-899a-aca3650c9d86"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.ChooseParent Type%3DChooseParentOperator Member%3D(Name%3DChangeOperator OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.ChooseParent Type%3DIChooseParentOperator)]) ParameterIdentifier%3DchPOperator"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="7e099d81-8190-4433-8a08-82ed2dd86688"
+                      LastKnownName="IChooseParentOperator"
+                      LastKnownLocation="Package_1405.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="7e099d81-8190-4433-8a08-82ed2dd86688"
+        name="IChooseParentOperator"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="ea9a94dd-5ad7-4046-a1ed-910b0562c577"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.ChooseParent Type%3DIChooseParentOperator"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="87539de5-30fb-4fce-a5f4-4b1308d60914"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="eeaa9bea-9a26-4478-ac7a-71ade629f058">
+                <propertyInstance
+                  Id="6189cfb0-3a23-43e6-9552-bc4fc9ce26f6"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1bcc78d8-aa53-4d70-a577-50d1e85b0818">
+                <propertyInstance
+                  Id="5c6be92c-6517-4c6d-b0e1-7d2508d7cb0d"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bcd9e3ce-7d94-4a10-915b-857a91311249">
+                <propertyInstance
+                  Id="635115e7-92d1-485a-aed1-196e237402b0"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2017df61-ba62-4284-b56b-1c41ac65d816">
+                <propertyInstance
+                  Id="a4977c03-f86b-49c6-b96c-ffb2abdcfca8"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperations>
+          <operation
+            Id="85e6dd8b-829e-44fb-8104-46ee2b4bae70"
+            name="ChooseParent"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="c4211baf-b94d-47e8-9487-bbb217859b34"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.ChooseParent Type%3DIChooseParentOperator Member%3D(Name%3DChooseParent OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DChromosome)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e219ae16-89a6-462b-a1ef-5e4f69b3e32f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c6e5ee41-28eb-446b-a071-776491802adf">
+                    <propertyInstance
+                      Id="aa6bf4be-67c3-4bf5-b993-9cbfb3a70b7b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eb1e6e7b-a779-4051-86e7-7352f64fe433">
+                    <propertyInstance
+                      Id="a31ba0c1-f967-49fe-92ea-2caf48cf423a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ed77ab75-1e29-4edf-bf43-7a2f616387a2">
+                    <propertyInstance
+                      Id="10caa359-c32f-4060-b400-e527f8982ae0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="98489b9d-9a04-4310-ae4a-0b2ca066871c">
+                    <propertyInstance
+                      Id="989f9772-65c1-4d22-81c5-6364eb9ed560"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="05ac2adb-6273-4f87-a8b3-77d59e34a38e">
+                    <propertyInstance
+                      Id="52cf7c91-2047-4633-be43-597ebd598f6c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1c7eaf9b-dbff-4c34-8a29-eeb5beffcb10">
+                    <propertyInstance
+                      Id="21c231b7-e799-46c5-82d7-062095e0910e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="77796049-db82-4055-970e-c64977befe5f"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="265433d7-8423-4c9e-8b66-1954cb1b4f19"
+                  name="population"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="a54c4961-b2c4-43c7-8203-03c074372324"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.ChooseParent Type%3DIChooseParentOperator Member%3D(Name%3DChooseParent OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DChromosome)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Dpopulation"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="6f9648aa-7d0a-42df-9f4e-d0f93268514f"
+                      LastKnownName="List&lt;Chromosome‎&gt;"
+                      LastKnownLocation="Package5_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="10bad7c9-196f-444f-9aa1-e16363bc3417"
+                  name="another"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="3b588e99-c028-488d-a781-4946e3ceecec"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.ChooseParent Type%3DIChooseParentOperator Member%3D(Name%3DChooseParent OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DChromosome)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Danother"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9325a5c5-ad9a-49e1-a64a-aee26b4cd87e"
+                  name="maxFit"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="eba7fd72-b59a-4492-b229-c9511940d729"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.ChooseParent Type%3DIChooseParentOperator Member%3D(Name%3DChooseParent OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DChromosome)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3DmaxFit"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="78f21af0-bd86-4fcc-b1cf-e2d3a1f58288"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package3_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bbc572cc-2e3d-4a00-ba71-8fc2364bd6c8"
+                  name="k"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="af838bbc-a34e-47a1-b7a3-74ed03d223f3"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.ChooseParent Type%3DIChooseParentOperator Member%3D(Name%3DChooseParent OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DChromosome)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Dk"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e55b8db2-3da7-47d8-8f7b-2f7d58f8a9e0"
+                  name="type"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="3a047f6a-435a-48d6-8806-bc93afdc71c1"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.ChooseParent Type%3DIChooseParentOperator Member%3D(Name%3DChooseParent OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DChromosome)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Dtype"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8ac16093-cd30-4b5c-aa5d-3d5778593eda"
+                  name="alpha"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="00845047-9011-4ba7-9621-bc6d1aefdd55"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.ChooseParent Type%3DIChooseParentOperator Member%3D(Name%3DChooseParent OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DChromosome)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Dalpha"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="78f21af0-bd86-4fcc-b1cf-e2d3a1f58288"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package3_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5a1ade40-b5d7-4705-b734-e818ecd98294"
+                  name="beta"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="08930fc8-a76f-4302-98b0-9d21f7bfad50"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.ChooseParent Type%3DIChooseParentOperator Member%3D(Name%3DChooseParent OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DChromosome)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3Dbeta"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="78f21af0-bd86-4fcc-b1cf-e2d3a1f58288"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package3_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="fcb5b487-a756-4c31-8f40-dec85fd6e891"
+  name="ModelingProject" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="816e84c1-8497-496b-bfcd-c884ccb707e4">
+      <profileInstance
+        Id="0fd4e34c-172b-41e0-9d68-1fa65f47575b"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="5e6eaaf1-f28e-4bae-b8ce-eaf7df2b447a"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="51a41899-bafd-434e-b88d-92e07cd14e91"
+            name="Attribute1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="b2854459-6a36-4676-a2fb-5addcba3d9f3"
+        LastKnownName="TSPAnde"
+        LastKnownLocation="Package_1146.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="ac4573ae-883a-40d7-afea-880715e76b4f"
+        LastKnownName="System"
+        LastKnownLocation="Package3_1146.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="c0229c85-3e82-44e6-ae6d-9b755c8200a1"
+        LastKnownName="TspLibNet"
+        LastKnownLocation="Package1_1152.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="1e9c384e-323f-4eab-b3d3-e71ee673a69e"
+        name="IMutationOperator1"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="d5042cbc-a60a-491c-91a2-9242afa2a0c0"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.Mutation Type%3DIMutationOperator"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="3a9fa981-5155-4543-ae93-2ac6250efc6f"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5b02d80e-a18d-4036-b669-0fc51d8d5a07">
+                <propertyInstance
+                  Id="d14a886d-0a05-4e54-8735-c67e2686c6e5"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="19718a91-29a5-4566-a930-f38cde0a5874">
+                <propertyInstance
+                  Id="152b0df9-8f3c-4c8b-bd4b-a1762c5c3649"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="87998bd2-0c97-4561-962e-83a057f4f527">
+                <propertyInstance
+                  Id="1774b9b6-ff77-4e52-b630-b338b4e92392"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="038a0b26-4678-4bc5-8f39-6c1a6b6c9eda">
+                <propertyInstance
+                  Id="8e7083eb-426a-47a4-87eb-378e0ee9882a"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperations>
+          <operation
+            Id="093f3daf-d3e6-41e2-b5d7-64feab968202"
+            name="Mutation"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="dda14f35-5e4a-4242-a8fe-a646a46e35f8"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.Mutation Type%3DIMutationOperator Member%3D(Name%3DMutation OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DChromosome)]))%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DEnvironment)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="879adcbb-652c-48d3-a0d2-50bd31d47db4"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9e9a3053-c985-4f73-bd5d-2d9190ca74f8">
+                    <propertyInstance
+                      Id="fdeb179a-5c2f-42fa-9666-4a3b00133f42"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="30c56112-7ac0-4b6e-a572-9ff17084e1bf">
+                    <propertyInstance
+                      Id="24f87fd5-b3ff-48f6-92bd-edf46c361e87"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="41c160b3-b732-47b1-8dc1-adc4fd0ab235">
+                    <propertyInstance
+                      Id="00b88f46-9636-4420-91bb-81c3aa182041"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1526b8a4-eb2a-4766-b64f-993521f0e2dd">
+                    <propertyInstance
+                      Id="83368ef5-9bfe-46c3-9bfb-5b827f832b2f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b63a98ed-5716-4559-a795-2c8e96583fc4">
+                    <propertyInstance
+                      Id="f0f0a42b-24d8-4187-a310-a6bc74ae3743"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3781f977-95c7-4e21-a527-25500654a4f4">
+                    <propertyInstance
+                      Id="66e5619b-eae7-4d78-a329-d7a5e2ec850f"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9fe2b9a4-5b24-4b41-9d64-cf850c9d9d8b"
+                  name="chromosomes"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="6b56b4cd-9769-4a6a-a6e5-c987d76ec989"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.Mutation Type%3DIMutationOperator Member%3D(Name%3DMutation OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DChromosome)]))%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DEnvironment)]) ParameterIdentifier%3Dchromosomes"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="6f9648aa-7d0a-42df-9f4e-d0f93268514f"
+                      LastKnownName="List&lt;Chromosome‎&gt;"
+                      LastKnownLocation="Package5_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a7f0928c-6827-4df3-b0eb-a110981ac186"
+                  name="Environment"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="718d0afd-bac6-4830-a887-49f748a65896"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA.Mutation Type%3DIMutationOperator Member%3D(Name%3DMutation OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DChromosome)]))%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fgreedy%2FDesktop%2FLunwen%2FProgramming%2F4.5%2FTSP_Ande%2FTSPAnde%2FTSPAnde.Lib%2Fbin%2FDebug%2FTSPAnde.Lib.dll Namespace%3DTSPAnde.Lib.GA Type%3DEnvironment)]) ParameterIdentifier%3DEnvironment"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="5b2b5f91-abf5-4c9c-a458-e6a95d864ecf"
+                      LastKnownName="Environment"
+                      LastKnownLocation="Package2_1146.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

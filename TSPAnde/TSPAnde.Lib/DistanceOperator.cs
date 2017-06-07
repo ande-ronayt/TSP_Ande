@@ -20,9 +20,10 @@ namespace TSPAnde.Lib
         static DistanceOperator()
         {
             //BalanceProportionCalc = new BalanceProportionMaxCalc();
-            //BalanceProportionCalc = new BalanceProportionDispersionCalc();
+            //BalanceProportionCalc = new BalanceProportionVarianceCalc();
             //BalanceProportionCalc = new BalanceProportionMaxWithSumCalc();
-            BalanceProportionCalc = new BalanceProportionMaxDevideByMin();
+            BalanceProportionCalc = new BalanceProportionMinDevideByMax();
+            //BalanceProportionCalc = new BalanceProportionMinDevideByMaxWithPercent();
         }
 
         public static double GetBalanceProportion(List<double> distances, double distance){
@@ -88,7 +89,6 @@ namespace TSPAnde.Lib
             Matrix = new double[size + 1, size + 1];
         }
 
-
         /// <summary>
         /// Calculate by using TspLib95 functions
         /// </summary>
@@ -105,21 +105,9 @@ namespace TSPAnde.Lib
                 }
             }
         }
-
-        //public int[] FindIntersections(int[] path)
-        //{
-        //    int a, b, c, d;
-        //    for (int i = 0; i < path.Length; i++)
-        //    {
-        //        a = path[i];
-        //        b = path[(i + 1)%path.Length];
-        //        c = path[(i + 2) % path.Length];
-        //        d = path[(i + 3) % path.Length];
-        //    }
-        //}
     }
 
-    public class BalanceProportionMaxDevideByMin : IBalanceProportionCalc
+    public class BalanceProportionMinDevideByMax : IBalanceProportionCalc
     {
         public double GetBalanceProportion(List<double> distances, double distance)
         {
@@ -138,24 +126,38 @@ namespace TSPAnde.Lib
         }
     }
 
+    public class BalanceProportionMinDevideByMaxWithPercent : IBalanceProportionCalc
+    {
+        public double GetBalanceProportion(List<double> distances, double distance)
+        {
+            double max = distances[0];
+            double min = distances[0];
+            for (int i = 1; i < distances.Count; i++)
+            {
+                if (distances[i] > max) max = distances[i];
+                if (distances[i] < min) min = distances[i];
+            }
+
+            if (min / max >= GA.Environment.BalanceCoefficient)
+                return distance;
+            return distance * (1 + ((GA.Environment.BalanceCoefficient) - min / max));
+        }
+    }
+
     public class BalanceProportionMaxWithSumCalc : IBalanceProportionCalc
     {
         public double GetBalanceProportion(List<double> distances, double distance)
         {
             //find maximum:
             double max = distances[0];
+            double min = distances[0];
             for (int i = 1; i < distances.Count; i++)
             {
                 if (distances[i] > max) max = distances[i];
+                if (distances[i] < max) min = distances[i];
             }
 
-            double temp = 0;
-            for (int i = 0; i < distances.Count; i++)
-            {
-                temp += max - distances[i];
-            }
-
-            return max + temp;
+            return max + max - min;
         }
     }
 
@@ -174,9 +176,8 @@ namespace TSPAnde.Lib
         }
     }
 
-    public class BalanceProportionDispersionCalc : IBalanceProportionCalc
+    public class BalanceProportionVarianceCalc : IBalanceProportionCalc
     {
-
         public double GetBalanceProportion(List<double> distances, double distance)
         {
             //----Find balanced tour:

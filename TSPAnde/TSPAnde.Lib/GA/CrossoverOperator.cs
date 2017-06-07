@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TSPAnde.Lib.GA
+namespace TSPAnde.Lib.GA.Crossover
 {
     #region crossover
 
@@ -13,7 +13,7 @@ namespace TSPAnde.Lib.GA
         CrossoverOperatorOX = 1,
         CrossoverOperatorAEXWithShortestDistance = 2,
         CrossoverOperatorAEX = 3,
-        CrosooverOperatorPMX = 4
+        CrossoverOperatorPMX = 4
     }
 
     public class CrossoverOperatorOX : ICrossoverOperator
@@ -50,7 +50,7 @@ namespace TSPAnde.Lib.GA
             List<Gene> child1, child2, parent1, parent2;
             Gene dx, dy;
             int indx1, indx2;
-            //child 1 right derection
+            //child 1 right direction
             parent1 = first.ToList();
             parent2 = second.ToList();
 
@@ -71,7 +71,7 @@ namespace TSPAnde.Lib.GA
                 child1.Add(gene);
             }
 
-            //child 2 -- left derection
+            //child 2 -- left direction
             parent1 = first.ToList();
             parent2 = second.ToList();
             i = Randomizer.Random.Next(parent2.Count);
@@ -107,7 +107,7 @@ namespace TSPAnde.Lib.GA
             Gene dx, dy;
             int indx1, indx2;
             bool fs = false;
-            //child 1 right derection
+            //child 1 right direction
             parent1 = first.ToList();
             parent2 = second.ToList();
 
@@ -130,7 +130,7 @@ namespace TSPAnde.Lib.GA
                 child1.Add(gene);
             }
 
-            //child 2 -- left derection
+            //child 2 -- left direction
             parent1 = first.ToList();
             parent2 = second.ToList();
             i = Randomizer.Random.Next(parent2.Count);
@@ -161,7 +161,7 @@ namespace TSPAnde.Lib.GA
         }
     }
 
-    public class CrosooverOperatorPMX : ICrossoverOperator
+    public class CrossoverOperatorPMX : ICrossoverOperator
     {
         public List<Chromosome> Crossover(List<Gene> first, List<Gene> second, Environment environment)
         {

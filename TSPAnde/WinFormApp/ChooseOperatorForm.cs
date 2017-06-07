@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TSPAnde.Lib;
 using TSPAnde.Lib.GA;
+using TSPAnde.Lib.GA.Crossover;
+using TSPAnde.Lib.GA.Mutation;
 
 namespace WinFormApp
 {
@@ -19,17 +21,38 @@ namespace WinFormApp
             InitializeComponent();
             SetCrossover();
             SetBalance();
+            SetMutation();
+            
+        }
+
+        private void SetMutation()
+        {
+            switch (ChromosomeOperator.GetMutationOperator.Name)
+            {
+                case "MutationOperatorInsertion":
+                    rbMutationInsertion.Checked = true;
+                    break;
+                case "MutationOperatorPSM":
+                    rbMutationPSM.Checked = true;
+                    break;
+                case "MutationOperatorRSM":
+                    rbMutationRSM.Checked = true;
+                    break;
+            }
         }
 
         private void SetCrossover()
         {
             switch (ChromosomeOperator.GetCrossoverType.Name)
             {
-                case "CrosooverOperatorPMX":
+                case "CrossoverOperatorPMX":
                     rbCrossoverPMX.Checked = true;
                     break;
-                case "CrossoverOperatorTwoPoints" :
-                    rbCrossoverTwoPoint.Checked = true;
+                case "CrossoverOperatorAEX" :
+                    rbCrossoverAEX.Checked = true;
+                    break;
+                case "CrossoverOperatorOX":
+                    rbCrossoverOX.Checked = true;
                     break;
             }
         }
@@ -38,18 +61,24 @@ namespace WinFormApp
         {
             switch (DistanceOperator.GetBalanceProportionType.Name)
             {
-                case "BalanceProportionDispersionCalc":
+                case "BalanceProportionVarianceCalc":
                     rbBalanceProportionDispersion.Checked = true;
                     break;
-                case "BalanceProportionMaxCalc":
+                case "BalanceProportionMaxWithSumCalc":
                     rbBalanceProportionMaxSubtour.Checked = true;
                     break;
+                case "BalanceProportionMinDevideByMax":
+                    rbBalanceDeviding.Checked = true;
+                    break; 
+                case "BalanceProportionMinDevideByMaxWithPercent":
+                    rbBalanceDevPlusPercent.Checked = true;
+                    break; 
             }
         }
-
+        #region Crossover
         private void rbCrossoverPMX_CheckedChanged(object sender, EventArgs e)
         {
-            ChromosomeOperator.ChangeOperator(new CrosooverOperatorPMX());
+            ChromosomeOperator.ChangeOperator(new CrossoverOperatorPMX());
         }
 
         private void rbCrossoverTwoPoint_CheckedChanged(object sender, EventArgs e)
@@ -57,15 +86,57 @@ namespace WinFormApp
             ChromosomeOperator.ChangeOperator(new CrossoverOperatorOX());
         }
 
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            ChromosomeOperator.ChangeOperator(new CrossoverOperatorAEX());
+        }
+        #endregion
+       
+
+        #region balance
         private void rbBalanceProportionDispersion_CheckedChanged(object sender, EventArgs e)
         {
-            DistanceOperator.SetBalanceProportionCalc(new BalanceProportionDispersionCalc());
+            DistanceOperator.SetBalanceProportionCalc(new BalanceProportionVarianceCalc());
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            DistanceOperator.SetBalanceProportionCalc(new BalanceProportionMaxCalc());
+            DistanceOperator.SetBalanceProportionCalc(new BalanceProportionMaxWithSumCalc());
         }
+
+        private void rbDev_CheckedChanged(object sender, EventArgs e)
+        {
+            DistanceOperator.SetBalanceProportionCalc(new BalanceProportionMinDevideByMax());
+        }
+
+        private void rbBalanceDevPlusPercent_CheckedChanged(object sender, EventArgs e)
+        {
+            DistanceOperator.SetBalanceProportionCalc(new BalanceProportionMinDevideByMaxWithPercent());
+        }
+        #endregion
+
+        #region mutation
+        private void rbMutationInsertion_CheckedChanged(object sender, EventArgs e)
+        {
+            ChromosomeOperator.ChangeOperator(new MutationOperatorInsertions());
+        }
+
+        private void rbMutationPSM_CheckedChanged(object sender, EventArgs e)
+        {
+            ChromosomeOperator.ChangeOperator(new MutationOperatorPSM());
+        }
+
+        #endregion
+
+        private void rbMutationRSM_CheckedChanged(object sender, EventArgs e)
+        {
+            ChromosomeOperator.ChangeOperator(new MutationOperatorRSM());
+        }
+
+        
+
+       
+
 
     }
 }

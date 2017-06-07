@@ -187,6 +187,7 @@
             // scAlpha
             // 
             this.scAlpha.Location = new System.Drawing.Point(605, 502);
+            this.scAlpha.Minimum = 1;
             this.scAlpha.Name = "scAlpha";
             this.scAlpha.Size = new System.Drawing.Size(330, 18);
             this.scAlpha.TabIndex = 12;
@@ -214,6 +215,7 @@
             // scBeta
             // 
             this.scBeta.Location = new System.Drawing.Point(605, 542);
+            this.scBeta.Minimum = 1;
             this.scBeta.Name = "scBeta";
             this.scBeta.Size = new System.Drawing.Size(330, 18);
             this.scBeta.TabIndex = 12;

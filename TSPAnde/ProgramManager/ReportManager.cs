@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TSPAnde.Lib.GA;
+using TSPAnde.Lib.GA.Crossover;
+using TSPAnde.Lib.GA.Mutation;
 using TspLibNet;
 
 namespace ProgramManager
@@ -89,15 +91,20 @@ namespace ProgramManager
         {
             if (TakeData(population))
             {
-                var row = GetRowData(population, data[0].Time);
+                var row = GetRowData(population, data[0].Time, DateTime.Now);
                 data.Add(row);
-                var fileName = GetFileName(population);
-                SaveToFile(fileName, GetResultContent(population));
             }
+        }
+
+        public void EndOfAlgorithm(Population population)
+        {
+            var fileName = GetFileName(population);
+            SaveToFile(fileName, GetResultContent(population));
         }
 
         private void SaveToFile(string fileName, string content)
         {
+            new FileInfo(fileName).Directory.Create();
             using (var writer = new StreamWriter(fileName))
             {
                 writer.WriteLine(content);
@@ -111,11 +118,38 @@ namespace ProgramManager
             content += "Map: " + TspProblem + "\n";
             content += "Crossover: " + ChromosomeOperator.GetCrossoverType.Name + "\n";
             content += "Mutation: " + ChromosomeOperator.GetMutationOperator.Name + "\n";
-            content += "Best chromosome: " + population.TheBest + "\n";
+            content += "Best chromosome: " + population.TheBest + "\n\n";
+            content += "Tick\tWorkingTime\tGeneration\tDistance\tRealtime\tStartTime\tCrossover\tMutation\tTestNumber\n";
 
-            for (int i = 1; i < data.Count; i++)
+            var cType = ChromosomeOperator.GetCrossoverType;
+            var cCode = (CrossoverType)Enum.Parse(typeof(CrossoverType), cType.Name);
+
+            var mType = ChromosomeOperator.GetMutationOperator;
+            var mCode = (MutationType)Enum.Parse(typeof(MutationType), mType.Name);
+
+
+            //var indx = data.FindIndex(x => x.Chromosome != null && Math.Abs(x.Chromosome.Distance - data.Last().Chromosome.Distance) < 1e-6);
+            //var dataToWrite = data.Take(indx + 100).ToList(); // take last 100 data
+            var dataToWrite = data.Skip(1).ToList(); // because first one doesn't have any data
+            foreach (var rd in dataToWrite)
             {
-                content += data[i] + string.Format("\t{0}", data[0].GetTime) + "\n";
+                rd.Timer = rd.Time.Subtract(data[0].Time);
+            }
+
+            dataToWrite = dataToWrite.OrderBy(x => x.Time).ToList();
+            for (var i = 0; i < dataToWrite.Count; i++)
+            {
+                dataToWrite[i].Tick = i + 1;
+            }
+
+            for (var i = 0; i < dataToWrite.Count; i++)
+            {
+                content += (dataToWrite[i] + string.Format("\t{0}\t{1}\t{2}\t{3}\n", 
+                    data[0].GetTime,
+                    (int)cCode,
+                    (int)mCode,
+                    NumberOfTest
+                    ));
             }
 
             return content;
@@ -130,7 +164,7 @@ namespace ProgramManager
             var mCode = (MutationType)Enum.Parse(typeof(MutationType), mType.Name);
 
             //CityCode _ CrossCode _ MutCode _ Number
-            return string.Format("{0}_{1}_{2}_{3}.txt",
+            return string.Format("ReportManager\\{0}\\{0}_{1}_{2}_{3}.txt",
                 CityCode,
                 cCode,
                 mCode,
@@ -138,18 +172,44 @@ namespace ProgramManager
                 );
         }
 
-        private rowData GetRowData(Population population, DateTime startTime)
+
+        private rowData GetRowData(Population population, DateTime startTime, DateTime time)
         {
-            var rd = new rowData(DateTime.Now, population.CurrentGeneration, population.TheBest);
-            rd.Timer = rd.Time.Subtract(startTime);
+            var rd = new rowData(time, population.CurrentGeneration, population.TheBest);
+            return rd;
+        }
+
+        private rowData GetRowData(double distance, int gener, DateTime startTime, DateTime time)
+        {
+            var rd = new rowData(time, gener, distance);
             return rd;
         }
 
         private bool TakeData(Population population)
         {
-            if (population.CurrentGeneration % 200 == 0)
+            var interval = 50;
+            if (population.Environment.CityAmount < 30)
+                interval = 15;
+            else if (population.Environment.CityAmount < 50)
+                interval = 25;
+            else if (population.Environment.CityAmount < 75)
+                interval = 30;
+            
+            if (population.CurrentGeneration % interval == 0)
                 return true;
             return false;
+        }
+
+        public void NextTick(DateTime time, Population population)
+        {
+            var row = GetRowData(population, data[0].Time, time);
+            data.Add(row);
+        }
+
+        public void NextTick(DateTime time, double distance, int gener)
+        {
+            var row = GetRowData(distance, gener, data[0].Time, time);
+            data.Add(row);
         }
     }
 
@@ -162,13 +222,22 @@ namespace ProgramManager
             Chromosome = chromosome;
         }
 
+        public rowData(DateTime time, int generation, double distance)
+        {
+            Time = time;
+            Generation = generation;
+            Distance = distance;
+        }
+
+        public long Tick { get; set; }
+
         public DateTime Time { get; set; }
 
         public TimeSpan Timer { get; set; }
 
         public string GetTime
         {
-            get { return Time.ToString("hh-mm-ss-ffff"); }
+            get { return Time.ToString("hh-mm-ss.fff"); }
         }
 
         public string GetTimer
@@ -185,13 +254,20 @@ namespace ProgramManager
 
         public Chromosome Chromosome { get; set; }
 
+        public double Distance;
+
         public override string ToString()
         {
-            return string.Format("{0}\t{1}\t{2}\t{3}",
+            double dis = Distance;
+            if (Chromosome != null)
+                dis = this.Chromosome.Distance;
+
+            return string.Format("{4}\t{0}\t{1}\t{2}\t{3}",
                 GetTimer,
                 Generation,
-                Chromosome.Distance,
-                GetTime);
+                dis,
+                GetTime,
+                Tick);
         }
     }
 }

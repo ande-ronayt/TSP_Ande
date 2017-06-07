@@ -104,5 +104,29 @@ namespace ProgramManager
                 return true;
             return false;
         }
+
+        public List<string> SplitDistances(string tour)
+        {
+
+            tour = tour.Substring(tour.IndexOf("-", tour.IndexOf("BD:")) + 1);
+            var ids = tour.Split('-');
+            var depoId = Population.Environment.DepoId;
+            var tours = new List<string>() { string.Empty };
+            int curr = 0;
+            for (int i = 0; i < ids.Length; i++)
+            {
+                if (int.Parse(ids[i]) == depoId)
+                {
+                    tours.Add(string.Empty);
+                    curr++;
+                }
+
+                tours[curr] += "-" + ids[i];
+            }
+
+            tours[0] = tours.Last() + tours[0];
+            tours.Remove(tours.Last());
+            return tours;
+        } 
     }
 }
